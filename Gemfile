@@ -20,6 +20,10 @@ group :developer do
   gem 'did_you_mean', '~> 0.9.2'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'devise'
 
 gem 'twitter-bootstrap-rails'
