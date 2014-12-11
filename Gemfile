@@ -20,13 +20,15 @@ group :developer do
   gem 'did_you_mean', '~> 0.9.2'
 end
 
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'ionicons-rails', '~> 1.5.2'
 gem 'gravatar_image_tag'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
