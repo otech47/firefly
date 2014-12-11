@@ -1,12 +1,3 @@
-/*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: Landing Sumo - Theme 19
- * URL: http://LandingSumo.com
- * Version: 1.0
- */
-
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
@@ -349,7 +340,7 @@ input {
 
 /* HEADER SECTION */
 #h {
-	background: url(../img/header.jpg) no-repeat center top;
+	background: url(header.jpg) no-repeat center top;
 	padding-top: 210px;
 	text-align:center;
 	background-attachment: relative;
@@ -387,7 +378,7 @@ input {
 /* DIVIDED SECTION */
 .news {
 	background-position: center;
-	background-image: url('../img/news-bg.jpg');
+	background-image: url('news-bg.jpg');
 	background-size: cover;
 }
 
@@ -455,7 +446,7 @@ input {
 /* TESTIMONIAL SECTION */
 .testimonials {
 	background-position: center;
-	background-image: url('../img/testimonials.jpg');
+	background-image: url('testimonials.jpg');
 	background-size: cover;
 }
 
