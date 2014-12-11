@@ -631,3 +631,25 @@ input {
 .btn-custom:focus {
   color: #fff;
 }
+
+.clean {
+
+  .navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+
+    .navbar-nav {
+      
+      >li>a {
+        color: #333;
+
+        :hover {
+          color: #2a6496;
+        }
+      }
+    }
+  }
+}
+
+
+

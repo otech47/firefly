@@ -76,23 +76,66 @@
 
     <%= csrf_meta_tags %>
   </head>
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu" class="clean">
 
     <!-- Menu -->
-    <nav class="menu" id="theMenu">
-      <div class="menu-wrap">
-        <h1 class="logo"><a href="index.html#home">BITCOIN HACKATHON</a></h1>
-        <i class="ion-android-close menu-close"></i>
-        <a href="#home" class="smoothScroll">Home</a>
-        <a href="#speakers" class="smoothScroll">Sponsors</a>
-        <a href="#topics" class="smoothScroll">Topics</a>
-        <a href="#purchase" class="smoothScroll">Registration</a>
-        <a href="#contact" class="smoothScroll">Contact</a>
-      </div>
-
-      <!-- Menu button -->
-      <div id="menuToggle"><i class="ion-home"></i></div>
-    </nav>
+    <% if current_user %>
+      <header class="site-header">
+        <div class="container">
+          <div class="navbar navbar-inverse" role="navigation">
+            <div>
+              <a href="/" class="navbar-brand hidden-xs"><img src=""></a>
+              <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="navbar-right" ng-hide="0">
+              <a href="/" class="navbar-brand visible-xs"><img src="//cdn.changetip.com/img/logos/changetip_logo.png"></a>
+              <div class="navbar-collapse collapse" style="height: 0px;">
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="/" analytics-on="click" analytics-event="Logged-in Home" analytics-label="Top Nav">
+                      <span>My Team</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/money" analytics-on="click" analytics-event="Money" analytics-label="Top Nav">
+                      <span class="">Teams</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/money" analytics-on="click" analytics-event="Money" analytics-label="Top Nav">
+                      <span class="">Profile</span>
+                    </a>
+                  </li>
+                  <li class="dropdown hidden-xs">
+                    <a href="#" class="dropdown-toggle setting-icon-orange" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="">Settings</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="/account" class="setting-icon-orange">Settings</a>
+                      </li>
+                        
+                      <li>
+                        <%= link_to destroy_user_session_path, :class => "logout-link" do %>
+                          <i class="hidden-xs fa fa-sign-out" title="Sign Out" style="min-width: 20px"></i><span class="">Log Out</span>
+                        <% end %>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- .container -->
+      </header>
+    <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "log in", new_user_session_path %>
+    <% end %>
 
     <%= yield %>
 
