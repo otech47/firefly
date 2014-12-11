@@ -20,6 +20,8 @@ group :developer do
   gem 'did_you_mean', '~> 0.9.2'
 end
 
+gem 'devise'
+
 gem 'twitter-bootstrap-rails'
 gem 'ionicons-rails', '~> 1.5.2'
 gem 'gravatar_image_tag'

@@ -1,0 +1,33 @@
+<div class="container ptb" style="padding-top: 172px;">
+  <div class="row">
+    <h2 class="centered">LOG IN</h2>
+    <hr class="aligncenter mb">
+    
+    <section id="login">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-wrap">
+            <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => "login-form"}) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="form-group">
+                <%= f.label :email %>
+                <%= f.email_field :email, :class => "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :password %>
+                <%= f.password_field :password, :class => "form-control", :autocomplete => "off" %>
+              </div>
+              <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log In">
+            <% end %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name), :class => "forget" %>
+          </div>
+        </div> <!-- /.col-xs-12 -->
+      </div> <!-- /.row -->
+    </section>
+  </div><!--/row-->
+  <div class="row mt">
+     
+  </div><!--/row-->
+</div>
+
+
