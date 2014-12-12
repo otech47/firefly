@@ -340,7 +340,6 @@ input {
 
 /* HEADER SECTION */
 #h {
-	background: url(header.jpg) no-repeat center top;
 	padding-top: 210px;
 	text-align:center;
 	background-attachment: relative;
@@ -649,4 +648,13 @@ input {
       }
     }
   }
+}
+
+#bgvid { 
+  position: absolute;
+  z-index: -100;
+  background-size: cover;
+  transition: 1s opacity;
+  width: 100%;
+  height: auto;
 }
