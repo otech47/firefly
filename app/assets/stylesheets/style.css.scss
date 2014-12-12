@@ -237,8 +237,8 @@ a:focus {
 	text-align: center;
 	font-size: 14px;
 	color: #ffffff;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 45px;
 	line-height: 40px;
 	cursor: pointer;
 	background: rgba(0,0,0,0.25);
@@ -340,6 +340,7 @@ input {
 
 /* HEADER SECTION */
 #h {
+  background:url('overlay.png') repeat;
 	padding-top: 210px;
 	text-align:center;
 	background-attachment: relative;
