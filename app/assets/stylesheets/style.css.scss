@@ -650,3 +650,40 @@ input {
   width: 21%;
   margin: 6px 14px 6px 14px;
 }
+
+.day ul.events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day ul.events li {
+  padding: 1.0em 10px;
+  vertical-align: top;
+  background: url(images/dashed_line.png) repeat-x 1px bottom;
+}
+
+.day ul.events li time {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  vertical-align: top;
+  color: #9199a3;
+  width: 60px;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.day ul.events li span {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  vertical-align: top;
+  width: 186px;
+}
+
+.day.alt {
+  background: rgba(0, 0, 0, 0.02);
+}
