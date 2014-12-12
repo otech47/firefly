@@ -8,7 +8,7 @@ Getting Started with firefly
 
 You're going to need:
 
- - **Ruby, version 2.1.3 or newer**
+ - **Ruby, version 2.1.5 or newer**
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
  - **MySQL** or **MariaDB** running localy
 
