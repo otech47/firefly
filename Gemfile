@@ -29,6 +29,10 @@ gem 'twitter-bootstrap-rails'
 gem 'ionicons-rails', '~> 1.5.2'
 gem 'gravatar_image_tag'
 
+gem 'nokogiri'
+gem 'fog'
+gem 'asset_sync'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

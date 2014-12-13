@@ -29,9 +29,12 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  config.assets.prefix = "/production/assets"
+
   # Generate digests for assets URLs.
   config.assets.digest = true
 
+  config.assets.enabled = true
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
@@ -44,6 +47,8 @@ Rails.application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+  config.assets.initialize_on_precompile = true
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
@@ -55,6 +60,7 @@ Rails.application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "//s3.amazonaws.com/#{ENV['FOG_DIRECTORY']}"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
