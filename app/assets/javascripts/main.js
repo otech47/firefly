@@ -21,17 +21,33 @@ $(function () {
   });
 
   //validate observer registration
+  $.validator.addMethod("checkemail",
+    function(value, element) {
+        var result = false;
+        $.ajax({
+            type:"GET",
+            async: false,
+            url: "/api/v1/validate/observer?email=" + encodeURI(value),
+            success: function(msg) {
+                result = (msg['check'] == "bad") ? false : true;
+            }
+        });
+        return result;
+    },
+    "Ticket with this email already exists."
+  );
+
   $("#new_observer").validate({
     rules: {
       "observer[email]": {
         required: true,
-        email: true
+        checkemail: true
       },
       "observer[name]": "required"
     },
     messages: {
       "observer[name]": "Please enter your name",
-      "observer[email]": "Please enter a valid email address"
+      "observer[checkemail]": "Ticket with this email already exists"
     }
   });
   
