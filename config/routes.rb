@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :observers
+
   devise_for :users, :path => '', :path_names => { :sign_in => "signin", :sign_out => "logout", :sign_up => "registration" }, :controllers => { :registrations => "registrations" }
 
-
   get 'dashboard' => 'dashboard#welcome'
+
+  namespace :api, :path => "api", :defaults => {:format => :json} do
+    namespace :v1 do
+      get 'validate/observer' => 'validate#observer'
+    end
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

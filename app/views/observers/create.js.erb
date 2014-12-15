@@ -1,0 +1,12 @@
+<% if @observer.save %>
+  $('#observer').modal('hide');
+  $('#new_observer')[0].reset();
+  $('#registration_process').modal('show');
+  $('.observer-validator-loading').hide();
+  $('.observer-success').show();
+  setTimeout(function() {
+    $('#observer').modal('hide');
+  }, 6000);
+<% else %>
+  console.log('na son');
+<% end %>
