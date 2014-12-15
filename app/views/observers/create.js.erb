@@ -1,5 +1,6 @@
 <% if @observer.save %>
   $('#observer').modal('hide');
+  $('#observer')[0].reset();
   $('#registration_process').modal('show');
 <% else %>
   console.log('na son');
