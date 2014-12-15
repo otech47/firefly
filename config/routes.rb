@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :observers
+
   devise_for :users, :path => '', :path_names => { :sign_in => "signin", :sign_out => "logout", :sign_up => "registration" }, :controllers => { :registrations => "registrations" }
 
 
