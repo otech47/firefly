@@ -1,1 +1,6 @@
-console.log('Was up');
+<% if @observer.save %>
+  $('#observer').modal('hide');
+  $('#registration_process').modal('show');
+<% else %>
+  console.log('na son');
+<% end %>
