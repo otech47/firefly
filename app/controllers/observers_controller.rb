@@ -53,6 +53,6 @@ class ObserversController < ApplicationController
     end
 
     def observer_params
-      params.require(:observer).permit(:name, :email)
+      params.require(:observer).permit(:name, :email, :ticket)
     end
 end
