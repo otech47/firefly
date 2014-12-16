@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'dashboard' => 'dashboard#welcome'
 
   get 'rules' => 'page#rules'
+  get 'land' => 'page#land'
 
   namespace :api, :path => "api", :defaults => {:format => :json} do
     namespace :v1 do
