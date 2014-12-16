@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  require 'sidekiq/web'
 
   resources :observers
 
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'page#home'
+
+  mount Sidekiq::Web, at: '/sidekiq'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
