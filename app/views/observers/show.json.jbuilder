@@ -1,0 +1,1 @@
+json.extract! @observer, :id, :name, :email, :created_at, :updated_at

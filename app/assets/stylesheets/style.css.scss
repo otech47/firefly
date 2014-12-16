@@ -742,3 +742,17 @@ input {
 .day.alt {
   background: rgba(0, 0, 0, 0.02);
 }
+
+.modal-dialog-center {
+  margin-top: 25%;
+}
+
+.error {
+  color: red;
+}
+
+.observer-success {
+  display: none;
+  text-align: center;
+  margin: 90px 0px;
+}
