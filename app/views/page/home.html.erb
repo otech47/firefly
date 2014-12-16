@@ -1,5 +1,9 @@
 <video autoplay id="bgvid" loop muted>
-  <source src="<%= asset_path('miami.webm') %>" type="video/webm">
+  <% if Rails.env.production? %>
+    <source src="<%= asset_path('miami.webm') %>" type="video/webm">
+  <% else %>
+    <source src="https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.webm" type="video/webm">
+  <% end %>
 </video>
 
 <!-- ********** HEADER ********** -->
