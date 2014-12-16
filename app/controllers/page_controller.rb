@@ -8,4 +8,8 @@ class PageController < ApplicationController
   def rules
     
   end
+
+  def land
+    
+  end
 end
