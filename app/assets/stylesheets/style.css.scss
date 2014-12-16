@@ -513,16 +513,18 @@ input {
 /* DEVELOPER RESOURCES */
 
 .tooltip-inner {
-	max-width: 240px;
+	max-width: 254px;
 	/* If max-width does not work, try using width instead */
-	width: 240px;
+	width: 254px;
+	background-color: #fff;
 }
 
 .code-language {
 	padding: 6px;
+	margin: 2px;
 	display: inline-block;
 	text-align: center;
-	width: 70px;
+	width: 75px;
 	&.javascript {
 		background-color: #f1e05a;
 	}
