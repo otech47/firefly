@@ -38,6 +38,7 @@ gem 'fog'
 gem 'asset_sync'
 
 gem 'httparty'
+gem 'roadie'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
