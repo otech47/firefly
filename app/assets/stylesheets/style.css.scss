@@ -512,39 +512,55 @@ input {
 
 /* DEVELOPER RESOURCES */
 
+.tooltip-inner {
+	max-width: 240px;
+	/* If max-width does not work, try using width instead */
+	width: 240px;
+}
+
 .code-language {
-	.javascript {
-		color: #f1e05a;
+	padding: 6px;
+	display: inline-block;
+	text-align: center;
+	width: 70px;
+	&.javascript {
+		background-color: #f1e05a;
 	}
-	.css {
-		color: #563d7c;
+	&.css {
+		background-color: #563d7c;
 	}
-	.ruby {
-		color: #701516;
+	&.ruby {
+		background-color: #701516;
 	}
-	.python {
-		color: #3581ba;
+	&.python {
+		background-color: #3581ba;
 	}
-	.c-plus-plus {
-		color: #f34b7d;
+	&.c-plus-plus {
+		background-color: #f34b7d;
 	}
-	.c {
-		color: #555;
+	&.c {
+		background-color: #555;
 	}
-	.objective-c {
-		color: #438eff;
+	&.objective-c {
+		background-color: #438eff;
 	}
-	.java {
-		color: #b07219;
+	&.c-sharp {
+		background-color: #555;
 	}
-	.perl {
-		color: #0298c3;
+	&.java {
+		background-color: #b07219;
 	}
-	.php {
-		color: #4f5d95;
+	&.perl {
+		background-color: #0298c3;
 	}
-	.swift {
-		color: #ffac45;
+	&.php {
+		background-color: #4f5d95;
+	}
+	&.swift {
+		background-color: #ffac45;
+	}
+	&.android {
+		background-color: #0f0;
 	}
 }
 
