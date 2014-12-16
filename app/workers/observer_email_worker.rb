@@ -1,6 +1,6 @@
 class ObserverEmailWorker
   include Sidekiq::Worker
-  sidekiq_options queue: "email"
+  sidekiq_options queue: "emails"
   sidekiq_options retry: true
   
   def perform(observer_id)
