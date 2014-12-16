@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#welcome'
 
+  get 'rules' => 'page#rules'
+
   namespace :api, :path => "api", :defaults => {:format => :json} do
     namespace :v1 do
       get 'validate/observer' => 'validate#observer'

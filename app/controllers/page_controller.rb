@@ -4,4 +4,8 @@ class PageController < ApplicationController
 
     @minerFee = HTTParty.get('https://api.coinbase.com/v1/prices/buy?qty=0.0001')
   end
+
+  def rules
+    
+  end
 end
