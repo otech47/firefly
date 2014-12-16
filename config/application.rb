@@ -30,5 +30,15 @@ module Firefly
       #Devise::UnlocksController.layout "frontend"
       #Devise::PasswordsController.layout "frontend"
     end
+
+    ActionMailer::Base.smtp_settings = {
+      :port           => 587,
+      :address        => ENV['SMTP_ADDRESS'],
+      :user_name      => ENV['SMTP_USERNAME'],
+      :password       => ENV['SMTP_PASSWORD'],
+      :enable_starttls_auto => true,
+      :domain         => ENV['SMTP_DOMAIN']
+    }
+    ActionMailer::Base.delivery_method = :smtp
   end
 end
