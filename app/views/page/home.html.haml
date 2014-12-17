@@ -1,0 +1,511 @@
+%video#bgvid{:autoplay => "", :loop => "", :muted => ""}
+  - if Rails.env.production?
+    %source{:src => asset_path('miami.webm'), :type => "video/webm"}
+      %source{:src => asset_path('miami.mp4'), :type => "video/mp4"}
+        %source{:src => asset_path('miami.ogv'), :type => "video/ogg"}
+  - else
+    %source{:src => "https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.webm", :type => "video/webm"}
+      %source{:src => "https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.mp4", :type => "video/mp4"}
+        %source{:src => "https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.ogv", :type => "video/ogg"}
+/ ********** HEADER **********
+%section#home
+#h
+  .container
+    .row
+      %h1
+        Miami Bitcoin
+        %br>/
+        Hackathon
+      %h5 January 9th to 11th - Miami, Florida
+      %h2 Do you want to create code that empowers people all over the world?
+      %p.mt
+        %a.smoothScroll.btn.btn-conf.btn-green.register-now-button{:href => "#registration"} Register Now
+        %a.smoothScroll.btn.btn-conf.btn-clear.learn-more-button{:href => "#initiative"} Learn More
+/ ********** SPONSORS **********
+%section#sponsors
+.container.ptb
+  .row
+    %h2.centered SPONSORS & PARTNERS
+    %hr.aligncenter.mb
+      .col-md-9.col-sm-9.col-lg-12.bigboys
+        %a{:href => "http://bitstop.co/", :target => "_blank"}
+          = image_tag 'sponsors/bitstop.png'
+        %a{:href => "http://www.refreshmiami.com/", :target => "_blank"}
+          = image_tag 'sponsors/refresh_miami.png'
+        %a{:href => "http://pollotropical.com/", :target => "_blank"}
+          = image_tag 'sponsors/pollo_tropical.png', :style => "height: 133px; width: auto;"
+        %a{:href => "https://coinkite.com/", :target => "_blank"}
+          = image_tag 'sponsors/coinkite.png'
+        %a{:href => "https://www.trucoin.com/", :target => "_blank"}
+          = image_tag 'sponsors/trucoin.png'
+        %a{:href => "http://btcmiami.com/", :target => "_blank"}
+          = image_tag 'sponsors/btcmiami.png'
+        %a{:href => "http://www.mdc.edu/main/", :target => "_blank"}
+          = image_tag 'sponsors/miami_dade_college.png'
+        %a{:href => "http://collegecrypto.org/", :target => "_blank"}
+          = image_tag 'sponsors/ccn.jpg'
+        %a{:href => "http://www.miami.edu/", :target => "_blank"}
+          = image_tag 'sponsors/u.jpg'
+        %a{:href => "http://pfunkmedia.com/", :target => "_blank"}
+          = image_tag 'sponsors/pfunk_media.png'
+        %a{:href => "#", :target => "_blank"}
+          = image_tag 'sponsors/rm-and-associates.jpg', :style => "height: 151px; width: auto;"
+        %a{:href => "http://www.amlclass.com/", :target => "_blank"}
+          = image_tag 'sponsors/aml_compliance_solutions.png', :style => "height: 151px; width: auto;"
+/ ********** GREY SECTION - PRIZES **********
+%section#prizes
+#g
+  .container
+    .row
+      %h2.centered PRIZES
+      %hr.aligncenter.mb
+        .col-md-12
+          .col-md-4
+            %i.icon.ion-trophy
+            %div
+              %strong 1st Place - Satoshi
+              %ul
+                %li $10,000 in bitcoins
+                %li Acknowledgement of victory on stage at TNABC
+                %li Free passes to TNABC
+                / <li>One Trezor Hardware Wallet Device</li>
+                %li First place winner of hackathon gets one year of Coinkite professional membership ($300 value)
+                %li Mad respect / street cred
+          .col-md-4
+            %i.icon.ion-ribbon-a
+            %strong 2nd Place - Finney
+            %ul
+              %li $3500 in bitcoins
+              / <li>One Trezor Hardware Wallet Device</li>
+            %i.icon.ion-ribbon-b
+            %strong 3rd Place - Dorian
+            %ul
+              %li $1000 in bitcoins
+              / <li>One Trezor Hardware Wallet Device</li>
+          .col-md-4
+            %i.icon.ion-android-star
+            %p Bonus Multiplier: If a team wins any place, 1st to 3rd using the Coinkite API, they get 1 year of Coinkite business membership ($3000 value)
+/ ********** GREY SECTION - TOPICS **********
+%section#initiative
+.container.ptb
+  .row
+    %h2.centered BLOCKCHAIN BEACH INITIATIVE
+    %hr.aligncenter.mb
+      .col-md-4
+        %tgr
+          %i.icon.ion-social-bitcoin
+        %h3.mb Why Bitcoin?
+        %p Bitcoin has changed the way we transfer value forever. It’s an open protocol that allows for innovation without permission. The code is open source and available to anyone to analyze or build upon. The technology of Bitcoin is revolutionary because it allows anyone to create digital scarcity without need for trusted third parties.
+        %p By removing trusted third parties, we can conduct transactions without the need to trust one another thereby making transactions of any digital property or value extremely efficient and secure. The Bitcoin network is agnostic and doesn’t care about user’s creed, place of birth, race or status - anyone can use Bitcoin. This provides exceptional potential and opportunities for so many revolutionary applications.
+      / /col-md-4
+      .col-md-4
+        %tgr
+          %i.icon.ion-earth
+        %h3.mb Why Miami?
+        %p Because of all the opportunity! Miami is a melting pot of many different ethnicities and it’s also a financial hub to Europe, Central and South America, and the Caribbean. Miami is one of the most unbanked and underbanked cities in the United States with one out of every five people without a bank account. Miami is also a tourist and international business hotspot; people from all over the world travel here for both business and pleasure. Bitcoin can allow anyone in the world to transfer value as long as they have access to the Internet.
+      / /col-md-4
+      .col-md-4
+        %tgr
+          %i.icon.ion-link
+        %h3.mb Who is Blockchain Beach?
+        %p Blockchain Beach is a group of educators, entrepreneurs, colleagues and enthusiasts who all share a common passion for blockchain technology and decentralized cryptocurrency.
+        %p Our mission is to empower the South Florida community through education of Blockchain based technologies. Our primary focus is to provide a consistent delivery of informative content in an effort to motivate and cultivate the entrepreneurial community in South Florida.
+      / /col-md-4
+%section#judges
+#g
+  .container
+    .row
+      %h2.centered JUDGES
+      %hr.aligncenter.mb
+        / Speakers First Row
+        /
+          <div class="col-md-2 centered">
+          <haml:loud> image_tag 'judges/chris_derose.jpg', :class =&amp;gt; 'img-circle', :height =&amp;gt; '120' </haml:loud>
+          </div>
+          <div class="col-md-4">
+          <h4>Chris DeRose</h4>
+          <h6><tg>Community Director of Counterparty Foundation</tg></h6>
+          <p>Chris DeRose is an active Bitcoin evangelist, rubyist, and sometimes pythonista. Chris writes for Bitcoin Magazine, contributes to Let's talk Bitcoin, and loves to talk Smart Contracts and user assets. Chris is the “Community Director” of the Counterparty Foundation, and has two amazing cats that have both been trained to balance on one paw.</p>
+          </div>
+          <div class="col-md-2 centered">
+          <haml:loud> image_tag 'judges/shawn_wilkinson.jpg', :class =&amp;gt; 'img-circle', :height =&amp;gt; '120' </haml:loud>
+          </div>
+          <div class="col-md-4">
+          <h4>Shawn Wilkinson</h4>
+          <h6><tg>Founder &amp; Lead Developer of Storj.io</tg></h6>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+    / /row
+    .row.mt
+      / Speakers Second Row
+      .col-md-2.centered
+        = image_tag 'judges/peter_martinez.jpg', :class => 'img-circle', :height => '120'
+      .col-md-4
+        %h4 Peter Martinez
+        %h6
+          %tg
+            Co-founder of
+            %a{:href => "http://www.accredify.com", :target => "_blank"} Accredify.com
+            \&amp; tech community organizer
+        %p A serial entrepreneur, Peter has successfully launched several tech startups which have engaged millions of users and have been featured on news outlets including BBC News, the Washington Post, USA Today, the Miami Herald, TechCrunch, Mashable, among others.
+      .col-md-2.centered
+        = image_tag 'judges/doug_carrillo.jpg', :class => 'img-circle', :height => '120'
+      .col-md-4
+        %h4 Doug Carrillo
+        %h6
+          %tg
+            Co-Founder of
+            %a{:href => "http://www.bitstop.co", :target => "_blank"} Bitstop
+        %p Doug is an entrepreneur who has started several successful businesses.  He was born and raised in Miami, FL.  Currently, he is a Co-Founder at Bitstop which provides Bitcoin related services for both consumers and businesses in South Florida. He has a fourth degree blackbelt in cryptocurrency mining and working with developers to create useful applications using Bitcoin's blockchain technology.
+    .row.mt
+      / Speakers Second Row
+      .col-md-2.centered
+        %i.icon.ion-person.tba-judge
+      .col-md-4
+        %h4 TBA
+      .col-md-2.centered
+        %i.icon.ion-person.tba-judge
+      .col-md-4
+        %h4 TBA
+      / /End Row of Speakers
+/ ********** WHITE SECTION - SCHEDULE **********
+%section#schedule
+.container.ptb
+  .row
+    %h2.centered SCHEDULE
+    %hr.aligncenter.mb
+      .col-md-4
+        #friday.day
+          %h3.mtb{:style => "text-align: center;  margin-bottom: 15px; margin-top: 28px;"} Friday
+          %h6{:style => "text-align: center;"} Jan 9
+          %ul.events{:style => "margin: 0 auto; width: 293px;"}
+            %li
+              %time 6:30pm
+              %span Registration Starts
+            %li
+              %time 7:00pm
+              %span Drinks &amp; Networking
+            %li
+              %time 7:30pm
+              %span Kickoff &amp; Speakers
+            %li
+              %time 8:00pm
+              %span
+                Pitches
+            %li
+              %time 9:00pm
+              %span Finish forming teams
+            %li
+              %time 10:00pm
+              %span Welcome Reception Ends
+      .col-md-4
+        #saturday.day
+          %h3.mtb{:style => "text-align: center;  margin-bottom: 15px; margin-top: 28px;"} Saturday
+          %h6{:style => "text-align: center;"} Jan 10
+          %ul.events{:style => "margin: 0 auto; width: 293px;"}
+            %li
+              %time 8:00am
+              %span Breakfast
+            %li
+              %time 9:00am
+              %span Begin Hacking
+            %li
+              %time 12:00pm
+              %span Lunch
+            %li
+              %time 7:00pm
+              %span Dinner
+      .col-md-4
+        #sunday.day
+          %h3.mtb{:style => "text-align: center;  margin-bottom: 15px; margin-top: 28px;"} Sunday
+          %h6{:style => "text-align: center;"} Jan 11
+          %ul.events{:style => "margin: 0 auto; width: 293px;"}
+            %li
+              %time 8:00am
+              %span Breakfast
+            %li
+              %time 12:00pm
+              %span Lunch
+            %li
+              %time 1:00pm
+              %span Gut check. Start prepping for presentations
+            %li
+              %time 1:30pm
+              %span Presentations
+            %li
+              %time 4:00pm
+              %span Judging Begins
+            %li
+              %time 5:00pm
+              %span Awards Distributed
+            %li
+              %time 6:00pm
+              %span After Party
+%section#resources
+#g
+  .container
+    .row
+      %h2.centered DEVELOPER RESOURCES
+      %hr.aligncenter.mb
+        .col-md-3.col-md-offset-4
+          %h4 API's
+          %ul
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://bitpay.com/developers", :target => "_blank", :title => "<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div><div class='code-language perl'>Perl</div><div class='code-language android'>Android</div>"} bitpay
+            / php, python, ruby, java, c#, perl, anroid
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://insight.is/", :target => "_blank", :title => "<div class='code-language javascript'>NodeJS</div>"} insight.is
+            / node
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://chain.com/", :target => "_blank", :title => "<div class='code-language ruby'>Ruby</div><div class='code-language javascript'>NodeJS</div><div class='code-language objective-c'>Objective-C</div><div class='code-language swift'>Swift</div><div class='code-language javascript'>Javascript</div>"} chain.com
+            / ruby, objective-c, swift, node, js
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://blockchain.info/api", :target => "_blank", :title => "<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div>"} blockchain.info
+            / python, java, c#, ruby, php
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://coinbase.com/docs/api/overview", :target => "_blank", :title => "<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div><div class='code-language javascript'>NodeJS</div>"} coinbase.com
+            / ruby, php, java, python, node, c#
+            %li
+              %a{"data-toggle" => "tooltip", :href => "https://coinkite.com/faq/developers", :target => "_blank", :title => "<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language javascript'>Javascript</div>"} coinkite.com
+            / python, ruby, php, javascript
+        .col-md-3
+          %h4 Bitcoin Libraries
+          %ul
+            %li
+              %a{:href => "https://github.com/bitcoin/bitcoin", :target => "_blank"} Bitcoin Core
+            %li
+              %a{:href => "https://code.google.com/p/bitcoinj/", :target => "_blank"} bitcoinj
+            %li
+              %a{:href => "https://github.com/nbobtc/bitcoind-php/", :target => "_blank"} bitcoind
+            %li
+              %a{:href => "http://bitcoinjs.org/", :target => "_blank"} bitcoinJS
+            %li
+              %a{:href => "https://github.com/libbitcoin/libbitcoin/", :target => "_blank"} libbitcoin
+            %li
+              %a{:href => "http://bitcore.io/", :target => "_blank"} bitcore.io
+            %li
+              %a{:href => "https://github.com/conformal/btcd", :target => "_blank"} btcd
+            %li
+              %a{:href => "https://github.com/coinbase/toshi/", :target => "_blank"} Toshi
+        .col-md-3.col-md-offset-4
+          %h4 Blockchain Explorer's
+          %ul
+            %li
+              %a{:href => "https://blockchain.info/", :target => "_blank"} blockchain.info
+            %li
+              %a{:href => "http://blockr.io/", :target => "_blank"} blockr.io
+            %li
+              %a{:href => "https://www.biteasy.com/", :target => "_blank"} biteasy.com
+        .col-md-3
+          %h4 Guides
+          %ul
+            %li
+              %a{:href => "https://bitcoin.org/en/developer-guide", :target => "_blank"} bitcoin.org
+            %li
+              %a{:href => "https://github.com/aantonop/bitcoinbook", :target => "_blank"} bitcoinbook
+%section#inspiration
+.container.ptb
+  .row
+    %h2.centered INSPIRATION
+    %hr.aligncenter.mb
+      .col-md-12
+        %p
+          Bitcoin provides a great opportunity for developers. Like the Internet, the Bitcoin network is an open protocol that allows any developer to build whatever comes to imagination. Brilliant minds and talented developers all over the world are using Bitcoin to build great software. VC funding in Bitcoin is measured to set a record year in 2014 with over
+          %a{:href => "http://www.coindesk.com/bitcoin-venture-capital/"} 400 Million Dollars
+          invested into Bitcoin startups. Bitcoin startups are in a hiring frenzy because they understand that Block Chain centered protocols such as Bitcoin will be in high demand. Check out some examples below:
+        .col-md-4
+          %ul
+            %li
+              %a{:href => "https://www.youtube.com/watch?v=HmYP-7pcdhM", :target => "_blank"} Micropayment channels
+            %li
+              %a{:href => "https://www.changetip.com", :target => "_blank"} Social network tipping apps
+            %li
+              %a{:href => "https://github.com/schildbach/bitcoin-wallet", :target => "_blank"} Open source bitcoin wallets
+            %li
+              %a{:href => "https://www.openbazaar.com", :target => "_blank"} Decentralized market places
+          %ul
+        .col-md-4
+          %ul
+            %li
+              %a{:href => "https://www.darkwallet.is/", :target => "_blank"} Privacy Bitcoin wallets
+            %li
+              %a{:href => "https://purse.io/", :target => "_blank"} Financial services
+            %li
+              %a{:href => "http://twister.net.co/", :target => "_blank"} Decentralized p2p microblogging services
+            %li
+              %a{:href => "https://onename.io/", :target => "_blank"} Decentralized identity services
+        .col-md-4
+          %ul
+            %li
+              %a{:href => "https://www.bitwage.co/", :target => "_blank"} Payroll services
+            %li
+              %a{:href => "http://www.proofofexistence.com/", :target => "_blank"} Notary services
+            %li
+              %a{:href => "https://www.livingroomofsatoshi.com/", :target => "_blank"} Bill payment services
+            %li
+              %a{:href => "https://www.swarm.co/", :target => "_blank"} Crowdfunding platorms
+%section.testimonials
+  .container
+    .row
+      .col-sm-6
+        = image_tag 'map.png', :style => 'width: 100%; max-height: 419px;'
+      .col-sm-6.section-bg-grey.centered
+        #carousel-example-generic.carousel.slide{"data-ride" => "carousel", :style => "height: 191px;"}
+          / Wrapper for slides
+          .carousel-inner
+            .item.active
+              %h2 Low transaction fees & High speed
+              %h3
+                Typically only a miners fee of 0.0001 btc ($#{@minerFee['subtotal']['amount']}) can cover the cost of any size transaction. Transactions are fast and settled permanetly!
+            .item
+              %h2 Open Source
+              %h3 The protocol is open source so you know the rules. The system is transparent and does not require you to trust other user. Trust is baked into Bitcoin making it trustworthy for you.
+            .item
+              %h2 Decentralized
+              %h3 Like Bittorrent it is run by people all over the world so there is no central point to shutdown
+            .item
+              %h2 For the poeple by the people
+              %h3 Bitcoin is peer to peer. That means no middle men if you dont need them. Just like us, there are people all over the world hacking away at the future of payments.
+%section#registration
+.container.ptb
+  .row
+    %h2.centered REGISTRATION
+    %hr.aligncenter.mb
+      .col-md-5.col-md-offset-1
+        .row.price-tag
+          .col-sm-5.centered
+            %h1 FREE
+            %h5 PARTICIPANT
+          .col-sm-7.centered
+            %h4 DAY 1 & 2 & 3
+            %p
+              Food Included
+              %br/
+              Access to all areas
+              %br/
+              %br/
+              = link_to 'Register', new_user_registration_path, :class => "btn btn-conf btn-green"
+      .col-md-5
+        .row.price-tag-green
+          .col-sm-5.centered
+            %h1 FREE
+            %h5 OBSERVER &amp; AFTER PARTY
+          .col-sm-7.centered
+            %h4 DAY 3
+            %p
+              Presentation Observer
+              %br/
+              After Party Access
+              %br/
+              %br/
+              %button.btn.btn-conf.btn-clear{"data-target" => "#observer", "data-toggle" => "modal"} Register
+  .row.mt
+    .col-md-4
+      %h3
+        %tgr Can I bring a team?
+      %p Yes, though we have a limit of 5 members per team. You can bring your friends or you can team up with other hackers on site. No matter what you choose, be ready to hack!
+    .col-md-4
+      %h3
+        %tgr Do you own my hack?
+      %p No, all code is yours. This hackathon is for you to have some fun, meet great people, do some good -- and have a chance to win $10k.
+    .col-md-4
+      %h3
+        %tgr Should I bring my pyjamas?
+      %p Expect to stay overnight, so bring whatever you need to get you through a 24 hour hack fest. We'll provide some sleep spaces for those who need to crash or when the energy drink starts to ebb. Remember you are in a public forum, so do cover up.
+    .col-md-4
+      %h3
+        %tgr What kind of code can I write?
+      %p All breeds of code welcome.
+  .row.mt
+    %h2.centered RULES & TERMS
+    %hr.aligncenter.mb
+      .col-md-12.rules-terms
+        %ol
+          %li
+            %h3 Participants must be 18 years of age or older unless accompanied by a legal guardian.
+          %li
+            %h3 Eligible participants may participate individually or as a team up to a limit of 5 people per team. A team can be just one person or up to five people.
+          %li
+            %h3 Participants must register on www.MiamiBitcoinHackathon.com before January 7, 2015 12:00 a.m. Eastern Standard Time.
+          %li
+            %h3 Submitted app must incorporate Bitcoin.
+          %li
+            %h3 Each Participant is eligible to receive only one prize from Blockchain Beach, whether individually or as a group.
+          %li
+            %h3 Winners must accept prizes in the form of bitcoin. Conversion rates will be Coinbase spot sell price at the time of transfer.
+          %li
+            %h3 All submitted code must be created between the Twenty-eight (28) hour time period start and stop time. Any participant or team who uses code, which has been created before the hackathon start time will automatically be disqualified.
+          %li
+            %h3 The team’s project must be hosted in Github in a public repo. Your team page must be updated with the repo’s url.
+          %li
+            %h3 Participants can only contribute code toward their respective team and cannot share code, ideas or contribute code towards other teams.
+          %li
+            %h3
+              By submitting your code, you agree to the #{link_to 'terms and conditions.', rules_path, :target => "blank"}
+          %li
+            %h3 Blockchain Beach registered agents, directors and officers at the time of this event cannot participate in this hackathon.
+/ ********** FOOTER **********
+%section#contact
+#f
+  .container
+    .row.centered
+      %h2 Don't miss any news. Subscribe below to be updated.
+      .col-md-6.col-md-offset-3.mt
+        %form{:action => "register.php", :enctype => "plain", :method => "post", :role => "form"}
+          %input.subscribe-input{:name => "email", :placeholder => "Enter your e-mail address...", :required => "", :type => "email"}
+            %button.btn.btn-conf.btn-green{:type => "submit"} Subscribe
+    .row.mt
+      .col-md-6.col-md-offset-3
+        .row
+          .col-sm-5.col-sm-offset-1
+            %h3 Welcome Reception &amp; Main Event Site
+            %h5
+              UM Life Science and Technology Park
+              %br/
+              1951 Northwest 7th Avenue
+              %br/
+              Miami, FL 33136
+              %br/
+              United States
+          .col-sm-5
+            %h3 After Party Location
+            %h5
+              Brick House
+              %br/
+              187 Northwest 28th Street
+              %br/
+              Wynwood, FL 33127
+              %br/
+              United States
+/ ********** MAP**********
+#map-contact
+#observer.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-dialog-center
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+          %span.sr-only Close
+        %h4#myModalLabel.modal-title Observer & After Party Registration
+      = form_for(@observer, remote: true, :html => {:class => "form-horizontal"}) do |f|
+        .modal-body
+          .form-group
+            = f.label :name, :class => "col-sm-2 control-label"
+            .col-sm-10
+              = f.text_field :name, :class => "form-control"
+          .form-group
+            = f.label :email, :class => "col-sm-2 control-label"
+            .col-sm-10
+              = f.text_field :email, :class => "form-control"
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", :style => "float: left;", :type => "button"} Never Mind
+          = f.submit 'Register', :class => 'btn btn-primary'
+#registration_process.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-dialog-center
+    .modal-content{:style => "text-align: center;"}
+      %i.fa.fa-circle-o-notch.fa-spin.fa-5x.observer-validator-loading{:style => "margin: 90px 0px;"}
+      .observer-success
+        %i.fa.fa-smile-o{:style => "font-size: 189px;"}
+        %h1 Success
+        %h2 See you January 11 at 2:00 pm
+        %h2 More information will be emailed soon.
