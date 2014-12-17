@@ -19,7 +19,7 @@
 /* iPhone 5 & 5S in landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
   #h {
-    min-height: 486px;
+    height: 486px;
     padding-top: 41px;
     background: url(image-path('header.jpg')) no-repeat center top;
     background-position: center center;
@@ -96,7 +96,46 @@
 /* iPad mini in landscape */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)  {
   #h {
-    min-height: 76%;
+    height: 76%;
+    padding-top: 74px;
+    background: url(image-path('header.jpg')) no-repeat center top;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .container {
+
+      .row {
+
+        h1 {
+          font-size: 56px;
+        }
+      }
+
+      .mt {
+
+        .register-now-button {
+          margin: 0px;
+        }
+
+        .learn-more-button {
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* iPad mini in portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)  {
+  #h {
+    height: 55%;
     padding-top: 74px;
     background: url(image-path('header.jpg')) no-repeat center top;
     background-position: center center;
