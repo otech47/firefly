@@ -6,10 +6,10 @@ class PageController < ApplicationController
   end
 
   def rules
-    
+    render :layout => 'lean'
   end
 
   def land
-    
+    render :layout => 'lean'
   end
 end
