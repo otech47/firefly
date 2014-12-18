@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  before_create :generate_ticket
+  before_create :generate_ticket #before creating the user generate a unique ticket string
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
