@@ -32,6 +32,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'ionicons-rails', '~> 1.5.2'
 gem 'gravatar_image_tag'
+gem 'jquery-datatables-rails', '~> 3.1.1'
 
 gem 'nokogiri'
 gem 'fog'
