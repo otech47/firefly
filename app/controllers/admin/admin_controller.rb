@@ -1,7 +1,7 @@
 class Admin::AdminController < ApplicationController
   before_action :authenticate_user!
   before_action :if_admin
-  layout 'lean'
+  layout 'admin'
 
   def dashboard
     @hackers = User.where(:admin => false)
