@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin, :path => "admin" do
-    get 'dashboard' => 'admin#dashboard'
-    get 'observer' => 'admin#observer'
+    get 'hackers' => 'admin#hackers'
+    get 'observers' => 'admin#observers'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

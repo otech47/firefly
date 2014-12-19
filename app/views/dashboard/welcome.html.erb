@@ -1,9 +1,22 @@
 <div class="container ptb">
   <div class="row">
     
-    <div class="col-md-4">
-      s
+    <div class="col-md-4" style="background: #194374;">
+      <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail hacker-avatar") %>
+
+      <ul class="hacker-info">
+        <li>
+          <h3><%= current_user.name %></h3>
+        </li>
+        <li>
+          <h3><%= current_user.email %></h3>
+        </li>
+        <li>
+          <h3>Team:</h3>
+        </li>
+      </ul>
     </div>
+
     <div class="col-md-8">
       s
     </div>
