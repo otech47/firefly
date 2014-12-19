@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :teams
+
   require 'sidekiq/web'
 
   resources :observers
