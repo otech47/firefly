@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-12
+      = link_to "Create A Team", new_team_path, :class => "btn btn-info pull-right", :style => "margin: 0px 16px 26px 0px;"
+  .row
+    .col-md-12
+      - @teams.each do |team|
+        .event.event-61.col-lg-3.col-md-4.col-sm-6{:style => "margin-bottom: 27px;"}
+          .event-wrapper
+            = link_to team do
+              .inner
+                .image-wrap
+                  %img{:alt => team.name, :src => team.avatar, :style => "width: 100%;"}/
+                %h3= team.name
