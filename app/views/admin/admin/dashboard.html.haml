@@ -1,14 +1,17 @@
-%table.table.table-hover
-  %thead
-    %tr
-      %th Name
-      %th Email
-      %th BTC Address
-      %th Ticket
-  %tbody
-    - @hackers.each do |hacker|
-      %tr
-        %td= hacker.name
-        %td= hacker.email
-        %td= hacker.btc_address
-        %td= hacker.ticket
+.container.ptb
+  .row
+    .col-md-12
+      %table.table.table-hover.datatable
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th BTC Address
+            %th Ticket
+        %tbody
+          - @hackers.each do |hacker|
+            %tr
+              %td= hacker.name
+              %td= hacker.email
+              %td= hacker.btc_address
+              %td= hacker.ticket
