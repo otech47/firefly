@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219230246) do
+ActiveRecord::Schema.define(version: 20141219233206) do
 
   create_table "observers", force: true do |t|
     t.string   "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20141219230246) do
     t.string   "btc_address"
     t.string   "ticket"
     t.boolean  "admin",                  default: false, null: false
+    t.integer  "team_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

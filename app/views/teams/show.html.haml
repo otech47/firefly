@@ -1,0 +1,8 @@
+.container
+  .row
+    %h2 Team Members
+    %hr.aligncenter.mb{:style => "margin-left: 0px; margin-right: 0px;"}
+    .col-md-2
+      - @team.users.each do |member|
+        = gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;")
+        %h3= member.name
