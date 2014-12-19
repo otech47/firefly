@@ -3,6 +3,8 @@ class TeamsController < ApplicationController
 
   respond_to :html
 
+  layout 'clean'
+
   def index
     @teams = Team.all
     respond_with(@teams)
