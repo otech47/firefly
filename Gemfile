@@ -40,6 +40,8 @@ gem 'asset_sync'
 
 gem 'httparty'
 
+gem 'identicon'
+
 gem 'roadie'
 gem 'roadie-rails'
 

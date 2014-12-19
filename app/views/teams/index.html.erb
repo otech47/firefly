@@ -1,31 +1,23 @@
-<h1>Listing teams</h1>
+<div class="container ptb">
+  <div class="row">
+    
+    <div class="col-md-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Repo</th>
-      <th>Video</th>
-      <th>Admin</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <% @teams.each do |team| %>
+        <div class="event event-61 col-lg-3 col-md-4 col-sm-6" style="margin-bottom: 27px;">
+          <div class="event-wrapper">
+            <%= link_to team do %>
+              <div class="inner">
+                
+                <div class="image-wrap"><img style="width: 100%;" alt="<%= team.name %>" src="<%= team.avatar %>"></div>
+                <h3><%= team.name %></h3>
+              </div>
+            <% end %>  
+          </div>
+        </div>
+      <% end %>
 
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.name %></td>
-        <td><%= team.repo %></td>
-        <td><%= team.video %></td>
-        <td><%= team.admin %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    </div>
 
-<br>
-
-<%= link_to 'New Team', new_team_path %>
+  </div>
+</div>
