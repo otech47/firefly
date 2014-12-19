@@ -1,0 +1,15 @@
+.container.ptb
+  .row
+    .col-md-12
+      %table.table.table-hover.datatable
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Ticket
+        %tbody
+          - @observers.each do |observer|
+            %tr
+              %td= observer.name
+              %td= observer.email
+              %td= observer.ticket

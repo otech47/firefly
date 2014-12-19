@@ -44,10 +44,10 @@
               .navbar-collapse.collapse{:style => "height: 0px;"}
                 %ul.nav.navbar-nav
                   %li
-                    %a{"analytics-event" => "Logged-in Home", "analytics-label" => "Top Nav", "analytics-on" => "click", :href => "/"}
+                    = link_to admin_dashboard_path do
                       %span Hackers
                   %li
-                    %a{"analytics-event" => "Money", "analytics-label" => "Top Nav", "analytics-on" => "click", :href => "/money"}
+                    = link_to admin_observer_path do
                       %span Observers / After Party
                   %li
                     = link_to destroy_user_session_path, :class => "logout-link", :method => :delete do

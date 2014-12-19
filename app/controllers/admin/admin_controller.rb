@@ -7,6 +7,10 @@ class Admin::AdminController < ApplicationController
     @hackers = User.where(:admin => false)
   end
 
+  def observer
+    @observers = Observer.all
+  end
+
 
   def if_admin
     if current_user.admin == false
