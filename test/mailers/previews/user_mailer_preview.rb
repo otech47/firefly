@@ -6,4 +6,8 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.observer_ticket('1')
   end
 
+  def participant_ticket
+    UserMailer.participant_ticket('1')
+  end
+
 end

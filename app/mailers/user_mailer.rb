@@ -10,7 +10,12 @@ class UserMailer < ActionMailer::Base
   def observer_ticket(observer_id)
     @observer = Observer.find(observer_id)
 
-    mail to: @observer.email
     mail to: @observer.email, subject: "Miami Bitcoin Hackathon - Observer Ticket"
+  end
+
+  def participant_ticket(participant_id)
+    @participant = User.find(participant_id)
+
+    mail to: @participant.email, subject: "Miami Bitcoin Hackathon - Participant Ticket"
   end
 end
