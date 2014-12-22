@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :api, :path => "api", :defaults => {:format => :json} do
     namespace :v1 do
       get 'validate/observer' => 'validate#observer'
+      get 'qrcode/generate' => 'qrcode#generate'
     end
   end
 
