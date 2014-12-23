@@ -71,7 +71,9 @@ $(function () {
         required: true,
         checkemail: true
       },
-      "observer[name]": "required"
+      "observer[name]": {
+        required: true
+      }
     },
     messages: {
       "observer[name]": "Please enter your name",
