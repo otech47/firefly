@@ -12,13 +12,4 @@ class PageController < ApplicationController
   def land
     render :layout => 'lean'
   end
-
-  def coje
-    @participants = User.where(:admin => false)
-
-    @participants.each do |participant|
-      ParticipantEmailWorker.perform_in(15.seconds, participant.id)
-    end
-    render json: { :data => @participants }
-  end
 end
