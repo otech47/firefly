@@ -81,16 +81,14 @@
       .container
         .row
           .col-md-8
-            = image_tag 'blockchain_beach_logo.jpg'
+            = image_tag 'blockchain_beach_logo.jpg', :style => "height: auto; width: 149px;"
           .col-md-4
-            %p.alignright
-              %a{:href => "https://twitter.com/miabitcoinhack"}
-                %i.ion-social-twitter
-              %a{:href => "#"}
+            %p.alignright{:style => "margin-top: 41px;"}
+              %a{:href => "https://twitter.com/miabitcoinhack", :target => "_blank"}
                 %i.ion-social-instagram
-              %a{:href => "https://www.facebook.com/miamibitcoinhackathon"}
+              %a{:href => "https://www.facebook.com/miamibitcoinhackathon", :target => "_blank"}
                 %i.ion-social-facebook
-              %a{:href => "https://github.com/blockchain-beach"}
+              %a{:href => "https://github.com/blockchain-beach", :target => "_blank"}
                 %i.ion-social-github
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
