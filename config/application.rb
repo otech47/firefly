@@ -36,9 +36,10 @@ module Firefly
       :address        => ENV['SMTP_ADDRESS'],
       :user_name      => ENV['SMTP_USERNAME'],
       :password       => ENV['SMTP_PASSWORD'],
-      :enable_starttls_auto => true,
-      :domain         => ENV['SMTP_DOMAIN']
+      :domain         => ENV['SMTP_DOMAIN'],
+      :authentication => :plain,
     }
     ActionMailer::Base.delivery_method = :smtp
+
   end
 end

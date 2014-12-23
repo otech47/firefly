@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   include Roadie::Rails::Automatic
-  default from: "hello@miamibitcoinhackathon.com"
+  default from: "Miami Bitcoin Hackathon <hello@mg.miamibitcoinhackathon.com>"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

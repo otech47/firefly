@@ -34,7 +34,7 @@ class ObserversController < ApplicationController
   def create
     @observer = Observer.new(observer_params)
     flash[:notice] = 'Observer was successfully created.' if @observer.save
-    #ObserverEmailWorker.perform_in(15.seconds, @observer.id)
+    ObserverEmailWorker.perform_in(15.seconds, @observer.id)
     respond_with(@observer)
   end
 
