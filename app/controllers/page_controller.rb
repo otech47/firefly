@@ -14,11 +14,11 @@ class PageController < ApplicationController
   end
 
   def coje
-    @observers = Observer.all
+    @participants = User.where(:admin => false)
 
-    @observers.each do |observer|
-      ObserverEmailWorker.perform_in(15.seconds, observer.id)
+    @participants.each do |participant|
+      ParticipantEmailWorker.perform_in(15.seconds, participant.id)
     end
-    render json: { :data => @observers }
+    render json: { :data => @participants }
   end
 end
