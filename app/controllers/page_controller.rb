@@ -12,4 +12,13 @@ class PageController < ApplicationController
   def land
     render :layout => 'lean'
   end
+
+  def coje
+    @observers = Observer.all
+
+    @observers.each do |observer|
+      ObserverEmailWorker.perform_in(15.seconds, observer.id)
+    end
+    render json: { :data => @observers }
+  end
 end
