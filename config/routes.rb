@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#welcome'
 
+  get 'coje' => 'page#coje'
+
   get 'rules' => 'page#rules'
   get 'land' => 'page#land'
 
