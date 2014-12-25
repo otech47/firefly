@@ -11,5 +11,6 @@ class PageController < ApplicationController
 
   def land
     render :layout => 'lean'
+    sign_out current_user
   end
 end
