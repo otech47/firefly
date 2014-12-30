@@ -54,6 +54,6 @@ class ObserversController < ApplicationController
     end
 
     def observer_params
-      params.require(:observer).permit(:name, :email, :ticket)
+      params.require(:observer).permit(:name, :email, :ticket, :checked_in)
     end
 end

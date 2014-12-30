@@ -17,6 +17,10 @@ class API::V1::AttendeesController < ApplicationController
         @name = @observer.name
         @email = @observer.email
 
+        @observer.update_attributes(
+          :checked_in => true
+        )
+
         @response = {
           :status => '200',
           :data => {
@@ -47,6 +51,10 @@ class API::V1::AttendeesController < ApplicationController
       if @partition
         @name = @partition.name
         @email = @partition.email
+
+        @partition.update_attributes(
+          :checked_in => true
+        )
 
         @response = {
           :status => '200',
