@@ -11,15 +11,75 @@ class API::V1::AttendeesController < ApplicationController
     if @payload.include? 'observer'
       @type = 'observer'
       @ticket = @payload.partition('-').last
+      @observer = Observer.find_by_ticket(@payload)
+
+      if @observer
+        @name = @observer.name
+        @email = @observer.email
+
+        @response = {
+          :status => '200',
+          :data => {
+            :ticket => {
+              :type => @type,
+              :ticket => @ticket,
+              :raw => @payload
+            },
+            :person => {
+              :name => @name,
+              :email => @email
+            }
+          }
+        }
+      else
+        @response = {
+        :status => '500',
+          :data => {
+            :error => 'No ticket found'
+          }
+        }
+      end
     elsif @payload.include? 'participant'
       @type = 'partition'
       @ticket = @payload.partition('-').last
+      @partition = User.find_by_ticket(@payload)
+
+      if @partition
+        @name = @partition.name
+        @email = @partition.email
+
+        @response = {
+          :status => '200',
+          :data => {
+            :ticket => {
+              :type => @type,
+              :ticket => @ticket,
+              :raw => @payload
+            },
+            :person => {
+              :name => @name,
+              :email => @email
+            }
+          }
+        }
+      else
+        @response = {
+        :status => '500',
+          :data => {
+            :error => 'No ticket found'
+          }
+        }
+      end
+    else
+      @response = {
+        :status => '500',
+        :data => {
+          :error => 'No ticket found'
+        }
+      }
     end
 
-    render json: { 
-      :type => @type,
-      :ticket => @ticket
-    }
+    render json: @response
   end
 
   def cors_set_access_control_headers
