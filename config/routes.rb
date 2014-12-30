@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'validate/observer' => 'validate#observer'
       get 'qrcode/generate' => 'qrcode#generate'
+      get 'attendees/checkin' => 'attendees#check_in'
     end
   end
 
