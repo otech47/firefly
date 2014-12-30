@@ -5,7 +5,7 @@ class Observer < ActiveRecord::Base
 
     def generate_ticket
       begin
-        self.ticket = SecureRandom.hex
+        self.ticket = "observer-#{SecureRandom.hex}"
       end while self.class.exists?(ticket: ticket)
     end
 end
