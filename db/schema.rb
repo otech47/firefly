@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20141230215636) do
     t.boolean  "checked_in", default: false, null: false
   end
 
+  create_table "teams", force: true do |t|
+    t.string   "name"
+    t.string   "repo"
+    t.string   "video"
+    t.integer  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "avatar"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -40,6 +50,7 @@ ActiveRecord::Schema.define(version: 20141230215636) do
     t.string   "btc_address"
     t.string   "ticket"
     t.boolean  "admin",                  default: false, null: false
+    t.integer  "team_id"
     t.boolean  "checked_in",             default: false, null: false
   end
 

@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   def send_email
     ParticipantEmailWorker.perform_in(15.seconds, self.id)
   end
+  
+  belongs_to :team
 
   private
 

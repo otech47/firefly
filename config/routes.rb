@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :teams
+
   require 'sidekiq/web'
 
   resources :observers
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
       get 'validate/observer' => 'validate#observer'
       get 'qrcode/generate' => 'qrcode#generate'
       get 'attendees/checkin' => 'attendees#check_in'
+      post 'process/cameratag' => 'process#cameratag'
     end
   end
 
