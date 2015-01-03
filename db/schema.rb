@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219233206) do
+ActiveRecord::Schema.define(version: 20141230215636) do
 
   create_table "observers", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141219233206) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ticket"
+    t.boolean  "checked_in", default: false, null: false
   end
 
   create_table "teams", force: true do |t|
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 20141219233206) do
     t.string   "btc_address"
     t.string   "ticket"
     t.boolean  "admin",                  default: false, null: false
+    t.boolean  "checked_in",             default: false, null: false
     t.integer  "team_id"
   end
 

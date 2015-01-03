@@ -1,6 +1,7 @@
 class Team < ActiveRecord::Base
   require 'identicon'
   before_create :generate_avatar
+  after_create :set_admin
 
   has_many :users
 
@@ -8,5 +9,13 @@ class Team < ActiveRecord::Base
 
     def generate_avatar
       self.avatar = Identicon.data_url_for self.name
+    end
+
+    def set_admin
+    	@admin = User.find(self.admin)
+
+    	@admin.update_attributes(
+        :team_id => self.id
+      )
     end
 end
