@@ -94,11 +94,13 @@
               <a href="/" class="navbar-brand visible-xs"><img src=""></a>
               <div class="navbar-collapse collapse" style="height: 0px;">
                 <ul class="nav navbar-nav">
-                  <li>
-                    <a href="/" analytics-on="click" analytics-event="Logged-in Home" analytics-label="Top Nav">
-                      <span>My Team</span>
-                    </a>
-                  </li>
+                  <% if current_user.team_id.present? %>
+                    <li>
+                      <%= link_to team_path(current_user.team_id) do %>
+                        <span>My Team</span>
+                      <% end %>
+                    </li>
+                  <% end %>
                   <li>
                     <%= link_to teams_path do %>
                       <span class="">Teams</span>
