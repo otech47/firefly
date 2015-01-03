@@ -1,13 +1,15 @@
 <script type="text/javascript">
-  CameraTag.observe('team_video', 'published', function(){
-    console.log('this video has been published!');
+  $(function () {
+    CameraTag.observe('team_video', 'published', function(){
+      console.log('this video has been published!');
 
-    myCamera = CameraTag.cameras["team_video"];
+      myCamera = CameraTag.cameras["team_video"];
 
-    var video_data_default = {team_id:'<%= @team.id %>'};
-    myCamera.addVideoData(video_data_default);
+      var video_data_default = {team_id:'<%= @team.id %>'};
+      myCamera.addVideoData(video_data_default);
 
-    console.log(myCamera.getVideo());
+      console.log(myCamera.getVideo());
+    });
   });
 </script>
 
@@ -16,7 +18,15 @@
     <h2>30 Second Pitch</h2>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
       <% if @team.video.present? %>
-        Something
+        
+        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+          controls preload="auto" width="640" height="264"
+          poster="<%= @video['formats'][0]['thumbnail_url'] %>"
+          data-setup='{"example_option":true}'>
+          <source src="<%= @video['formats'][0]['mp4_url'] %>" type='video/mp4' />
+          <source src="<%= @video['formats'][0]['flv_url'] %>" type='video/flv' />
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
       <% else %>
         <camera data-app-id="a-51bf9420-75aa-0132-1522-22000a8c0328" data-sources="record,sms" id="team_video" style="width: 720px; height: 440px;"></camera>
       <% end %>
