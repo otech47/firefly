@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   namespace :api, :path => "api", :defaults => {:format => :json} do
     namespace :v1 do
       get 'validate/observer' => 'validate#observer'
+      post 'process/cameratag' => 'process#cameratag'
     end
   end
 

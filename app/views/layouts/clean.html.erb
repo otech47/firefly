@@ -35,37 +35,7 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-    <!-- MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-    <script type="text/javascript">
-      // When the window has finished loading create our google map below
-      google.maps.event.addDomListener(window, 'load', init);
-
-      function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-          // How zoomed in you want the map to start at (always required)
-          zoom: 12,
-
-          scrollwheel: false,
-
-          // The latitude and longitude to center the map (always required)
-          center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-          // How you would like to style the map.
-          // This is where you would paste any style found on Snazzy Maps.
-          styles: [ {   featureType:'water',    stylers:[{color:'#03C9A9'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
-        };
-
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map-contact');
-
-        // Create the Google Map using out element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-       }
-    </script>
+    <script src='https://cameratag.com/api/v4/js/cameratag.js' type='text/javascript'></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

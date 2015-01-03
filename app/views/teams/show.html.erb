@@ -1,0 +1,37 @@
+<script type="text/javascript">
+  CameraTag.observe('team_video', 'published', function(){
+    console.log('this video has been published!');
+
+    myCamera = CameraTag.cameras["team_video"];
+
+    var video_data_default = {team_id:'<%= @team.id %>'};
+    myCamera.addVideoData(video_data_default);
+
+    console.log(myCamera.getVideo());
+  });
+</script>
+
+<div class="container">
+  <div class="row">
+    <h2>30 Second Pitch</h2>
+    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
+      <% if @team.video.present? %>
+        Something
+      <% else %>
+        <camera data-app-id="a-51bf9420-75aa-0132-1522-22000a8c0328" data-sources="record,sms" id="team_video" style="width: 720px; height: 440px;"></camera>
+      <% end %>
+    </hr>
+  </div>
+  <div class="row">
+    <h2>Team Members</h2>
+    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
+    <div class="col-md-2">
+      <% @team.users.each do |member| %>
+        <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+        <h3>
+          <%= member.name %>
+        </h3>
+      <% end %>
+    </div>
+  </div>
+</div>
