@@ -14,7 +14,7 @@ class Admin::AdminController < ApplicationController
 
   def if_admin
     if current_user.admin == false
-      redirect_to root_url
+      redirect_to dashboard_path
     end
   end
 end

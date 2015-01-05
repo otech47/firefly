@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if resource.admin == true
       admin_hackers_path
     else
-      root_url
+      dashboard_path
     end
   end
 end
