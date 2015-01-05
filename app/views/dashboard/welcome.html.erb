@@ -11,9 +11,11 @@
         <li>
           <h3><%= current_user.email %></h3>
         </li>
-        <li>
-          <h3>Team:</h3>
-        </li>
+        <% if current_user.team_id.present? %>
+          <li>
+            <h3>Team: <%= link_to current_user.team.name, team_path(current_user.team_id) %></h3>
+          </li>
+        <% end %>
       </ul>
     </div>
 
