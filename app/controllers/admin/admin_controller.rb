@@ -3,11 +3,11 @@ class Admin::AdminController < ApplicationController
   before_action :if_admin
   layout 'admin'
 
-  def dashboard
+  def hackers
     @hackers = User.where(:admin => false)
   end
 
-  def observer
+  def observers
     @observers = Observer.all
   end
 
