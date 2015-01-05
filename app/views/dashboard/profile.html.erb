@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-4" style="background: #194374; padding-bottom: 42px;">
+      <%= gravatar_image_tag(@hacker.email.gsub('spam', 'mdeering'), :alt => @hacker.name, :class => "img-thumbnail hacker-avatar") %>
+
+      <ul class="hacker-info">
+        <li>
+          <h3><%= @hacker.name %></h3>
+        </li>
+        <% if @hacker.team_id.present? %>
+          <li>
+            <h3>Team: <%= link_to @hacker.team.name, team_path(@hacker.team_id) %></h3>
+          </li>
+        <% end %>
+        <% if @hacker.btc_address.present? %>
+          <li>
+            <h3>BTC Address</h3>
+            <img src="http://miamibitcoinhackathon.com/api/v1/qrcode/generate?code=<%= @hacker.btc_address %>" style="display: block;" width="163px">
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-md-8">
+      s
+    </div>
+
+  </div>
+</div>

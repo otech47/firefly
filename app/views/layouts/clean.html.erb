@@ -80,9 +80,9 @@
                     <% end %>
                   </li>
                   <li>
-                    <a href="/money" analytics-on="click" analytics-event="Money" analytics-label="Top Nav">
+                    <%= link_to hacker_profile_path(current_user.id) do %>
                       <span class="">Profile</span>
-                    </a>
+                    <% end %>
                   </li>
                   <li class="dropdown hidden-xs">
                     <a href="#" class="dropdown-toggle setting-icon-orange" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

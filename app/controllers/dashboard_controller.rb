@@ -4,4 +4,8 @@ class DashboardController < ApplicationController
 
   def welcome
   end
+
+  def profile
+  	@hacker = User.find(params[:id])
+  end
 end

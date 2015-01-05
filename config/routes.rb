@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, :path => '', :path_names => { :sign_in => "signin", :sign_out => "logout", :sign_up => "registration" }, :controllers => { :registrations => "registrations" }
 
   get 'dashboard' => 'dashboard#welcome'
+  get 'hacker/:id' => 'dashboard#profile', :as => 'hacker_profile'
 
   get 'rules' => 'page#rules'
   get 'land' => 'page#land'
