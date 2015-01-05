@@ -73,6 +73,10 @@
         %a.smoothScroll{:href => "#inspiration"} Inspiration
         %a.smoothScroll{:href => "#registration"} Registration
         %a.smoothScroll{:href => "#contact"} Contact
+        - if user_signed_in?
+          %a{:href => "/dashboard"} Dashboard
+        - else
+          %a{:href => "/signin"} Signin
       #menuToggle
         %i.ion-home{:style => "font-size: 24px;"}
     = yield
