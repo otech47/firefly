@@ -11,7 +11,7 @@
   });
 </script>
 
-<div class="container">
+<div class="container" style="margin-bottom: 50px;">
   <div class="row">
     <div style="overflow: hidden;">
       <h2 style="float: left;">30 Second Pitch</h2>
@@ -37,7 +37,12 @@
     </hr>
   </div>
   <div class="row">
-    <h2>Team Members</h2>
+    <div style="overflow: hidden; margin-top: 25px;">
+      <h2 style="float: left;">Team Members</h2>
+      <% if @team.admin == current_user.id %>
+      <button class="btn btn-info add-team-member" style="float: right; margin: 15px 29px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+      <% end %>
+    </div>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
     <div class="col-md-2">
       <% @team.users.each do |member| %>
@@ -46,6 +51,34 @@
           <%= member.name %>
         </h3>
       <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="add_member" tabindex="-1" role="dialog" aria-labelledby="AddTeamMember" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="AddTeamMember">Add A Member To The Team</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>New Member Email Address</label>
+            <input type="email" class="form-control new-member-email-address">
+          </div>
+
+          <div>
+            <i class="fa fa-cog fa-spin fa-5x"></i>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer" style="overflow: hidden;">
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="float: left;">Close</button>
+        <button type="button" class="btn btn-primary">Add Member</button>
+      </div>
     </div>
   </div>
 </div>

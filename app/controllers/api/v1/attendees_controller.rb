@@ -90,6 +90,27 @@ class API::V1::AttendeesController < ApplicationController
     render json: @response
   end
 
+  def hacker_look_up
+    @hacker = User.find_by_email(params['email'])
+
+    if @hacker
+      @response = {
+        :status => '200',
+        :data => {
+          :name => @hacker.name,
+          :email => @hacker.email,
+          :btc_address => @hacker.btc_address
+        }
+      }
+    else
+      @response = {
+        :status => '500'
+      }
+    end
+
+    render json: @response
+  end
+
   def cors_set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'

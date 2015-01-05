@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get 'qrcode/generate' => 'qrcode#generate'
       get 'attendees/checkin' => 'attendees#check_in'
       post 'process/cameratag' => 'process#cameratag'
+      get 'process/lookup/hacker' => 'attendees#hacker_look_up'
     end
   end
 

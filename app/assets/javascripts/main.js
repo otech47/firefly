@@ -1,5 +1,7 @@
 $(function () {
 
+  $('select').select2();
+
   var isMobile = {
     Android: function() {
       return navigator.userAgent.match(/Android/i);
