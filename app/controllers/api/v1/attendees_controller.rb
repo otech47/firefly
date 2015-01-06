@@ -98,11 +98,15 @@ class API::V1::AttendeesController < ApplicationController
         :team_id => params['team_id']
       )
 
+      @email_hash = Digest::MD5.hexdigest("@hacker.email")
+
       @response = {
         :status => '200',
         :data => {
+          :id => @hacker.id,
           :name => @hacker.name,
           :email => @hacker.email,
+          :email_hash => @email_hash,
           :btc_address => @hacker.btc_address
         }
       }

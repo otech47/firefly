@@ -44,16 +44,18 @@
       <% end %>
     </div>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
-    <% @team.users.each do |member| %>
-      <div class="col-md-2">
-        <%= link_to hacker_profile_path(member.id) do %>
-          <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
-          <h3>
-            <%= member.name %>
-          </h3>
-        <% end %>
-      </div>
-    <% end %>
+    <div class="team-members-here">
+      <% @team.users.each do |member| %>
+        <div class="col-md-2">
+          <%= link_to hacker_profile_path(member.id) do %>
+            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+            <h3>
+              <%= member.name %>
+            </h3>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 

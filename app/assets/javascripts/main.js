@@ -113,6 +113,8 @@ $(function () {
           $('.adding-member-message .in span').html(data.data.name);
           $('.adding-member-message .in').show();
 
+          $('.team-members-here').append('<div class="col-md-2"><a href="/hacker/'+data.data.id+'"><img alt="'+data.data.name+'" class="img-thumbnail" height="512" src="http://gravatar.com/avatar/'+data.data.email_hash+'?secure=false&amp;size=512" style="width: 100%;" width="512"><h3>'+data.data.name+'</h3></a></div>');
+
         } else {
           $('.waiting-adding-member').hide();
           $('.adding-member-message .out span').html(member_email);
