@@ -23,6 +23,6 @@ class UserMailer < ActionMailer::Base
     @admin = User.find(admin_id)
     @team = Team.find(team_id)
     
-    mail to: participant_email, subject: "Invite To Miami Bitcoin Hackathon - From @admin.name"
+    mail to: participant_email, subject: "Invite To Miami Bitcoin Hackathon - From #{@admin.name}"
   end
 end
