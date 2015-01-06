@@ -94,6 +94,10 @@ class API::V1::AttendeesController < ApplicationController
     @hacker = User.find_by_email(params['email'])
 
     if @hacker
+      @hacker.update_attributes(
+        :team_id => params['team_id']
+      )
+
       @response = {
         :status => '200',
         :data => {

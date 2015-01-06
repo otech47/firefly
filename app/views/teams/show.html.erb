@@ -44,14 +44,16 @@
       <% end %>
     </div>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
-    <div class="col-md-2">
-      <% @team.users.each do |member| %>
-        <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
-        <h3>
-          <%= member.name %>
-        </h3>
-      <% end %>
-    </div>
+    <% @team.users.each do |member| %>
+      <div class="col-md-2">
+        <%= link_to hacker_profile_path(member.id) do %>
+          <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+          <h3>
+            <%= member.name %>
+          </h3>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 
@@ -64,19 +66,25 @@
         <h4 class="modal-title" id="AddTeamMember">Add A Member To The Team</h4>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label>New Member Email Address</label>
-            <input type="email" class="form-control new-member-email-address">
-          </div>
+        <div class="form-group">
+          <label>New Member Email Address</label>
+          <input type="email" class="form-control new-member-email-address">
 
-          <div style="text-align: center; margin: 20px 0px;">
-            <i class="fa fa-cog fa-spin fa-5x"></i>
-          </div>
-        </form>
+          <input type="hidden" name="team_id" value="<%= @team.id %>" class="team-id-get-it">
+        </div>
+
+        <div style="text-align: center; margin: 20px 0px; display: none;" class="waiting-adding-member">
+          <i class="fa fa-cog fa-spin fa-5x"></i>
+        </div>
+
+        <div class="adding-member-message">
+          <h3 class="out" style="display: none;">We sent an invite to <span></span></h3>
+
+          <h3 class="in" style="display: none;"><span></span> has been added as a member</h3>
+        </div>
       </div>
       <div class="modal-footer" style="overflow: hidden;">
-        <button type="button" class="btn btn-default" data-dismiss="modal" style="float: left;">Close</button>
+        <button type="button" class="btn btn-default close-add-member" data-dismiss="modal" style="float: left;">Close</button>
         <button type="button" class="btn btn-primary try-to-add-member">Add Member</button>
       </div>
     </div>

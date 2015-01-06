@@ -97,23 +97,26 @@ $(function () {
 
   //adding team member
   $(".try-to-add-member").click(function(){
+
+    $('.waiting-adding-member').show();
     
     var member_email = $(".new-member-email-address").val();
-
-    console.log(member_email);
+    var team_id = $(".team-id-get-it").val();
 
     $.ajax({
       type: "GET",
-      url: "/api/v1/process/lookup/hacker?email="+member_email,
+      url: "/api/v1/process/lookup/hacker?email="+member_email+"&team_id="+team_id,
       success: function(data){
-        console.log(data);
 
         if (data.status == '200') {
-          console.log('200');
-        } else if (data.status == '500') {
-          console.log('500');
+          $('.waiting-adding-member').hide();
+          $('.adding-member-message .in span').html(data.data.name);
+          $('.adding-member-message .in').show();
+
         } else {
-          console.log('other');
+          $('.waiting-adding-member').hide();
+          $('.adding-member-message .out span').html(member_email);
+          $('.adding-member-message .out').show();
         };
         
       },
@@ -122,6 +125,12 @@ $(function () {
       }
     });
 
+  });
+
+  $(".close-add-member").click(function(){
+    $('.new-member-email-address').val('');
+    $('.adding-member-message .in').hide();
+    $('.adding-member-message .out').hide();
   });
 
 });
