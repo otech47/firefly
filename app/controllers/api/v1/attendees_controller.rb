@@ -111,6 +111,8 @@ class API::V1::AttendeesController < ApplicationController
         }
       }
     else
+      UserMailer.participant_invite(current_user.id, params['email'], params['team_id']).deliver
+      
       @response = {
         :status => '500'
       }
