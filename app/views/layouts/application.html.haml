@@ -33,12 +33,12 @@
               // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
               var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
-                zoom: 12,
+                zoom: 15,
 
                 scrollwheel: false,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(25.773506, -80.190454), // Miami
+                center: new google.maps.LatLng(25.8013319, -80.2022986), // Miami
 
                 // How you would like to style the map.
                 // This is where you would paste any style found on Snazzy Maps.
@@ -51,6 +51,20 @@
 
               // Create the Google Map using out element and options defined above
               var map = new google.maps.Map(mapElement, mapOptions);
+
+              var labLatlng = new google.maps.LatLng(25.8013319, -80.2022986);
+              var bhLatlng = new google.maps.LatLng(25.803673,-80.199011);
+
+              var marker = new google.maps.Marker({
+                position: labLatlng,
+                map: map,
+                title: 'LAB Miami'
+              });
+              var marker2 = new google.maps.Marker({
+                position: bhLatlng,
+                map: map,
+                title: 'Brick House'
+              });
             }
 
           %script{:src => "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"}
