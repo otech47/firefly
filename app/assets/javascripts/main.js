@@ -95,4 +95,33 @@ $(function () {
     // http://datatables.net/reference/option/pagingType
   });
 
+  //adding team member
+  $(".try-to-add-member").click(function(){
+    
+    var member_email = $(".new-member-email-address").val();
+
+    console.log(member_email);
+
+    $.ajax({
+      type: "GET",
+      url: "/api/v1/process/lookup/hacker?email="+member_email,
+      success: function(data){
+        console.log(data);
+
+        if (data.status == '200') {
+          console.log('200');
+        } else if (data.status == '500') {
+          console.log('500');
+        } else {
+          console.log('other');
+        };
+        
+      },
+      failure: function(errMsg) {
+        console.log(errMsg);
+      }
+    });
+
+  });
+
 });
