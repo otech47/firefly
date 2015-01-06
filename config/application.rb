@@ -28,7 +28,7 @@ module Firefly
       Devise::RegistrationsController.layout "clean"
       #Devise::ConfirmationsController.layout "frontend"
       #Devise::UnlocksController.layout "frontend"
-      #Devise::PasswordsController.layout "frontend"
+      Devise::PasswordsController.layout "clean"
     end
 
     ActionMailer::Base.smtp_settings = {
