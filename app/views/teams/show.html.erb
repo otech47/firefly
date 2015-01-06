@@ -16,21 +16,24 @@
     <div style="overflow: hidden;">
       <h2 style="float: left;">30 Second Pitch</h2>
       <% if @team.admin == current_user.id %>
-        <%= link_to 'Edit Team', edit_team_path(@team), :class => "btn btn-info", :style => "float: right; margin: 15px 29px 0px 0px;" %> 
+        <%= link_to 'Edit Team', edit_team_path(@team), :class => "btn btn-info", :style => "float: right; margin: 15px 0px 0px 0px;" %> 
       <% end %>
     </div>
 
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
       <% if @team.video.present? %>
-        
-        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-          controls preload="auto" width="640" height="264"
-          poster="<%= @video['formats'][0]['thumbnail_url'] %>"
-          data-setup='{"example_option":true}'>
-          <source src="<%= @video['formats'][0]['mp4_url'] %>" type='video/mp4' />
-          <source src="<%= @video['formats'][0]['flv_url'] %>" type='video/flv' />
-          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-        </video>
+        <div class="embed-responsive embed-responsive-16by9">
+
+          <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+            controls preload="auto" width="auto" height="auto"
+            poster="<%= @video['formats'][0]['thumbnail_url'] %>"
+            data-setup='{"example_option":true}'>
+            <source src="<%= @video['formats'][0]['mp4_url'] %>" type='video/mp4' />
+            <source src="<%= @video['formats'][0]['flv_url'] %>" type='video/flv' />
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+          </video>
+
+        </div>
       <% else %>
         <camera data-app-id="a-51bf9420-75aa-0132-1522-22000a8c0328" data-sources="record,sms" id="team_video" style="width: 720px; height: 440px;"></camera>
       <% end %>
@@ -40,7 +43,7 @@
     <div style="overflow: hidden; margin-top: 25px;">
       <h2 style="float: left;">Team Members</h2>
       <% if @team.admin == current_user.id %>
-      <button class="btn btn-info add-team-member" style="float: right; margin: 15px 29px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+      <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
       <% end %>
     </div>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
