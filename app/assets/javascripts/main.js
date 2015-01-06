@@ -123,7 +123,7 @@ $(function () {
         
       },
       failure: function(errMsg) {
-        console.log(errMsg);
+        alert(errMsg);
       }
     });
 

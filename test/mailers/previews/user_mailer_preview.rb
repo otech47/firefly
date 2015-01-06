@@ -10,4 +10,8 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.participant_ticket('1')
   end
 
+  def participant_invite
+    UserMailer.participant_invite('3', 'dan@yovu.co', '1')
+  end
+
 end
