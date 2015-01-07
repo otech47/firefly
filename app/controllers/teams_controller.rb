@@ -22,7 +22,10 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
+    @admin = User.find(@team.admin)
+    if @team.video.present?
+      @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
+    end
   end
 
   def create

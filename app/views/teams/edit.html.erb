@@ -3,6 +3,7 @@
 
     <div class="col-md-6">
       <h2>Edit Team</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
 
       <%= form_for(@team) do |f| %>
         <% if @team.errors.any? %>
@@ -24,11 +25,12 @@
 
         <div class="form-group">
           <%= f.label "Git Repo Url" %>
-          <%= f.text_field :repo, :class => "form-control" %>
+          <%= f.text_field :repo, :class => "form-control", :placeholder => "https://github.com/my-awesome/repo" %>
         </div>
 
         <div class="form-group">
           <%= f.label "Admin" %>
+          <h4><%= link_to @admin.name, hacker_profile_path(@admin.id) %></h4>
         </div>
 
         <div><%= f.submit "Update", :class => "btn btn-default" %></div>
@@ -38,6 +40,7 @@
 
     <div class="col-md-4">
       <h2>Video</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
 
       <% if @team.video.present? %>
         <div class="embed-responsive embed-responsive-16by9">
