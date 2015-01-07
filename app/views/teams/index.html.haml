@@ -21,7 +21,7 @@
           %span{"aria-hidden" => "true"} &times;
         %h4#myModalLabel.modal-title Creating A New Team
       .modal-body
-        = form_for(@new_team, :remote => true) do |f|
+        = form_for(@new_team, :remote => true, :html => {:class => "remote_team_create"}) do |f|
           = f.hidden_field :admin, :value => current_user.id
           .form-group
             = f.label "Team Name"

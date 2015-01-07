@@ -83,6 +83,35 @@ $(function () {
     }
   });
 
+
+  $.validator.addMethod("checkteam",
+    function(value, element) {
+        var result = false;
+        $.ajax({
+            type:"GET",
+            async: false,
+            url: "/api/v1/validate/team?teamname=" + encodeURI(value),
+            success: function(msg) {
+                result = (msg['check'] == "bad") ? false : true;
+            }
+        });
+        return result;
+    },
+    "A team with this name already exists"
+  );
+
+  $(".remote_team_create").validate({
+    rules: {
+      "team[name]": {
+        required: true,
+        checkteam: true
+      }
+    },
+    messages: {
+      "team[name]": "Please enter a unique team name"
+    }
+  });
+
   $('.datatable').DataTable({
     // ajax: ...,
     // autoWidth: false,
