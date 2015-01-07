@@ -21,6 +21,9 @@ Rails.application.routes.draw do
       get 'attendees/checkin' => 'attendees#check_in'
       post 'process/cameratag' => 'process#cameratag'
       get 'process/lookup/hacker' => 'attendees#hacker_look_up'
+
+      get 'team/all' => 'team#all'
+      get 'team/:id' => 'team#team'
     end
   end
 
