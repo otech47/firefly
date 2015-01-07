@@ -29,6 +29,11 @@
         </div>
 
         <div class="form-group">
+          <%= f.label "BTC Addresss" %>
+          <%= f.text_field :btc_address, :class => "form-control" %>
+        </div>
+
+        <div class="form-group">
           <%= f.label "Admin" %>
           <h4><%= link_to @admin.name, hacker_profile_path(@admin.id) %></h4>
         </div>
