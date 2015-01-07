@@ -23,7 +23,19 @@
     </div>
 
     <div class="col-md-8">
-      s
+      <h2><%= @hacker.team.name %></h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+          controls preload="auto" width="auto" height="auto"
+          poster="<%= @video['formats'][0]['thumbnail_url'] %>"
+          data-setup='{"example_option":true}'>
+          <source src="<%= @video['formats'][0]['mp4_url'] %>" type='video/mp4' />
+          <source src="<%= @video['formats'][0]['flv_url'] %>" type='video/flv' />
+          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+      </div>
     </div>
 
   </div>
