@@ -21,14 +21,13 @@
           %span{"aria-hidden" => "true"} &times;
         %h4#myModalLabel.modal-title Creating A New Team
       .modal-body
-        = form_for(@new_team) do |f|
+        = form_for(@new_team, :remote => true) do |f|
           = f.hidden_field :admin, :value => current_user.id
           .form-group
-            = f.label "Name"
+            = f.label "Team Name"
             = f.text_field :name, :class => "form-control"
           .form-group
-            = f.label "GIT Repo"
-            = f.text_field :repo, :class => "form-control"
+            %p After creating a team you will be able to add team members and create your 30 video pitch.
           .modal-footer{:style => "overflow: hidden;"}
             %button.btn.btn-default{"data-dismiss" => "modal", :type => "button", :style => "float: left;"} Close
             = f.submit "Create Team", :class => "btn btn-primary"

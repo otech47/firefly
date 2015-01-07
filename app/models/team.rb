@@ -4,7 +4,7 @@ class Team < ActiveRecord::Base
   after_create :set_admin
 
   has_many :users
-
+  
   private
 
     def generate_avatar
