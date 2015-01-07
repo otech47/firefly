@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     
-    <div class="col-md-4" style="background: #194374; padding-bottom: 42px;">
+    <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
       <%= gravatar_image_tag(@hacker.email.gsub('spam', 'mdeering'), :alt => @hacker.name, :class => "img-thumbnail hacker-avatar") %>
 
       <ul class="hacker-info">
@@ -26,7 +26,7 @@
       <h2><%= @hacker.team.name %></h2>
       <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
 
-      <div class="embed-responsive embed-responsive-16by9">
+      <div class="embed-responsive embed-responsive-16by9" style="padding-left: 15px;">
         <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
           controls preload="auto" width="auto" height="auto"
           poster="<%= @video['formats'][0]['thumbnail_url'] %>"
@@ -36,6 +36,20 @@
           <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
         </video>
       </div>
+
+      <h2>Team Members</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
+
+      <% @hacker.team.users.each do |member| %>
+        <div class="col-md-4">
+          <%= link_to hacker_profile_path(member.id) do %>
+            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+            <h3>
+              <%= member.name %>
+            </h3>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
   </div>
