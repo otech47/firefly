@@ -1,28 +1,23 @@
 <div class="container ptb">
   <div class="row">
     
-    <div class="col-md-12">
+    <div class="col-md-6">
       
       <%= form_for(@team) do |f| %>
         <%= f.hidden_field :admin, :value => current_user.id %>
 
-        <div class="field">
-          <%= f.label :name %><br>
-          <%= f.text_field :name %>
+        <div class="form-group">
+          <%= f.label "Name" %>
+          <%= f.text_field :name, :class => "form-control" %>
         </div>
-        <div class="field">
-          <%= f.label :repo %><br>
-          <%= f.text_field :repo %>
-        </div>
-        <div class="field">
-          <%= f.label :video %><br>
-          <%= f.text_field :video %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
 
+        <div class="form-group">
+          <%= f.label "GIT Repo" %>
+          <%= f.text_field :repo, :class => "form-control" %>
+        </div>
+
+        <div><%= f.submit "Create Team", :class => "btn btn-default" %></div>
+      <% end %>
 
     </div>
 

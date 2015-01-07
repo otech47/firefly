@@ -7,6 +7,7 @@ class TeamsController < ApplicationController
 
   def index
     @teams = Team.all
+    @new_team = Team.new
     respond_with(@teams)
   end
 
