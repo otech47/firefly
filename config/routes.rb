@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#welcome'
   get 'hacker/:id' => 'dashboard#profile', :as => 'hacker_profile'
+  get 'foreveralone' => 'dashboard#foreveralone'
 
   get 'rules' => 'page#rules'
   get 'land' => 'page#land'

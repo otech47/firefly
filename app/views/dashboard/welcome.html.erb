@@ -20,18 +20,27 @@
     </div>
 
     <div class="col-md-8">
-      <h2 style="text-align: center;">Hackathon Stats</h2>
-      <hr class="aligncenter mb" style="margin-bottom: 17px;">
+      <h2 style="margin-left: 15px;">Hackathon Stats</h2>
+      <hr class="mb" style="margin-bottom: 17px; margin-left: 15px;">
 
-      <div style="overflow: hidden; max-width: 518px; margin: 0 auto;">
-        <div class="pull-left">
+      <div style="padding-left: 20px;">
+        <div>
           <h3>Total Contestants: <%= @hackers %></h3>
         </div>
 
-        <div class="pull-right">
+        <div>
           <h3>Total Observers: <%= @observers %></h3>
         </div>
+
+        <div>
+          <h3>Total Teams: <%= @teams %></h3>
+        </div>
+
+        <div>
+          <h3>Participants without teams: <%= @noTeam %> - <%= link_to "View Them", foreveralone_path %></h3>
+        </div>
       </div>
+
     </div>
 
   </div>

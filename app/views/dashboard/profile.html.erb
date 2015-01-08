@@ -13,9 +13,11 @@
             <h3>Team: <%= link_to @hacker.team.name, team_path(@hacker.team_id) %></h3>
           </li>
         <% end %>
-        <li>
-          <h3>Bio: <%= @hacker.bio %></h3>
-        </li>
+        <% if @hacker.bio.present? %>
+          <li>
+            <h3>Bio: <%= @hacker.bio %></h3>
+          </li>
+        <% end %>
         <% if @hacker.btc_address.present? %>
           <li>
             <h3>BTC Address</h3>

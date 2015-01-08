@@ -67,6 +67,11 @@
               <a href="/" class="navbar-brand visible-xs"><img src=""></a>
               <div class="navbar-collapse collapse" style="height: 0px;">
                 <ul class="nav navbar-nav">
+                  <li>
+                    <%= link_to dashboard_path do %>
+                      <span class="">Dashboard</span>
+                    <% end %>
+                  </li>
                   <% if current_user.team_id.present? %>
                     <li>
                       <%= link_to team_path(current_user.team_id) do %>
