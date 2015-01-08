@@ -63,9 +63,11 @@
         <% end %>
       <% else %>
 
-        <% if @hacker.team_id == nil %>
-          <h2 style="text-align: center; margin-top: 70px;">Invite <%= @hacker.name %> to your team.</h2>
-          <button class="btn btn-success profile-invite-team">Lets Hack</button>
+        <% if user_signed_in? %>
+          <% if @hacker.team_id == nil && teamSize(current_user.team_id) < 5 %>
+            <h2 style="text-align: center; margin-top: 70px;">Invite <%= @hacker.name %> to your team.</h2>
+            <button class="btn btn-success profile-invite-team">Lets Hack</button>
+          <% end %>
         <% end %>
       <% end %>
     </div>
