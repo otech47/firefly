@@ -51,7 +51,7 @@
           <% else %>
             <div class="col-md-3 a-team-member">
               <%= link_to hacker_profile_path(member.id) do %>
-                <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+                <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => member.name, :class => "img-thumbnail", :style => "width: 100%;") %>
                 <h3>
                   <%= member.name %>
                 </h3>
