@@ -3,6 +3,8 @@ class DashboardController < ApplicationController
   layout 'clean'
 
   def welcome
+    @hackers = User.where(:admin => false).count
+    @observers = Observer.count
   end
 
   def profile
