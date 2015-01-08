@@ -3,9 +3,10 @@
     .col-md-12
       %div{:style => "overflow: hidden;"}
         %h2{:style => "float: left;"} Teams
-        - if current_user.team_id.present?
-        - else
-          %button.btn.btn-info.pull-right{"data-target" => "#creating_new_team", "data-toggle" => "modal", :type => "button", :style => "margin: 3px 16px 26px 0px;"} Create A Team
+        - if user_signed_in?
+          - if current_user.team_id.present?
+          - else
+            %button.btn.btn-info.pull-right{"data-target" => "#creating_new_team", "data-toggle" => "modal", :type => "button", :style => "margin: 3px 16px 26px 0px;"} Create A Team
         %hr.aligncenter.mb{:style => "margin-left: 0px; margin-right: 0px;"}/
   .row
     .col-md-12
@@ -18,22 +19,23 @@
                   %img{:alt => team.name, :src => team.avatar, :style => "width: 100%;"}/
                 %h3= team.name
 
-#creating_new_team.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} &times;
-        %h4#myModalLabel.modal-title Creating A New Team
-      .modal-body
-        = form_for(@new_team, :remote => true, :html => {:class => "remote_team_create"}) do |f|
-          = f.hidden_field :admin, :value => current_user.id
-          .form-group
-            = f.label "Team Name"
-            = f.text_field :name, :class => "form-control"
-          .form-group
-            %p After creating a team you will be able to add team members and create your 30 video pitch.
-            %div.creating-team-error
-          .modal-footer{:style => "overflow: hidden;"}
-            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button", :style => "float: left;"} Close
-            = f.submit "Create Team", :class => "btn btn-primary create-that-team"
+- if user_signed_in?
+  #creating_new_team.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} &times;
+          %h4#myModalLabel.modal-title Creating A New Team
+        .modal-body
+          = form_for(@new_team, :remote => true, :html => {:class => "remote_team_create"}) do |f|
+            = f.hidden_field :admin, :value => current_user.id
+            .form-group
+              = f.label "Team Name"
+              = f.text_field :name, :class => "form-control"
+            .form-group
+              %p After creating a team you will be able to add team members and create your 30 video pitch.
+              %div.creating-team-error
+            .modal-footer{:style => "overflow: hidden;"}
+              %button.btn.btn-default{"data-dismiss" => "modal", :type => "button", :style => "float: left;"} Close
+              = f.submit "Create Team", :class => "btn btn-primary create-that-team"

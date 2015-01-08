@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   respond_to :html, :js
