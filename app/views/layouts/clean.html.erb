@@ -85,6 +85,11 @@
                     <% end %>
                   </li>
                   <li>
+                    <%= link_to participants_path do %>
+                      <span class="">Participants</span>
+                    <% end %>
+                  </li>
+                  <li>
                     <%= link_to hacker_profile_path(current_user.id) do %>
                       <span class="">Profile</span>
                     <% end %>

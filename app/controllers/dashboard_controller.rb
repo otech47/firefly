@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-	before_action :authenticate_user!, :except => [:profile]
+	before_action :authenticate_user!, :except => [:profile, :participants]
   layout 'clean'
 
   def welcome
@@ -19,5 +19,9 @@ class DashboardController < ApplicationController
 
   def foreveralone
     @noTeam = User.where(:admin => false, :team_id => nil)
+  end
+
+  def participants
+    @participants = User.where(:admin => false)
   end
 end

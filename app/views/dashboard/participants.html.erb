@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Participants</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 27px;"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <% @participants.each do |hacker| %>
+        <%= link_to hacker_profile_path(hacker.id) do %>
+          <div class="col-md-2" style="border: 1px solid #3c3c3c; margin: 16px 13px; padding-top: 14px; min-height: 260px;">
+            <%= gravatar_image_tag(hacker.email.gsub('spam', 'mdeering'), :alt => hacker.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+            <h3>
+              <%= hacker.name %>
+            </h3>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
