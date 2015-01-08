@@ -1,4 +1,4 @@
-worker_processes 3
+worker_processes 6
 
 working_directory "#{ENV['STACK_PATH']}"
 

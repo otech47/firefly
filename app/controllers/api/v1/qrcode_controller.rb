@@ -6,6 +6,7 @@ class API::V1::QrcodeController < ApplicationController
 
   def generate
     render :qrcode => params[:code], :scale => 5
+    logger.info params[:code]
   end
 
   def cors_set_access_control_headers
