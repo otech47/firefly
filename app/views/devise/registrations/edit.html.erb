@@ -4,6 +4,7 @@
     <div class="col-md-6">
       
       <h2>Edit Profile</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 27px;">
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
@@ -46,6 +47,7 @@
     <div class="col-md-4">
       
       <h2>Never Mind</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 27px;">
 
       <p>Unhappy? <%= button_to "Release my ticket", registration_path(resource_name), data: { confirm: "You are about to release your participant ticket, Are you sure?" }, method: :delete, :class => "btn btn-default" %></p>
 
