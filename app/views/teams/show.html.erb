@@ -12,6 +12,40 @@
 </script>
 
 <div class="container" style="margin-bottom: 50px;">
+
+  <div class="row">
+    <div style="overflow: hidden; margin-top: 25px;">
+      <h2 style="float: left;">Team Members</h2>
+      <% if @memberCount < 5 %>
+        <% if @team.admin == current_user.id %>
+          <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+        <% end %>
+      <% end %>
+    </div>
+    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
+    <div class="team-members-here">
+      <% @team.users.each do |member| %>
+        <div class="col-md-2">
+          <%= link_to hacker_profile_path(member.id) do %>
+            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+            <h3>
+              <%= member.name %>
+            </h3>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @team.bio.present? %>
+    <div class="row">
+      <h2>Team Bio</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 17px;"/>
+      
+      <p><%= @team.bio %></p>
+    </div>
+  <% end %>
+
   <div class="row">
     <div style="overflow: hidden;">
       <h2 style="float: left;">30 Second Pitch</h2>
@@ -39,28 +73,6 @@
       <% end %>
     </hr>
   </div>
-
-  <div class="row">
-    <div style="overflow: hidden; margin-top: 25px;">
-      <h2 style="float: left;">Team Members</h2>
-      <% if @team.admin == current_user.id %>
-        <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
-      <% end %>
-    </div>
-    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
-    <div class="team-members-here">
-      <% @team.users.each do |member| %>
-        <div class="col-md-2">
-          <%= link_to hacker_profile_path(member.id) do %>
-            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
-            <h3>
-              <%= member.name %>
-            </h3>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </div>
 </div>
 
 
@@ -87,6 +99,8 @@
           <h3 class="out" style="display: none;">We sent an invite to <span></span></h3>
 
           <h3 class="in" style="display: none;"><span></span> has been added as a member</h3>
+
+          <h3 class="max" style="display: none;"><span></span> already has 5 members, thats the max</h3>
         </div>
       </div>
       <div class="modal-footer" style="overflow: hidden;">

@@ -42,6 +42,7 @@ class API::V1::TeamController < ApplicationController
         :status => '200',
         :data => {
           :team => @team,
+          :member_count => @team.users.count,
           :members => teamMembers
         }
       }

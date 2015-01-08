@@ -12,6 +12,7 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @memberCount = @team.users.count
     @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
     respond_with(@team)
   end
@@ -50,6 +51,6 @@ class TeamsController < ApplicationController
     end
 
     def team_params
-      params.require(:team).permit(:name, :repo, :video, :admin, :avatar, :btc_address)
+      params.require(:team).permit(:name, :repo, :video, :admin, :avatar, :btc_address, :bio)
     end
 end

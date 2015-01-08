@@ -3,7 +3,9 @@
     .col-md-12
       %div{:style => "overflow: hidden;"}
         %h2{:style => "float: left;"} Teams
-        %button.btn.btn-info.pull-right{"data-target" => "#creating_new_team", "data-toggle" => "modal", :type => "button", :style => "margin: 3px 16px 26px 0px;"} Create A Team
+        - if current_user.team_id.present?
+        - else
+          %button.btn.btn-info.pull-right{"data-target" => "#creating_new_team", "data-toggle" => "modal", :type => "button", :style => "margin: 3px 16px 26px 0px;"} Create A Team
         %hr.aligncenter.mb{:style => "margin-left: 0px; margin-right: 0px;"}/
   .row
     .col-md-12
