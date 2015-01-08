@@ -132,24 +132,47 @@ $(function () {
     var member_email = $(".new-member-email-address").val();
     var team_id = $(".team-id-get-it").val();
 
+    //check team member account
     $.ajax({
       type: "GET",
-      url: "/api/v1/process/lookup/hacker?email="+member_email+"&team_id="+team_id,
-      success: function(data){
+      url: "/api/v1/team/"+team_id,
+      success: function(data) {
+        console.log(data);
 
-        if (data.status == '200') {
-          $('.waiting-adding-member').hide();
-          $('.adding-member-message .in span').html(data.data.name);
-          $('.adding-member-message .in').show();
+        if (data.data.member_count < 5) {
+          
+          //add the member
+          $.ajax({
+            type: "GET",
+            url: "/api/v1/process/lookup/hacker?email="+member_email+"&team_id="+team_id,
+            success: function(data){
 
-          $('.team-members-here').append('<div class="col-md-2"><a href="/hacker/'+data.data.id+'"><img alt="'+data.data.name+'" class="img-thumbnail" height="512" src="http://gravatar.com/avatar/'+data.data.email_hash+'?secure=false&amp;size=512" style="width: 100%;" width="512"><h3>'+data.data.name+'</h3></a></div>');
+              if (data.status == '200') {
+                $('.waiting-adding-member').hide();
+                $('.adding-member-message .in span').html(data.data.name);
+                $('.adding-member-message .in').show();
+
+                $('.team-members-here').append('<div class="col-md-2"><a href="/hacker/'+data.data.id+'"><img alt="'+data.data.name+'" class="img-thumbnail" height="512" src="http://gravatar.com/avatar/'+data.data.email_hash+'?secure=false&amp;size=512" style="width: 100%;" width="512"><h3>'+data.data.name+'</h3></a></div>');
+
+              } else {
+                $('.waiting-adding-member').hide();
+                $('.adding-member-message .out span').html(member_email);
+                $('.adding-member-message .out').show();
+              };
+              
+            },
+            failure: function(errMsg) {
+              alert(errMsg);
+            }
+          });
 
         } else {
+
           $('.waiting-adding-member').hide();
-          $('.adding-member-message .out span').html(member_email);
-          $('.adding-member-message .out').show();
+          $('.adding-member-message .max span').html(data.data.team.name);
+          $('.adding-member-message .max').show();
+
         };
-        
       },
       failure: function(errMsg) {
         alert(errMsg);
@@ -162,6 +185,7 @@ $(function () {
     $('.new-member-email-address').val('');
     $('.adding-member-message .in').hide();
     $('.adding-member-message .out').hide();
+    $('.adding-member-message .max').hide();
   });
 
 });
