@@ -6,13 +6,16 @@
 
       <ul class="hacker-info">
         <li>
-          <h3><%= @hacker.name %></h3>
+          <h3>Name: <%= @hacker.name %></h3>
         </li>
         <% if @hacker.team_id.present? %>
           <li>
             <h3>Team: <%= link_to @hacker.team.name, team_path(@hacker.team_id) %></h3>
           </li>
         <% end %>
+        <li>
+          <h3>Bio: <%= @hacker.bio %></h3>
+        </li>
         <% if @hacker.btc_address.present? %>
           <li>
             <h3>BTC Address</h3>
@@ -22,7 +25,7 @@
       </ul>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-8 profile-hold-team-members">
       <% if @hacker.team_id.present? %>
         <% if @hacker.team.video.present? %>
           <h2><%= @hacker.team.name %></h2>
@@ -41,12 +44,12 @@
         <% end %>
 
         <h2>Team Members</h2>
-        <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;">
+        <hr class="aligncenter mb">
 
         <% @hacker.team.users.each do |member| %>
           <% if @hacker.id == member.id %>
           <% else %>
-            <div class="col-md-4">
+            <div class="col-md-3 a-team-member">
               <%= link_to hacker_profile_path(member.id) do %>
                 <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
                 <h3>
