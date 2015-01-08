@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    
+
     <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
       <%= gravatar_image_tag(@hacker.email.gsub('spam', 'mdeering'), :alt => @hacker.name, :class => "img-thumbnail hacker-avatar") %>
 
@@ -62,7 +62,11 @@
           <% end %>
         <% end %>
       <% else %>
-        <h2 style="text-align: center;">Dont forget to join a team</h2>
+
+        <% if @hacker.team_id == nil %>
+          <h2 style="text-align: center; margin-top: 70px;">Invite <%= @hacker.name %> to your team.</h2>
+          <button class="btn btn-success profile-invite-team">Lets Hack</button>
+        <% end %>
       <% end %>
     </div>
 
