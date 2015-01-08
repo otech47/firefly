@@ -33,6 +33,7 @@
             = f.text_field :name, :class => "form-control"
           .form-group
             %p After creating a team you will be able to add team members and create your 30 video pitch.
+            %div.creating-team-error
           .modal-footer{:style => "overflow: hidden;"}
             %button.btn.btn-default{"data-dismiss" => "modal", :type => "button", :style => "float: left;"} Close
-            = f.submit "Create Team", :class => "btn btn-primary"
+            = f.submit "Create Team", :class => "btn btn-primary create-that-team"

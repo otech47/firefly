@@ -1,5 +1,7 @@
 <% if @team.save %>
-console.log('yes');
+$('.creating-team-error').html('<p style="color: green;">Success</p>');
+$('#creating_new_team').modal('toggle');
+window.location.href='teams/'+<%= @team.id %>;
 <% else %>
-console.log('no');
+$('.creating-team-error').html('<p style="color: red;">We had a problem adding your team please try again.</p>');
 <% end %>

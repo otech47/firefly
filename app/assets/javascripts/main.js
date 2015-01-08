@@ -84,6 +84,7 @@ $(function () {
   });
 
 
+
   $.validator.addMethod("checkteam",
     function(value, element) {
         var result = false;
