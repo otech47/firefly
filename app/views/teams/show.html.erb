@@ -16,8 +16,10 @@
   <div class="row">
     <div style="overflow: hidden; margin-top: 25px;">
       <h2 style="float: left;">Team Members</h2>
-      <% if @team.admin == current_user.id %>
-        <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+      <% if @memberCount < 5 %>
+        <% if @team.admin == current_user.id %>
+          <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+        <% end %>
       <% end %>
     </div>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
