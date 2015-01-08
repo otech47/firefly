@@ -39,6 +39,12 @@
           <%= f.password_field :password_confirmation, :class => "form-control" %>
         </div>
 
+        <div class="form-group">
+          <%= f.label "Avatar" %><br>
+          <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 140px; height: auto;") %>
+          <p>We use <a href="http://en.gravatar.com/" target="_blank">Gravatar</a> to add your avatar.</p>
+        </div>
+
         <div><%= f.submit "Update", :class => "btn btn-default" %></div>
       <% end %>
 
