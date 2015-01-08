@@ -24,6 +24,11 @@
         </div>
 
         <div class="form-group">
+          <%= f.label "Team Bio" %>
+          <%= f.text_area :bio, :class => "form-control" %>
+        </div>
+
+        <div class="form-group">
           <%= f.label "Git Repo Url" %>
           <%= f.text_field :repo, :class => "form-control", :placeholder => "https://github.com/my-awesome/repo" %>
         </div>

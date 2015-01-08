@@ -12,6 +12,38 @@
 </script>
 
 <div class="container" style="margin-bottom: 50px;">
+
+  <div class="row">
+    <div style="overflow: hidden; margin-top: 25px;">
+      <h2 style="float: left;">Team Members</h2>
+      <% if @team.admin == current_user.id %>
+        <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
+      <% end %>
+    </div>
+    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
+    <div class="team-members-here">
+      <% @team.users.each do |member| %>
+        <div class="col-md-2">
+          <%= link_to hacker_profile_path(member.id) do %>
+            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
+            <h3>
+              <%= member.name %>
+            </h3>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @team.bio.present? %>
+    <div class="row">
+      <h2>Team Bio</h2>
+      <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 17px;"/>
+      
+      <p><%= @team.bio %></p>
+    </div>
+  <% end %>
+
   <div class="row">
     <div style="overflow: hidden;">
       <h2 style="float: left;">30 Second Pitch</h2>
@@ -38,28 +70,6 @@
         <camera data-app-id="a-51bf9420-75aa-0132-1522-22000a8c0328" data-sources="record,sms" id="team_video" style="width: 720px; height: 440px;"></camera>
       <% end %>
     </hr>
-  </div>
-
-  <div class="row">
-    <div style="overflow: hidden; margin-top: 25px;">
-      <h2 style="float: left;">Team Members</h2>
-      <% if @team.admin == current_user.id %>
-        <button class="btn btn-info add-team-member" style="float: right; margin: 15px 0px 0px 0px;" data-toggle="modal" data-target="#add_member">Add Team Member</button>
-      <% end %>
-    </div>
-    <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px;"/>
-    <div class="team-members-here">
-      <% @team.users.each do |member| %>
-        <div class="col-md-2">
-          <%= link_to hacker_profile_path(member.id) do %>
-            <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail", :style => "width: 100%;") %>
-            <h3>
-              <%= member.name %>
-            </h3>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
   </div>
 </div>
 
