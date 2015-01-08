@@ -24,9 +24,13 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @admin = User.find(@team.admin)
-    if @team.video.present?
-      @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
+    if current_user.id == @team.admin
+      @admin = User.find(@team.admin)
+      if @team.video.present?
+        @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
+      end
+    else
+      redirect_to teams_path
     end
   end
 
@@ -37,8 +41,12 @@ class TeamsController < ApplicationController
   end
 
   def update
-    flash[:notice] = 'Team was successfully updated.' if @team.update(team_params)
-    respond_with(@team)
+    if current_user.id == @team.admin
+      flash[:notice] = 'Team was successfully updated.' if @team.update(team_params)
+      respond_with(@team)
+    else
+      redirect_to teams_path
+    end
   end
 
   def destroy
