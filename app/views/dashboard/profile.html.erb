@@ -4,7 +4,11 @@
 
     <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
       <%= gravatar_image_tag(@hacker.email.gsub('spam', 'mdeering'), :alt => @hacker.name, :class => "img-thumbnail hacker-avatar") %>
-      <%= link_to "Edit Profile", edit_user_registration_path, :style => "display: block; text-align: center;" %>
+      <% if user_signed_in? %>
+        <% if current_user.id == @hacker.id %>
+          <%= link_to "Edit Profile", edit_user_registration_path, :style => "display: block; text-align: center;" %>
+        <% end %>
+      <% end %>
 
       <ul class="hacker-info">
         <li>
