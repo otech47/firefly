@@ -11,7 +11,7 @@ class DashboardController < ApplicationController
   end
 
   def profile
-  	@hacker = User.find(params[:id])
+  	@hacker = User.friendly.find(params[:id])
     if @hacker.team_id.present? && @hacker.team.video.present?
       @video = HTTParty.get("http://cameratag.com/api/v4/videos/#{@hacker.team.video}.json?api_key=#{ENV['CAMERATAG_API']}")
     end

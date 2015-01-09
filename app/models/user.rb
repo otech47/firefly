@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   before_create :generate_ticket #before creating the user generate a unique ticket string
   after_create :send_email
 
@@ -10,7 +12,7 @@ class User < ActiveRecord::Base
   def send_email
     ParticipantEmailWorker.perform_in(15.seconds, self.id)
   end
-  
+
   belongs_to :team
 
   private

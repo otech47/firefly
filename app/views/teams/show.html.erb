@@ -31,7 +31,7 @@
     <div class="team-members-here">
       <% @team.users.each do |member| %>
         <div class="col-md-2">
-          <%= link_to hacker_profile_path(member.id) do %>
+          <%= link_to hacker_profile_path(member.slug) do %>
             <%= gravatar_image_tag(member.email.gsub('spam', 'mdeering'), :alt => member.name, :class => "img-thumbnail", :style => "width: 100%;") %>
             <h3>
               <%= member.name %>
@@ -46,7 +46,7 @@
     <div class="row">
       <h2>Project Description</h2>
       <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 17px;"/>
-      
+
       <p style="margin-left: 15px;"><%= @team.bio %></p>
     </div>
   <% end %>
@@ -54,7 +54,7 @@
   <div class="row">
     <h2>30 Second Pitch</h2>
     <hr class="aligncenter mb" style="margin-left: 0px; margin-right: 0px; margin-bottom: 27px;">
-      
+
     <% if @team.video.present? %>
       <div class="embed-responsive embed-responsive-16by9" style="margin-left: 15px;" >
 
