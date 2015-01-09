@@ -26,8 +26,8 @@
         <% end %>
         <% if @hacker.btc_address.present? %>
           <li>
-            <h3>BTC Address</h3>
-            <img src="http://miamibitcoinhackathon.com/api/v1/qrcode/generate?code=<%= @hacker.btc_address %>" style="display: block;" width="163px">
+            <h3>BTC Address:</h3>
+            <a href="https://blockchain.info/address/<%= @hacker.btc_address %>" target="_blank"><%= @hacker.btc_address %></a>
           </li>
         <% end %>
       </ul>
