@@ -28,6 +28,7 @@ gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'redis'
 
 gem 'devise'
+gem 'friendly_id'
 
 gem 'twitter-bootstrap-rails'
 gem 'ionicons-rails', '~> 1.5.2'
@@ -71,4 +72,3 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

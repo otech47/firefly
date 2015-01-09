@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-md-12">
       <% @participants.each do |hacker| %>
-        <%= link_to hacker_profile_path(hacker.id) do %>
+        <%= link_to hacker_profile_path(hacker.slug) do %>
           <div class="col-md-2" style="border: 1px solid #3c3c3c; margin: 16px 13px; padding-top: 14px; min-height: 260px;">
             <%= gravatar_image_tag(hacker.email.gsub('spam', 'mdeering'), :alt => hacker.name, :class => "img-thumbnail", :style => "width: 100%;") %>
             <h3>
