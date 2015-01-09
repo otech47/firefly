@@ -80,38 +80,49 @@
   </div>
 </div>
 
+<% if user_signed_in? %>
+  <% if @memberCount < 5 %>
+    <% if @team.admin == current_user.id %>
+      <div class="modal fade" id="add_member" tabindex="-1" role="dialog" aria-labelledby="AddTeamMember" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="AddTeamMember">Add A Member To The Team</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>New Member Email Address</label>
+                <input type="email" class="form-control new-member-email-address">
 
-<div class="modal fade" id="add_member" tabindex="-1" role="dialog" aria-labelledby="AddTeamMember" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="AddTeamMember">Add A Member To The Team</h4>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>New Member Email Address</label>
-          <input type="email" class="form-control new-member-email-address">
+                <input type="hidden" name="team_id" value="<%= @team.id %>" class="team-id-get-it">
+              </div>
 
-          <input type="hidden" name="team_id" value="<%= @team.id %>" class="team-id-get-it">
+              <div style="text-align: center; margin: 20px 0px; display: none;" class="waiting-adding-member">
+                <i class="fa fa-cog fa-spin fa-5x"></i>
+              </div>
+
+              <div class="adding-member-message">
+                <h3 class="out" style="display: none;">We sent an invite to <span></span></h3>
+
+                <h3 class="in" style="display: none;"><span></span> has been added as a member</h3>
+
+                <h3 class="max" style="display: none;"><span></span> already has 5 members, thats the max</h3>
+              </div>
+
+              <div>
+                <hr>
+                <h3>Dont Know Who To Invite!</h3>
+                <h4>Click <%= link_to "here", foreveralone_path %> to check out the participants that dont have a team.</h4>
+              </div>
+            </div>
+            <div class="modal-footer" style="overflow: hidden;">
+              <button type="button" class="btn btn-default close-add-member" data-dismiss="modal" style="float: left;">Close</button>
+              <button type="button" class="btn btn-primary try-to-add-member">Add Member</button>
+            </div>
+          </div>
         </div>
-
-        <div style="text-align: center; margin: 20px 0px; display: none;" class="waiting-adding-member">
-          <i class="fa fa-cog fa-spin fa-5x"></i>
-        </div>
-
-        <div class="adding-member-message">
-          <h3 class="out" style="display: none;">We sent an invite to <span></span></h3>
-
-          <h3 class="in" style="display: none;"><span></span> has been added as a member</h3>
-
-          <h3 class="max" style="display: none;"><span></span> already has 5 members, thats the max</h3>
-        </div>
       </div>
-      <div class="modal-footer" style="overflow: hidden;">
-        <button type="button" class="btn btn-default close-add-member" data-dismiss="modal" style="float: left;">Close</button>
-        <button type="button" class="btn btn-primary try-to-add-member">Add Member</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <% end %>
+  <% end %>
+<% end %>
