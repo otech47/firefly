@@ -8,6 +8,11 @@
         <li>
           <h3>Name: <%= @hacker.name %></h3>
         </li>
+        <% if @hacker.twitter.present? %>
+          <li>
+            <h3>Twitter: <a href="http://twitter.com/<%= @hacker.twitter %>" target="_blank"><%= @hacker.twitter %></a></h3>
+          </li>
+        <% end %>
         <% if @hacker.team_id.present? %>
           <li>
             <h3>Team: <%= link_to @hacker.team.name, team_path(@hacker.team.slug) %></h3>
