@@ -18,4 +18,8 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.hacker_invite('3', '92')
   end
 
+  def participant_follow_up
+    UserMailer.participant_follow_up('3')
+  end
+
 end

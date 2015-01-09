@@ -5,5 +5,6 @@ class ParticipantEmailWorker
   
   def perform(participant_id)
     UserMailer.participant_ticket(participant_id).deliver
+    UserMailer.participant_follow_up(participant_id).deliver
   end
 end

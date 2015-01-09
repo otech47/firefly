@@ -32,4 +32,10 @@ class UserMailer < ActionMailer::Base
     
     mail to: @hacker.email, subject: "Invite To Miami Bitcoin Hackathon - From #{@admin.name}"
   end
+
+  def participant_follow_up(hacker_id)
+    @hacker = User.find(hacker_id)
+
+    mail to: @hacker.email, subject: "Miami Bitcoin Hackathon - Dashboard"
+  end
 end
