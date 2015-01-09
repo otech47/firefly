@@ -7,11 +7,11 @@ class UserMailerPreview < ActionMailer::Preview
   end
 
   def participant_ticket
-    UserMailer.participant_ticket('1')
+    UserMailer.participant_ticket('3')
   end
 
   def participant_invite
-    UserMailer.participant_invite('3', 'dan@yovu.co', '1')
+    UserMailer.participant_invite('3', 'dan@yovu.co', '8')
   end
 
   def hacker_invite

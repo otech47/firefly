@@ -156,7 +156,7 @@
                       <!-- ======= section text ======= -->
 
                       <p style="margin: 0px 0px 15px 0px;">
-                        <%= link_to @admin.name, hacker_profile_path(@admin.id), :target => "_blank" %> has invited you to join team: <%= link_to @team.name, team_path(@team.id), :target => "_blank" %> for the Miami Bitcoin Hackathon.
+                        <a href="http://miamibitcoinhackathon.com/hacker/<%= @admin.slug %>" target="_blank"><%= @admin.name %></a> has invited you to join team: <a href="http://miamibitcoinhackathon.com/teams/<%= @admin.team.slug %>" target="_blank"><%=  @admin.team.name %></a>  for the Miami Bitcoin Hackathon.
                       </p>
 
                       <p style="margin: 0px 0px 15px 0px;">
