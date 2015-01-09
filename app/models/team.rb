@@ -1,10 +1,12 @@
 class Team < ActiveRecord::Base
   require 'identicon'
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   before_create :generate_avatar
   after_create :set_admin
 
   has_many :users
-  
+
   private
 
     def generate_avatar

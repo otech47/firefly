@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109000904) do
+ActiveRecord::Schema.define(version: 20150109001610) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -46,7 +46,10 @@ ActiveRecord::Schema.define(version: 20150109000904) do
     t.string   "btc_address"
     t.text     "bio"
     t.string   "project_name"
+    t.string   "slug"
   end
+
+  add_index "teams", ["slug"], name: "index_teams_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
