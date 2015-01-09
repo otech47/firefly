@@ -203,3 +203,16 @@
   display: block;
   margin-top: 25px;
 }
+
+.participant-list {
+
+	a {
+		
+		.col-md-2 {
+			border: 1px solid #3c3c3c;
+			margin: 16px 13px;
+			padding-top: 14px;
+			min-height: 260px;
+		}
+	}
+}
