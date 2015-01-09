@@ -2,8 +2,9 @@
   <div class="row">
     <%= render partial: "layouts/shared/flash_messages", flash: flash %> 
 
-    <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
+    <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px; min-height: 695px;">
       <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail hacker-avatar") %>
+      <%= link_to "Edit Profile", edit_user_registration_path, :style => "display: block; text-align: center;" %>
 
       <ul class="hacker-info">
         <li>
@@ -40,6 +41,10 @@
         <div>
           <h3>Participants without teams: <%= @noTeam %> - <%= link_to "View Them", foreveralone_path %></h3>
         </div>
+      </div>
+
+      <div>
+        <%= image_tag "miami-bitcoin-hackathon.jpg", :class => "img-rounded dashboard-logo" %>
       </div>
 
     </div>
