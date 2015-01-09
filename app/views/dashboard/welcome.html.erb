@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    
+
     <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
       <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail hacker-avatar") %>
 
@@ -13,7 +13,7 @@
         </li>
         <% if current_user.team_id.present? %>
           <li>
-            <h3>Team: <%= link_to current_user.team.name, team_path(current_user.team_id) %></h3>
+            <h3>Team: <%= link_to current_user.team.name, team_path(current_user.team.slug) %></h3>
           </li>
         <% end %>
       </ul>

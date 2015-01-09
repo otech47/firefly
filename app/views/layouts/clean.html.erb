@@ -76,7 +76,7 @@
                   </li>
                   <% if current_user.team_id.present? %>
                     <li>
-                      <%= link_to team_path(current_user.team_id) do %>
+                      <%= link_to team_path(current_user.team.slug) do %>
                         <span>My Team</span>
                       <% end %>
                     </li>
@@ -106,7 +106,7 @@
                           <i class="hidden-xs fa fa-cog" title="Settings" style="min-width: 20px"></i><span>Settings</span>
                         <% end %>
                       </li>
-                        
+
                       <li>
                         <%= link_to destroy_user_session_path, :class => "logout-link", :method => :delete do %>
                           <i class="hidden-xs fa fa-sign-out" title="Sign Out" style="min-width: 20px"></i><span class="">Log Out</span>

@@ -1,7 +1,6 @@
 class TeamsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
-  before_action :set_team, only: [:edit, :update, :destroy]
-  before_action :set_team_friendly, only: [:show]
+  before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   respond_to :html, :js
 
@@ -57,10 +56,6 @@ class TeamsController < ApplicationController
 
   private
     def set_team
-      @team = Team.find(params[:id])
-    end
-
-    def set_team_friendly
       @team = Team.friendly.find(params[:id])
     end
 
