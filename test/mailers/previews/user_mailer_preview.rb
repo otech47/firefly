@@ -14,4 +14,8 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.participant_invite('3', 'dan@yovu.co', '1')
   end
 
+  def hacker_invite
+    UserMailer.hacker_invite('3', '92')
+  end
+
 end

@@ -129,7 +129,7 @@ $(function () {
   $(".try-to-add-member").click(function(){
 
     $('.waiting-adding-member').show();
-    
+
     var member_email = $(".new-member-email-address").val();
     var team_id = $(".team-id-get-it").val();
 
@@ -141,7 +141,7 @@ $(function () {
         console.log(data);
 
         if (data.data.member_count < 5) {
-          
+
           //add the member
           $.ajax({
             type: "GET",
@@ -160,7 +160,7 @@ $(function () {
                 $('.adding-member-message .out span').html(member_email);
                 $('.adding-member-message .out').show();
               };
-              
+
             },
             failure: function(errMsg) {
               alert(errMsg);
@@ -187,6 +187,33 @@ $(function () {
     $('.adding-member-message .in').hide();
     $('.adding-member-message .out').hide();
     $('.adding-member-message .max').hide();
+  });
+
+  //invite participant
+  $(".dude-invite-me").click(function(){
+    var hacker_id = $('.p_invi_hacker_id').val();
+    var by_who = $('.p_invi_by_who').val();
+
+    $.ajax({
+      type: "GET",
+      url: "/api/v1/team/invite/"+by_who+"/"+hacker_id,
+      success: function(data){
+
+        if (data.status == '200') {
+          $('#profile-invite-member').modal('toggle');
+
+          $('.yo-no-se h2').hide();
+          $('.yo-no-se button').hide();
+          $('.yo-no-se h3').show();
+        } else {
+          alert('Nothing Happen');
+        };
+
+      },
+      failure: function(errMsg) {
+        alert(errMsg);
+      }
+    });
   });
 
 });

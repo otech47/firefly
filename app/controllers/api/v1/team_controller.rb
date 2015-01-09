@@ -1,7 +1,7 @@
 class API::V1::TeamController < ApplicationController
   respond_to     :json
   skip_before_filter :verify_authenticity_token
- 
+
   before_filter :cors_preflight_check
   after_filter :cors_set_access_control_headers
 
@@ -21,7 +21,7 @@ class API::V1::TeamController < ApplicationController
         :data => {
           :error => 'O_o'
         }
-      } 
+      }
     end
 
     render json: @response
@@ -52,10 +52,41 @@ class API::V1::TeamController < ApplicationController
         :data => {
           :error => 'O_o'
         }
-      }      
+      }
     end
 
     render json: @response
+  end
+
+  def invite
+    begin
+      UserMailer.hacker_invite(params[:by_who], params[:hacker_id]).deliver
+
+      @response = {
+        :status => '200',
+        :data => ':)'
+      }
+    rescue Exception => e
+      @response = {
+        :status => '500',
+        :data => {
+          :error => 'O_o'
+        }
+      }
+    end
+
+    render json: @response
+  end
+
+  def join
+    @hacker = User.find(params[:hacker_id])
+    @team = Team.find(params[:team_id])
+
+    @hacker.update_attributes(
+      :team_id => @team.id
+    )
+
+    redirect_to team_path(@team.slug)
   end
 
   def cors_set_access_control_headers
@@ -64,14 +95,14 @@ class API::V1::TeamController < ApplicationController
     headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
     headers['Access-Control-Max-Age'] = "1728000"
   end
- 
+
   def cors_preflight_check
     if request.method == 'OPTIONS'
       headers['Access-Control-Allow-Origin'] = '*'
       headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
       headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Token'
       headers['Access-Control-Max-Age'] = '1728000'
- 
+
       render :text => '', :content_type => 'text/plain'
     end
   end

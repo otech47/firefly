@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#welcome'
   get 'hacker/:id' => 'dashboard#profile', :as => 'hacker_profile'
-  
+
   get 'foreveralone' => 'dashboard#foreveralone'
   get 'participants' => 'dashboard#participants'
 
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
       get 'team/all' => 'team#all'
       get 'team/:id' => 'team#team'
+      get 'team/invite/:by_who/:hacker_id' => 'team#invite', :as => 'team_invite_sis'
+      get 'team/invite/join/:hacker_id/:team_id' => 'team#join', :as => 'team_join_sis'
     end
   end
 

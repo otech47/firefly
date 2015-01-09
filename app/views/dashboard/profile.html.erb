@@ -71,8 +71,11 @@
 
         <% if user_signed_in? %>
           <% if @hacker.team_id == nil && teamSize(current_user.team_id) < 5 %>
-            <h2 style="text-align: center; margin-top: 70px;">Invite <%= @hacker.name %> to your team.</h2>
-            <button class="btn btn-success profile-invite-team" data-toggle="modal" data-target="#profile-invite-member">Lets Hack</button>
+            <div class="yo-no-se">
+              <h2 style="text-align: center; margin-top: 70px;">Invite <%= @hacker.name %> to your team.</h2>
+              <button class="btn btn-success profile-invite-team" data-toggle="modal" data-target="#profile-invite-member">Lets Hack</button>
+              <h3 style="text-align: center; margin-top: 70px; display: none;">We sent and email inviting <%= @hacker.name %> to <%= current_user.team.name %></h3>
+            </div>
 
             <div class="modal fade" id="profile-invite-member" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -82,6 +85,9 @@
                     <h4 class="modal-title" id="myModalLabel">Team Invite</h4>
                   </div>
                   <div class="modal-body" style="text-align: center;">
+                    <input type="hidden" name="hacker_id" class="p_invi_hacker_id" value="<%= @hacker.id %>">
+                    <input type="hidden" name="by_who" class="p_invi_by_who" value="<%= current_user.id %>">
+
                     <div class="pre-invite">
                       <h3>You are about to invite <%= @hacker.name %> <br> to your team <%= current_user.team.name %></h3>
                       <h3>Are You Sure?</h3>
@@ -90,7 +96,7 @@
                   </div>
                   <div class="modal-footer" style="overflow: hidden;">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">No Never Mind</button>
-                    <button type="button" class="btn btn-primary">Yes Invite</button>
+                    <button type="button" class="btn btn-primary dude-invite-me">Yes Invite</button>
                   </div>
                 </div>
               </div>
