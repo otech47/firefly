@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-	before_action :authenticate_user!, :except => [:profile, :participants]
+	before_action :authenticate_user!, :except => [:profile, :participants, :foreveralone]
   layout 'clean'
 
   def welcome

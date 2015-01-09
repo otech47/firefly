@@ -1,3 +1,8 @@
+<style type="text/css">
+  body {
+    background: url(<%= asset_path('for-ever-alone.png') %>) no-repeat;
+  }
+</style>
 <div class="container">
   <div class="row">
     <%= render partial: "layouts/shared/flash_messages", flash: flash %>
@@ -8,7 +13,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 participant-list">
       <% @noTeam.each do |hacker| %>
         <%= link_to hacker_profile_path(hacker.slug) do %>
           <div class="col-md-2" style="border: 1px solid #3c3c3c; margin: 16px 13px; padding-top: 14px; min-height: 260px;">
