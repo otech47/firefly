@@ -2,12 +2,13 @@
   <div class="row">
     <h2 class="centered">REGISTRATION</h2>
     <hr class="aligncenter mb">
-    
+
     <section id="login">
       <div class="row">
         <div class="col-xs-12">
           <div class="form-wrap">
             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "login-form"}) do |f| %>
+              <%= render partial: "layouts/shared/flash_messages", flash: flash %>
               <%= devise_error_messages! %>
 
               <% if params['team'] %>
@@ -42,7 +43,6 @@
     </section>
   </div><!--/row-->
   <div class="row mt">
-     
+
   </div><!--/row-->
 </div>
-

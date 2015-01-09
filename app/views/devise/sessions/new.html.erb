@@ -3,13 +3,12 @@
     <h2 class="centered">LOG IN</h2>
     <hr class="aligncenter mb">
 
-    <%= render partial: "layouts/shared/flash_messages", flash: flash %> 
-
     <section id="login">
       <div class="row">
         <div class="col-xs-12">
           <div class="form-wrap">
             <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => "login-form"}) do |f| %>
+              <%= render partial: "layouts/shared/flash_messages", flash: flash %>
               <%= devise_error_messages! %>
               <div class="form-group">
                 <%= f.label :email %>

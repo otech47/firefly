@@ -1,5 +1,6 @@
 .container
   .row
+    = render partial: "layouts/shared/flash_messages", flash: flash
     .col-md-12
       %div{:style => "overflow: hidden;"}
         %h2{:style => "float: left;"} Teams

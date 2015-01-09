@@ -1,8 +1,9 @@
 <div class="container ptb">
   <div class="row">
-    
+    <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+
     <div class="col-md-6">
-      
+
       <%= form_for(@team) do |f| %>
         <%= f.hidden_field :admin, :value => current_user.id %>
 

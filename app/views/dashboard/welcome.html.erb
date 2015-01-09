@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <%= render partial: "layouts/shared/flash_messages", flash: flash %> 
 
     <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px;">
       <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail hacker-avatar") %>

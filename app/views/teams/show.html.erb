@@ -14,6 +14,8 @@
 <div class="container" style="margin-bottom: 50px;">
 
   <div class="row">
+    <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+    
     <div style="overflow: hidden; margin-top: 25px;">
       <h2 style="float: left;">Team Members</h2>
       <% if user_signed_in? %>
