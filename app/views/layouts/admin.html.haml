@@ -50,6 +50,9 @@
                     = link_to admin_observers_path do
                       %span Observers / After Party
                   %li
+                    = link_to admin_checkin_path do
+                      %span Checkin
+                  %li
                     = link_to destroy_user_session_path, :class => "logout-link", :method => :delete do
                       %span Log Out
     = yield

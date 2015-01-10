@@ -21,27 +21,11 @@ class API::V1::AttendeesController < ApplicationController
           :checked_in => true
         )
 
-        @response = {
-          :status => '200',
-          :data => {
-            :ticket => {
-              :type => @type,
-              :ticket => @ticket,
-              :raw => @payload
-            },
-            :person => {
-              :name => @name,
-              :email => @email
-            }
-          }
-        }
+        redirect_to admin_checkin_path
+        flash[:notice] = "#{@name} was checked in."
       else
-        @response = {
-        :status => '500',
-          :data => {
-            :error => 'No ticket found'
-          }
-        }
+        redirect_to admin_checkin_path
+        flash[:notice] = "That did not work, refresh the page and try again."
       end
     elsif @payload.include? 'participant'
       @type = 'partition'
@@ -56,38 +40,17 @@ class API::V1::AttendeesController < ApplicationController
           :checked_in => true
         )
 
-        @response = {
-          :status => '200',
-          :data => {
-            :ticket => {
-              :type => @type,
-              :ticket => @ticket,
-              :raw => @payload
-            },
-            :person => {
-              :name => @name,
-              :email => @email
-            }
-          }
-        }
+        redirect_to admin_checkin_path
+        flash[:notice] = "#{@name} was checked in."
       else
-        @response = {
-        :status => '500',
-          :data => {
-            :error => 'No ticket found'
-          }
-        }
+        redirect_to admin_checkin_path
+        flash[:notice] = "That did not work, refresh the page and try again."
       end
     else
-      @response = {
-        :status => '500',
-        :data => {
-          :error => 'No ticket found'
-        }
-      }
+      redirect_to admin_checkin_path
+        flash[:notice] = "That did not work, refresh the page and try again."
     end
 
-    render json: @response
   end
 
   def hacker_look_up

@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   namespace :admin, :path => "admin" do
     get 'hackers' => 'admin#hackers'
     get 'observers' => 'admin#observers'
+    get 'checkin' => 'admin#checkin'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

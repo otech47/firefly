@@ -1,0 +1,35 @@
+<div class="container ptb">
+  <div class="row">
+    <%= render partial: "layouts/shared/flash_messages", flash: flash %>
+    <div class="col-md-12">
+      <table class="table table-hover datatable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Ticket</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @todos.each do |todos| %>
+            <tr>
+              <td>
+                <%= todos.name %>
+              </td>
+              <td>
+                <%= todos.email %>
+              </td>
+              <td>
+                <%= todos.ticket %>
+              </td>
+              <td>
+                <a href="/api/v1/attendees/checkin?payload=<%= todos.ticket %>" class="btn btn-success">Checkin</a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

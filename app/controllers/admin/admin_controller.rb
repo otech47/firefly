@@ -11,6 +11,21 @@ class Admin::AdminController < ApplicationController
     @observers = Observer.all
   end
 
+  def checkin
+    @hackers = User.where(:admin => false, :checked_in => false)
+    @observers = Observer.all
+
+    @todos = Array.new
+    @hackers.each do |hacker|
+      buildhacker = hacker
+      @todos.push buildhacker
+    end
+
+    @observers.each do |observer|
+      buildobserver = observer
+      @todos.push buildobserver
+    end
+  end
 
   def if_admin
     if current_user.admin == false
