@@ -27,6 +27,16 @@ class Admin::AdminController < ApplicationController
     end
   end
 
+  def presenting
+    @teams = Team.all
+  end
+
+  def set_presenters
+    @teams = Team.find(params[:team])
+
+    
+  end
+
   def if_admin
     if current_user.admin == false
       redirect_to dashboard_path

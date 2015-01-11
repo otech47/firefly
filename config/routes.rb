@@ -29,6 +29,7 @@ Rails.application.routes.draw do
       get 'team/:id' => 'team#team'
       get 'team/invite/:by_who/:hacker_id' => 'team#invite', :as => 'team_invite_sis'
       get 'team/invite/join/:hacker_id/:team_id' => 'team#join', :as => 'team_join_sis'
+      get 'team/currently/presenting' => 'team#currently_presenting', :as => 'currently_presenting'
     end
   end
 
@@ -36,11 +37,12 @@ Rails.application.routes.draw do
     get 'hackers' => 'admin#hackers'
     get 'observers' => 'admin#observers'
     get 'checkin' => 'admin#checkin'
+    get 'presenting' => 'admin#presenting'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
   root 'page#home'
 
-  mount Sidekiq::Web, at: '/sidekiq'
+  #mount Sidekiq::Web, at: '/sidekiq'
 
 end

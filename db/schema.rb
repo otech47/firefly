@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109144038) do
+ActiveRecord::Schema.define(version: 20150111185639) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150109144038) do
     t.datetime "updated_at"
     t.string   "ticket"
     t.boolean  "checked_in", default: false, null: false
+  end
+
+  create_table "presentings", force: true do |t|
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "teams", force: true do |t|

@@ -89,6 +89,27 @@ class API::V1::TeamController < ApplicationController
     redirect_to team_path(@team.slug)
   end
 
+  def currently_presenting
+    @presenting = Presenting.last
+    @team = Team.find(@presenting.team_id)
+
+    begin
+      @response = {
+        :status => '200',
+        :data => {
+          :team => @presenting,
+          :team_info => @team
+        }
+      } 
+    rescue Exception => e
+      @response = {
+        :status => '500'
+      } 
+    end
+
+    render json: @response
+  end
+
   def cors_set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Methods'] = 'POST, GET, PUT, DELETE, OPTIONS'
