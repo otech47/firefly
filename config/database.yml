@@ -83,4 +83,4 @@ production:
 #  <<: *default
 #  database: firefly_production
 #  username: firefly
-#  password: <%= ENV['HOLY-SEA_DATABASE_PASSWORD'] %>
+#  password: <%= ENV['FIREFLY_DATABASE_PASSWORD'] %>
