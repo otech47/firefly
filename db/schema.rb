@@ -13,7 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20150111185639) do
 
-  create_table "friendly_id_slugs", force: true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
     t.string   "sluggable_type", limit: 50
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150111185639) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "observers", force: true do |t|
+  create_table "observers", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
@@ -35,13 +38,13 @@ ActiveRecord::Schema.define(version: 20150111185639) do
     t.boolean  "checked_in", default: false, null: false
   end
 
-  create_table "presentings", force: true do |t|
+  create_table "presentings", force: :cascade do |t|
     t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "teams", force: true do |t|
+  create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.string   "repo"
     t.string   "video"
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150111185639) do
 
   add_index "teams", ["slug"], name: "index_teams_on_slug", unique: true, using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
@@ -75,8 +78,8 @@ ActiveRecord::Schema.define(version: 20150111185639) do
     t.string   "btc_address"
     t.string   "ticket"
     t.boolean  "admin",                  default: false, null: false
-    t.boolean  "checked_in",             default: false, null: false
     t.integer  "team_id"
+    t.boolean  "checked_in",             default: false, null: false
     t.text     "bio"
     t.string   "slug"
     t.string   "twitter"
