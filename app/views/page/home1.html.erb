@@ -1,0 +1,1021 @@
+<video id="bgvid">
+  <% if Rails.env.production? %>
+    <source src="<%= asset_path('miami.webm') %>" type="video/webm"></source>
+    <source src="<%= asset_path('miami.mp4') %>" type="video/mp4"></source>
+    <source src="<%= asset_path('miami.ogv') %>" type="video/ogg"></source>
+  <% else %>
+    <source src="https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.webm" type="video/webm">
+      <source src="https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.mp4" type="video/mp4">
+        <source src="https://s3.amazonaws.com/miamibitcoinhackathon/misc/miami.ogv" type="video/ogg"></source>
+      </source>
+    </source>
+  <% end %>
+</video>
+<!-- ********** HEADER **********
+-->
+<section id="home"></section>
+<div id="h">
+  <div class="container">
+    <div class="row">
+      <h1>
+        <br/>
+        2016 Miami Bitcoin Hackathon
+      </h1>
+      <h5>January 22nd to 24th - Miami, Florida</h5>
+      <h2>Do you want to create code that empowers people all over the world?</h2>
+      <p class="mt">
+        <a class="smoothScroll btn btn-conf btn-green register-now-button" href="#registration">Register Now</a>
+        <a class="smoothScroll btn btn-conf btn-clear learn-more-button" href="#initiative">Learn More</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- ********** SPONSORS **********
+-->
+<section id="sponsors"></section>
+<div class="container ptb">
+  <div class="row">
+    <h2 class="centered">SPONSORS & PARTNERS</h2>
+    <hr class="aligncenter mb">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bigboys centered">
+        <h3>Sponsors</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centered">
+            <a href="http://www.knightfoundation.org/" target="_blank">
+              <%= image_tag 'sponsors/knight.png' %>
+            </a>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centered logo-lab">
+            <a href="http://www.thelabmiami.com/" target="_blank">
+              <%= image_tag 'sponsors/lab_miami.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-bitstop">
+            <a href="http://bitstop.co/" target="_blank">
+              <%= image_tag 'sponsors/bitstop.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-bitpay">
+            <a href="https://bitpay.com/" target="_blank">
+              <%= image_tag 'sponsors/bitpay.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-coinkite">
+            <a href="https://coinkite.com/" target="_blank">
+              <%= image_tag 'sponsors/coinkite.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered tally-capital">
+            <a href="http://tallycapital.com/" target="_blank">
+              <%= image_tag 'sponsors/tally_capital.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="https://lamassu.is/" target="_blank">
+              <%= image_tag 'sponsors/lamassu.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="http://satoshilabs.com/" target="_blank">
+              <%= image_tag 'sponsors/satoshi_labs.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="https://www.bitcointrezor.com/" target="_blank">
+              <%= image_tag 'sponsors/trezor.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-trucoin">
+            <a href="https://www.trucoin.com/" target="_blank">
+              <%= image_tag 'sponsors/trucoin.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="https://www.alarmgrid.com/" target="_blank">
+              <%= image_tag 'sponsors/alarm_grid.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="http://www.enviropro.net/" target="_blank">
+              <%= image_tag 'sponsors/enviro_pro_usa.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="http://www.digitalcurrencycouncil.com/" target="_blank">
+              <%= image_tag 'sponsors/digital_currency_council.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="http://mtalawyers.com/" target="_blank">
+              <%= image_tag 'sponsors/mearkle_trueblood_adam.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="#" target="_blank">
+              <%= image_tag 'sponsors/brave.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-rm-and-associates">
+            <a href="#" target="_blank">
+              <%= image_tag 'sponsors/rm-and-associates.jpg' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-amlclass">
+            <a href="http://www.amlclass.com/" target="_blank">
+              <%= image_tag 'sponsors/aml_compliance_solutions.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="#" target="_blank">
+              <%= image_tag 'sponsors/acle_law.png' %>
+            </a>
+          </div>
+        </div>
+        <h3 style="margin: 100px 0px 1px 0px;">Event Partners</h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-btcmiami">
+            <a href="http://btcmiami.com/" target="_blank">
+              <%= image_tag 'sponsors/btcmiami.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-refreshmiami">
+            <a href="http://www.refreshmiami.com/" target="_blank">
+              <%= image_tag 'sponsors/refresh_miami.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-mdc">
+            <a href="http://www.mdc.edu/main/" target="_blank">
+              <%= image_tag 'sponsors/miami_dade_college.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-ccn">
+            <a href="http://collegecrypto.org/" target="_blank">
+              <%= image_tag 'sponsors/ccn.jpg' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-u">
+            <a href="http://www.miami.edu/" target="_blank">
+              <%= image_tag 'sponsors/u.jpg' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-wyncode">
+            <a href="http://wyncode.co/" target="_blank">
+              <%= image_tag 'sponsors/wyncode.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="#" target="_blank">
+              <%= image_tag 'sponsors/blockchain_beach.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered loglo-pollotropical">
+            <a href="http://pollotropical.com/" target="_blank">
+              <%= image_tag 'sponsors/pollo_tropical.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-king">
+            <a href="http://www.powerpizzeria.com/" target="_blank">
+              <%= image_tag 'sponsors/power_pizzeria.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-king">
+            <a href="https://www.sipjojo.com/" target="_blank">
+              <%= image_tag 'sponsors/jojo.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-king">
+            <a href="http://www.eternitycoffeeroasters.com/" target="_blank">
+              <%= image_tag 'sponsors/eternity.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-king">
+            <a href="http://www.kindsnacks.com/" target="_blank">
+              <%= image_tag 'sponsors/king.jpg' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered">
+            <a href="http://satoshicloset.com/" target="_blank">
+              <%= image_tag 'sponsors/satoshi_closet.png' %>
+            </a>
+          </div>
+        </div>
+        <h3 style="margin: 100px 0px 1px 0px;">Media Partners</h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-pfunk">
+            <a href="http://ybitcoin.net/" target="_blank">
+              <%= image_tag 'sponsors/ybitcoin.png' %>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 centered logo-pfunk">
+            <a href="http://pfunkmedia.com/" target="_blank">
+              <%= image_tag 'sponsors/pfunk_media.png' %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </hr>
+  </div>
+</div>
+<!-- ********** GREY SECTION - PRIZES **********
+-->
+<section id="prizes"></section>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">PRIZES</h2>
+      <hr class="aligncenter mb">
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-trophy pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">1st Place</h3>
+            </div>
+            <div>
+              <ul style="padding: 0px 0px 0px 17px;list-style:none;">
+                <li>$10,000 in bitcoins</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-ribbon-a pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">2nd Place</h3>
+            </div>
+            <div>
+              <ul style="padding: 0px 0px 0px 17px;list-style:none;">
+                <li>$3000 in bitcoins</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-ribbon-b pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">3rd Place</h3>
+            </div>
+            <div>
+              <ul style="padding: 0px 0px 0px 17px;list-style:none;">
+                <li>$1500 in bitcoins</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-trophy pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">4th Place</h3>
+            </div>
+            <div>
+              <ul style="padding: 0px 0px 0px 17px;list-style:none;">
+                <li>$750 in bitcoins</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-trophy pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">5th Place</h3>
+            </div>
+            <div>
+              <ul style="padding: 0px 0px 0px 17px;list-style:none;">
+                <li>$500 in bitcoins</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div style="overflow: hidden; margin-bottom: 7px;">
+              <i class="icon ion-android-star pull-left"></i>
+              <br>
+              <h3 class="pull-left" style="margin: 34px 0px 0px 24px;">Bonus Multiplier</h3>
+            </div>
+            <p>If a team wins any place, 1st to 3rd using the Coinkite API, they get 1 year of Coinkite business membership ($3000 value)</p>
+          </div>
+        </div>
+      </hr>
+    </div>
+  </div>
+</div>
+<!-- ********** GREY SECTION - TOPICS **********
+-->
+<section id="initiative"></section>
+<div class="container ptb">
+  <div class="row">
+    <h2 class="centered">BLOCKCHAIN BEACH INITIATIVE</h2>
+    <hr class="aligncenter mb">
+      <div class="col-md-4">
+        <tgr>
+          <i class="icon ion-social-bitcoin"></i>
+        </tgr>
+        <h3 class="mb">Why Bitcoin?</h3>
+        <p>Bitcoin has changed the way we transfer value forever. It’s an open protocol that allows for innovation without permission. The code is open source and available to anyone to analyze or build upon. The technology of Bitcoin is revolutionary because it allows anyone to create digital scarcity without need for trusted third parties.</p>
+        <p>By removing trusted third parties, we can conduct transactions without the need to trust one another thereby making transactions of any digital property or value extremely efficient and secure. The Bitcoin network is agnostic and doesn’t care about user’s creed, place of birth, race or status - anyone can use Bitcoin. This provides exceptional potential and opportunities for so many revolutionary applications.</p>
+      </div>
+      <!-- /col-md-4
+      -->
+      <div class="col-md-4">
+        <tgr>
+          <i class="icon ion-earth"></i>
+        </tgr>
+        <h3 class="mb">Why Miami?</h3>
+        <p>Because of all the opportunity! Miami is a melting pot of many different ethnicities and it’s also a financial hub to Europe, Central and South America, and the Caribbean. Miami is one of the most unbanked and underbanked cities in the United States with one out of every five people without a bank account. Miami is also a tourist and international business hotspot; people from all over the world travel here for both business and pleasure. Bitcoin can allow anyone in the world to transfer value as long as they have access to the Internet.</p>
+      </div>
+      <!-- /col-md-4
+      -->
+      <div class="col-md-4">
+        <tgr>
+          <i class="icon ion-link"></i>
+        </tgr>
+        <h3 class="mb">Who is Blockchain Beach?</h3>
+        <p>Blockchain Beach is a group of educators, entrepreneurs, colleagues and enthusiasts who all share a common passion for blockchain technology and decentralized cryptocurrency.</p>
+        <p>Our mission is to empower the South Florida community through education of Blockchain based technologies. Our primary focus is to provide a consistent delivery of informative content in an effort to motivate and cultivate the entrepreneurial community in South Florida.</p>
+      </div>
+      <!-- /col-md-4
+      -->
+    </hr>
+  </div>
+</div>
+<section id="judges"></section>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">JUDGES</h2>
+      <hr class="aligncenter mb">
+        <!-- Speakers First Row
+        -->
+        <!--
+          <div class="col-md-2 centered">
+          <haml:loud> image_tag 'judges/chris_derose.jpg', :class =&amp;gt; 'img-circle', :height =&amp;gt; '120' </haml:loud>
+          </div>
+          <div class="col-md-4">
+          <h4>Chris DeRose</h4>
+          <h6><tg>Community Director of Counterparty Foundation</tg></h6>
+          <p>Chris DeRose is an active Bitcoin evangelist, rubyist, and sometimes pythonista. Chris writes for Bitcoin Magazine, contributes to Let's talk Bitcoin, and loves to talk Smart Contracts and user assets. Chris is the “Community Director” of the Counterparty Foundation, and has two amazing cats that have both been trained to balance on one paw.</p>
+          </div>
+          <div class="col-md-2 centered">
+          <haml:loud> image_tag 'judges/shawn_wilkinson.jpg', :class =&amp;gt; 'img-circle', :height =&amp;gt; '120' </haml:loud>
+          </div>
+          <div class="col-md-4">
+          <h4>Shawn Wilkinson</h4>
+          <h6><tg>Founder &amp; Lead Developer of Storj.io</tg></h6>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        -->
+      </hr>
+    </div>
+    <!-- /row
+    -->
+    <div class="row mt">
+      <!-- Speakers Second Row
+      -->
+      <div class="col-md-2 centered">
+        <%= image_tag 'judges/peter_martinez.jpg', :class => 'img-circle', :height => '120' %>
+      </div>
+      <div class="col-md-4">
+        <h4>Peter Martinez</h4>
+        <h6>
+          <tg>
+            Co-founder of
+            <a href="http://www.accredify.com" target="_blank">Accredify.com</a>
+            \&amp; tech community organizer
+          </tg>
+        </h6>
+        <p>A serial entrepreneur, Peter has successfully launched several tech startups which have engaged millions of users and have been featured on news outlets including BBC News, the Washington Post, USA Today, the Miami Herald, TechCrunch, Mashable, among others.</p>
+      </div>
+      <div class="col-md-2 centered">
+        <%= image_tag 'judges/doug_carrillo.jpg', :class => 'img-circle', :height => '120' %>
+      </div>
+      <div class="col-md-4">
+        <h4>Doug Carrillo</h4>
+        <h6>
+          <tg>
+            Co-Founder of
+            <a href="http://www.bitstop.co" target="_blank">Bitstop</a>
+          </tg>
+        </h6>
+        <p>Doug is an entrepreneur who has started several successful businesses.  He was born and raised in Miami, FL.  Currently, he is a Co-Founder at Bitstop which provides Bitcoin related services for both consumers and businesses in South Florida. He has a fourth degree blackbelt in cryptocurrency mining and working with developers to create useful applications using Bitcoin's blockchain technology.</p>
+      </div>
+    </div>
+    <div class="row mt">
+      <!-- Speakers Second Row
+      -->
+      <div class="col-md-2 centered">
+        <%= image_tag 'judges/tom_lackner.jpg', :class => 'img-circle', :height => '120' %>
+      </div>
+      <div class="col-md-4">
+        <h4>Thomas Lackner</h4>
+        <h6>
+          <tg>
+            <a href="http://www.pop.co" target="_blank">Pop.co</a>
+          </tg>
+        </h6>
+        <p>Thomas Lackner is a 15 year veteran of the tech industry. In 1999 he became the CTO of TeRespondo.com, Latin America's first pay-per-click search engine, later sold to Yahoo. Later he cofounded Destructoid.com, the world's most popular independent gaming blog and a US top 2000 site. More recently he acted as the CTO of the .CO domain extension which was sold to Neustar in 2014. Now he leads POP.co, a next-generation domain registrar, obsesses over cryptography and privacy issues, and plays with his Pomeranian.</p>
+      </div>
+      <div class="col-md-2 centered">
+        <%= image_tag 'judges/joshua_unseth.jpg', :class => 'img-circle', :height => '120' %>
+      </div>
+      <div class="col-md-4">
+        <h4>Joshua Unseth</h4>
+        <h6>
+          <tg>
+            <a href="https://www.alarmgrid.com/" target="_blank">Alarm Grid</a>
+          </tg>
+        </h6>
+        <p>Joshua Unseth is an entrepreneur and marketer from the Fort Lauderdale/Miami area and one of the co-organizers of the South Florida Bitcoin community. His company, Alarm Grid, is a strong supporter in the advancement of disruptive technologies such as Bitcoin, and shows that support by participating and helping to fund local Bitcoin projects. Recently, Joshua spoke about Bitcoin on Refresh Miami's panel on Mobile Payments.</p>
+      </div>
+    </div>
+    <div class="row mt">
+      <!-- Speakers Second Row
+      -->
+      <div class="col-md-2 centered">
+        <%= image_tag 'judges/jorge_ruiz_m.jpg', :class => 'img-circle', :height => '120' %>
+      </div>
+      <div class="col-md-4">
+        <h4>Jorge Ruiz M.</h4>
+        <h6>
+          <tg>
+            Global Digital Acceleration Head at
+            <a href="http://www.citi.com" target="_blank">Citibank</a>
+          </tg>
+        </h6>
+        <p>Jorge is a senior financial service executive with successful experience in digital strategy, restructuring and developing businesses; covering different segments, markets and industries. He has held senior level positions in corporate banking and consumer business, insurance and capital markets.</p>
+      </div>
+      <!-- /End Row of Speakers
+      -->
+    </div>
+  </div>
+</div>
+<section id="judging"></section>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">JUDGING CRITERIA</h2>
+      <hr class="aligncenter mb">
+        <div class="col-md-12 centered">
+          <h2>
+            Judging will be based on the following criteria with equal weight assigned to each:
+            <h3 class="col-md-4">
+              Creativity:
+              <p>Another bitcoin wallet may not add much wow factor for your team unless it has very unique features. How could bitcoin enhance pain points in gaming or paywalls?  How will your app create brand new interesting original use cases?</p>
+            </h3>
+            <h3 class="col-md-4">
+              Product:
+              <p>Does the application make bitcoin more user friendly and approachable? Can the application make bitcoin go viral or much easier to use?</p>
+            </h3>
+            <h3 class="col-md-4">
+              Execution:
+              <p>The devil is in the details. Does the application work well? Does it provide a good experience to the user? How does UX feel or the GUI look?</p>
+            </h3>
+          </h2>
+        </div>
+      </hr>
+    </div>
+  </div>
+</div>
+<!-- ********** WHITE SECTION - SCHEDULE **********
+-->
+<section id="schedule"></section>
+<div class="container ptb">
+  <div class="row">
+    <h2 class="centered">SCHEDULE</h2>
+    <hr class="aligncenter mb">
+      <div class="col-md-4">
+        <div class="day" id="friday">
+          <h3 class="mtb" style="text-align: center;  margin-bottom: 15px; margin-top: 28px;">
+            <span>Friday @ Brick House</span>
+            <p>187 Northwest 28th Street</p>
+          </h3>
+          <h6 style="text-align: center;">Jan 9</h6>
+          <ul class="events" style="margin: 0 auto; width: 293px;">
+            <li>
+              <time>6:30pm</time>
+              <span>Registration Starts</span>
+            </li>
+            <li>
+              <time>7:00pm</time>
+              <span>Drinks &amp; Networking</span>
+            </li>
+            <li>
+              <time>7:30pm</time>
+              <span>Kickoff &amp; Speakers</span>
+            </li>
+            <li>
+              <time>8:00pm</time>
+              <span>
+                Pitches
+              </span>
+            </li>
+            <li>
+              <time>9:00pm</time>
+              <span>Finish forming teams</span>
+            </li>
+            <li>
+              <time>10:00pm</time>
+              <span>Welcome Reception Ends</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="day" id="saturday">
+          <h3 class="mtb" style="text-align: center;  margin-bottom: 15px; margin-top: 28px;">
+            <span>Saturday @ LAB Miami</span>
+            <p>400 NW 26th Street</p>
+          </h3>
+          <h6 style="text-align: center;">Jan 10</h6>
+          <ul class="events" style="margin: 0 auto; width: 293px;">
+            <li>
+              <time>8:00am</time>
+              <span>Breakfast</span>
+            </li>
+            <li>
+              <time>9:00am</time>
+              <span>Begin Hacking</span>
+            </li>
+            <li>
+              <time>12:00pm</time>
+              <span>Lunch</span>
+            </li>
+            <li>
+              <time>7:00pm</time>
+              <span>Dinner</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="day" id="sunday">
+          <h3 class="mtb" style="text-align: center;  margin-bottom: 15px; margin-top: 28px;">
+            <span>Sunday @ LAB Miami</span>
+            <p>400 NW 26th Street</p>
+          </h3>
+          <h6 style="text-align: center;">Jan 11</h6>
+          <ul class="events" style="margin: 0 auto; width: 293px;">
+            <li>
+              <time>8:00am</time>
+              <span>Breakfast</span>
+            </li>
+            <li>
+              <time>12:00pm</time>
+              <span>Lunch</span>
+            </li>
+            <li>
+              <time>1:00pm</time>
+              <span>Gut check. Start prepping for presentations</span>
+            </li>
+            <li>
+              <time>1:30pm</time>
+              <span>Presentations</span>
+            </li>
+            <li>
+              <time>4:00pm</time>
+              <span>Judging Begins</span>
+            </li>
+            <li>
+              <time>5:00pm</time>
+              <span>Awards Distributed</span>
+            </li>
+            <li>
+              <time>6:00pm</time>
+              <span>After Party @ Brick House - 187 Northwest 28th Street</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </hr>
+  </div>
+</div>
+<section id="resources"></section>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">DEVELOPER RESOURCES</h2>
+      <hr class="aligncenter mb">
+        <div class="col-md-3 col-md-offset-4">
+          <h4>API's</h4>
+          <ul>
+            <li>
+              <a data-toggle="tooltip" href="https://bitpay.com/developers" target="_blank" title="<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div><div class='code-language perl'>Perl</div><div class='code-language android'>Android</div>">bitpay</a>
+            </li>
+            <!-- php, python, ruby, java, c#, perl, anroid
+            -->
+            <li>
+              <a data-toggle="tooltip" href="https://insight.is/" target="_blank" title="<div class='code-language javascript'>NodeJS</div>">insight.is</a>
+            </li>
+            <!-- node
+            -->
+            <li>
+              <a data-toggle="tooltip" href="https://chain.com/" target="_blank" title="<div class='code-language ruby'>Ruby</div><div class='code-language javascript'>NodeJS</div><div class='code-language objective-c'>Objective-C</div><div class='code-language swift'>Swift</div><div class='code-language javascript'>Javascript</div>">chain.com</a>
+            </li>
+            <!-- ruby, objective-c, swift, node, js
+            -->
+            <li>
+              <a data-toggle="tooltip" href="https://blockchain.info/api" target="_blank" title="<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div>">blockchain.info</a>
+            </li>
+            <!-- python, java, c#, ruby, php
+            -->
+            <li>
+              <a data-toggle="tooltip" href="https://coinbase.com/docs/api/overview" target="_blank" title="<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language java'>Java</div><div class='code-language c-sharp'>C#</div><div class='code-language javascript'>NodeJS</div>">coinbase.com</a>
+            </li>
+            <!-- ruby, php, java, python, node, c#
+            -->
+            <li>
+              <a data-toggle="tooltip" href="https://coinkite.com/faq/developers" target="_blank" title="<div class='code-language php'>PHP</div><div class='code-language python'>Python</div><div class='code-language ruby'>Ruby</div><div class='code-language javascript'>Javascript</div>">coinkite.com</a>
+            </li>
+            <!-- python, ruby, php, javascript
+            -->
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>Bitcoin Libraries</h4>
+          <ul>
+            <li>
+              <a href="https://github.com/bitcoin/bitcoin" target="_blank">Bitcoin Core</a>
+            </li>
+            <li>
+              <a href="https://code.google.com/p/bitcoinj/" target="_blank">bitcoinj</a>
+            </li>
+            <li>
+              <a href="https://github.com/nbobtc/bitcoind-php/" target="_blank">bitcoind</a>
+            </li>
+            <li>
+              <a href="http://bitcoinjs.org/" target="_blank">bitcoinJS</a>
+            </li>
+            <li>
+              <a href="https://github.com/libbitcoin/libbitcoin/" target="_blank">libbitcoin</a>
+            </li>
+            <li>
+              <a href="http://bitcore.io/" target="_blank">bitcore.io</a>
+            </li>
+            <li>
+              <a href="https://github.com/conformal/btcd" target="_blank">btcd</a>
+            </li>
+            <li>
+              <a href="https://github.com/coinbase/toshi/" target="_blank">Toshi</a>
+            </li>
+            <li>
+              <a href="https://github.com/coinkite/coinkite-real-time-invoice" target="_blank">Coinkite Invoicing &amp; Checkout</a>
+            </li>
+            <li>
+              <a href="https://github.com/coinkite/coinkite-bitcoin-atm" target="_blank">Coinkite Bitcoin ATM</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-md-offset-4">
+          <h4>Blockchain Explorer's</h4>
+          <ul>
+            <li>
+              <a href="https://blockchain.info/" target="_blank">blockchain.info</a>
+            </li>
+            <li>
+              <a href="http://blockr.io/" target="_blank">blockr.io</a>
+            </li>
+            <li>
+              <a href="https://www.biteasy.com/" target="_blank">biteasy.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>Guides</h4>
+          <ul>
+            <li>
+              <a href="https://bitcoin.org/en/developer-guide" target="_blank">bitcoin.org</a>
+            </li>
+            <li>
+              <a href="https://github.com/aantonop/bitcoinbook" target="_blank">bitcoinbook</a>
+            </li>
+          </ul>
+        </div>
+      </hr>
+    </div>
+  </div>
+</div>
+<section id="inspiration"></section>
+<div class="container ptb">
+  <div class="row">
+    <h2 class="centered">INSPIRATION</h2>
+    <hr class="aligncenter mb">
+      <div class="col-md-12">
+        <p>
+          Bitcoin provides a great opportunity for developers. Like the Internet, the Bitcoin network is an open protocol that allows any developer to build whatever comes to imagination. Brilliant minds and talented developers all over the world are using Bitcoin to build great software. VC funding in Bitcoin is measured to set a record year in 2014 with over
+          <a href="http://www.coindesk.com/bitcoin-venture-capital/">400 Million Dollars</a>
+          invested into Bitcoin startups. Bitcoin startups are in a hiring frenzy because they understand that Block Chain centered protocols such as Bitcoin will be in high demand. Check out some examples below:
+        </p>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=HmYP-7pcdhM" target="_blank">Micropayment channels</a>
+            </li>
+            <li>
+              <a href="https://www.changetip.com" target="_blank">Social network tipping apps</a>
+            </li>
+            <li>
+              <a href="https://github.com/schildbach/bitcoin-wallet" target="_blank">Open source bitcoin wallets</a>
+            </li>
+            <li>
+              <a href="https://www.openbazaar.com" target="_blank">Decentralized market places</a>
+            </li>
+          </ul>
+          <ul></ul>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="https://www.darkwallet.is/" target="_blank">Privacy Bitcoin wallets</a>
+            </li>
+            <li>
+              <a href="https://purse.io/" target="_blank">Financial services</a>
+            </li>
+            <li>
+              <a href="http://twister.net.co/" target="_blank">Decentralized p2p microblogging services</a>
+            </li>
+            <li>
+              <a href="https://onename.io/" target="_blank">Decentralized identity services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <a href="https://www.bitwage.co/" target="_blank">Payroll services</a>
+            </li>
+            <li>
+              <a href="http://www.proofofexistence.com/" target="_blank">Notary services</a>
+            </li>
+            <li>
+              <a href="https://www.livingroomofsatoshi.com/" target="_blank">Bill payment services</a>
+            </li>
+            <li>
+              <a href="https://www.swarm.co/" target="_blank">Crowdfunding platorms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </hr>
+  </div>
+</div>
+<section class="testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag 'map.png', :style => 'width: 100%; max-height: 419px;' %>
+      </div>
+      <div class="col-sm-6 section-bg-grey centered">
+        <div class="carousel slide" data-ride="carousel" id="carousel-example-generic" style="height: 191px;">
+          <!-- Wrapper for slides
+          -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <h2>Low transaction fees & High speed</h2>
+              <h3>
+                Typically only a miner&#39;s fee of 0.0001 btc ($#{@minerFee['subtotal']['amount']}) can cover the cost of any size transaction. Transactions are fast and settled permanetly!
+              </h3>
+            </div>
+            <div class="item">
+              <h2>Open Source</h2>
+              <h3>The protocol is open source so you know the rules. The system is transparent and does not require you to trust another user. Trust is baked into Bitcoin making it trustworthy for you.</h3>
+            </div>
+            <div class="item">
+              <h2>Decentralized</h2>
+              <h3>Unlike traditional client-server architecture, there is no center to the network, just a mesh of nodes that can act as both client and server.</h3>
+            </div>
+            <div class="item">
+              <h2>For the poeple, By the people</h2>
+              <h3>Bitcoin is peer to peer. That means no middle men if you don&#39;t need them. Just like us, there are people all over the world hacking away on the future of payments.</h3>
+            </div>
+            <div class="item">
+              <h2>Banking for the Unbanked</h2>
+              <h3>Billions of people around the world have no access to banking. However, with Bitcoin, anyone with even a basic cell phone can essentially be their own bank.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="registration"></section>
+<div class="container ptb">
+  <div class="row">
+    <h2 class="centered">REGISTRATION</h2>
+    <hr class="aligncenter mb">
+      <div class="col-md-5 col-md-offset-1">
+        <div class="row price-tag">
+          <div class="col-sm-5 centered">
+            <h1>FREE</h1>
+            <h5>PARTICIPANT</h5>
+          </div>
+          <div class="col-sm-7 centered">
+            <h4>DAY 1 & 2 & 3</h4>
+            <p>
+              Food Included
+              <br/>
+              Access to all areas
+              <br/>
+              After Party
+              <br/>
+              <br/>
+              <%= link_to 'Register', new_user_registration_path, :class => "btn btn-conf btn-green" %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="row price-tag-green">
+          <div class="col-sm-5 centered">
+            <h1>FREE</h1>
+            <h5>OBSERVER &amp; AFTER PARTY</h5>
+          </div>
+          <div class="col-sm-7 centered">
+            <h4>DAY 1 & 3</h4>
+            <p>
+              Kick Off Bash
+              <br/>
+              Presentation Observer
+              <br/>
+              After Party Access
+              <br/>
+              <br/>
+              <button class="btn btn-conf btn-clear" data-target="#observer" data-toggle="modal">Register</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </hr>
+  </div>
+  <div class="row mt">
+    <div class="col-md-4">
+      <h3>
+        <tgr>Can I bring a team?</tgr>
+      </h3>
+      <p>Yes, though we have a limit of 5 members per team. You can bring your friends or you can team up with other hackers on site. No matter what you choose, be ready to hack!</p>
+    </div>
+    <div class="col-md-4">
+      <h3>
+        <tgr>Do you own my hack?</tgr>
+      </h3>
+      <p>No, all code is yours. This hackathon is for you to have some fun, meet great people, do some good -- and have a chance to win $10k.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>
+        <tgr>Should I bring my pajamas?</tgr>
+      </h3>
+      <p>Expect to stay overnight, so bring whatever you need to get you through a 24 hour hack fest. We'll provide some sleep spaces for those who need to crash or when the energy drink starts to ebb. Remember you are in a public forum, so do cover up.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>
+        <tgr>What kind of code can I write?</tgr>
+      </h3>
+      <p>All breeds of code welcome.</p>
+    </div>
+  </div>
+  <div class="row mt">
+    <h2 class="centered">RULES & TERMS</h2>
+    <hr class="aligncenter mb">
+      <div class="col-md-12 rules-terms">
+        <ol>
+          <li>
+            <p>Participants must be 18 years of age or older unless accompanied by a legal guardian.</p>
+          </li>
+          <li>
+            <p>Eligible participants may participate individually or as a team up to a limit of 5 people per team. A team can be just one person or up to five people.</p>
+          </li>
+          <li>
+            <p>Participants must register on www.MiamiBitcoinHackathon.com before January 10, 2015 9:00 a.m. Eastern Standard Time.</p>
+          </li>
+          <li>
+            <p>Submitted project must incorporate Bitcoin.</p>
+          </li>
+          <li>
+            <p>Each Participant is eligible to receive only one prize from Blockchain Beach, whether individually or as a group.</p>
+          </li>
+          <li>
+            <p>Winners must accept prizes in the form of bitcoin. Conversion rates will be Coinbase spot sell price at the time of transfer.</p>
+          </li>
+          <li>
+            <p>All submitted code must be created between the Twenty-eight (28) hour time period start and stop time. Any participant or team who uses code, which has been created before the hackathon start time will automatically be disqualified.</p>
+          </li>
+          <li>
+            <p>The team’s project must be hosted on Github in a public repo. Your team page must be updated with the repo’s url.</p>
+          </li>
+          <li>
+            <p>Participants can only contribute code toward their respective team and cannot share code, ideas or contribute code towards other teams.</p>
+          </li>
+          <li>
+            <p>
+              By submitting your code, you agree to the #{link_to 'terms and conditions.', rules_path, :target => "blank"}
+            </p>
+          </li>
+          <li>
+            <p>Blockchain Beach registered agents, directors and officers at the time of this event cannot participate in this hackathon.</p>
+          </li>
+        </ol>
+      </div>
+    </hr>
+  </div>
+</div>
+<!-- ********** FOOTER **********
+-->
+<section id="contact"></section>
+<div id="f">
+  <div class="container">
+    <div class="row centered">
+      <h2>Locations</h2>
+    </div>
+    <div class="row mt">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1">
+            <h3>Main Hackathon Event</h3>
+            <h5>
+              LAB Miami
+              <br/>
+              400 NW 26th Street
+              <br/>
+              Miami, FL 33127
+              <br/>
+              United States
+              <!--UM Life Science and Technology Park
+              -->
+              <!--%br/
+              -->
+              <!--1951 Northwest 7th Avenue
+              -->
+              <!--%br/
+              -->
+              <!--Miami, FL 33136
+              -->
+              <!--%br/
+              -->
+              <!--United States
+              -->
+            </h5>
+          </div>
+          <div class="col-sm-5">
+            <h3>Welcome Reception &amp; After Party</h3>
+            <h5>
+              Brick House
+              <br/>
+              187 Northwest 28th Street
+              <br/>
+              Miami, FL 33127
+              <br/>
+              United States
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ********** MAP**********
+-->
+<div id="map-contact"></div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="observer" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-dialog-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Observer & After Party Registration</h4>
+      </div>
+      <%= form_for(@observer, remote: true, :html => {:class => "form-horizontal"}) do |f| %>
+        <div class="modal-body">
+          <div class="form-group">
+            <%= f.label :name, :class => "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.text_field :name, :class => "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, :class => "col-sm-2 control-label" %>
+            <div class="col-sm-10">
+              <%= f.text_field :email, :class => "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal" style="float: left;" type="button">Never Mind</button>
+          <%= f.submit 'Register', :class => 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="registration_process" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-dialog-center">
+    <div class="modal-content" style="text-align: center;">
+      <i class="fa fa-circle-o-notch fa-spin fa-5x observer-validator-loading" style="margin: 90px 0px;"></i>
+      <div class="observer-success">
+        <i class="fa fa-smile-o" style="font-size: 189px;"></i>
+        <h1>Success</h1>
+        <h2>See you January 9 at 6:30 pm</h2>
+      </div>
+    </div>
+  </div>
+</div>
