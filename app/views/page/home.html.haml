@@ -12,170 +12,181 @@
 #h
   .container
     .row
-      %h1
-        Miami Bitcoin
-        %br>/
-        Hackathon
-      %h5 January 9th to 11th - Miami, Florida
-      %h2 Do you want to create code that empowers people all over the world?
+      -# %h1{:class => "landing-line-height"} 2nd Annual
+      -# %h1 Miami Bitcoin Hackathon
+      %h5{:class => "date-padding"} January 22nd to 24th
+      = image_tag 'mbh-blue-white.svg', :class => "mbh-logo"
+      %h3{:class => "tag-padding"} Write code. Empower the world.
+      .divider
       %p.mt
-        %a.smoothScroll.btn.btn-conf.btn-green.register-now-button{:href => "#registration"} Register Now
+        %a.smoothScroll.btn.btn-conf.btn-clear.register-now-button{:href => "#registration"} Register Now
         %a.smoothScroll.btn.btn-conf.btn-clear.learn-more-button{:href => "#initiative"} Learn More
 / ********** SPONSORS **********
 %section#sponsors
 .container.ptb
   .row
-    %h2.centered SPONSORS & PARTNERS
+    %h2.centered 2015 HACKATHON RECAP
     %hr.aligncenter.mb
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
-        %h3 Sponsors
-        .row
-          .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered
-            %a{:href => "http://www.knightfoundation.org/", :target => "_blank"}
-              = image_tag 'sponsors/knight.png'
-          .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.logo-lab
-            %a{:href => "http://www.thelabmiami.com/", :target => "_blank"}
-              = image_tag 'sponsors/lab_miami.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitstop
-            %a{:href => "http://bitstop.co/", :target => "_blank"}
-              = image_tag 'sponsors/bitstop.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitpay
-            %a{:href => "https://bitpay.com/", :target => "_blank"}
-              = image_tag 'sponsors/bitpay.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-coinkite
-            %a{:href => "https://coinkite.com/", :target => "_blank"}
-              = image_tag 'sponsors/coinkite.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.tally-capital
-            %a{:href => "http://tallycapital.com/", :target => "_blank"}
-              = image_tag 'sponsors/tally_capital.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "https://lamassu.is/", :target => "_blank"}
-              = image_tag 'sponsors/lamassu.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "http://satoshilabs.com/", :target => "_blank"}
-              = image_tag 'sponsors/satoshi_labs.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "https://www.bitcointrezor.com/", :target => "_blank"}
-              = image_tag 'sponsors/trezor.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-trucoin
-            %a{:href => "https://www.trucoin.com/", :target => "_blank"}
-              = image_tag 'sponsors/trucoin.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "https://www.alarmgrid.com/", :target => "_blank"}
-              = image_tag 'sponsors/alarm_grid.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "http://www.enviropro.net/", :target => "_blank"}
-              = image_tag 'sponsors/enviro_pro_usa.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "http://www.digitalcurrencycouncil.com/", :target => "_blank"}
-              = image_tag 'sponsors/digital_currency_council.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "http://mtalawyers.com/", :target => "_blank"}
-              = image_tag 'sponsors/mearkle_trueblood_adam.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "#", :target => "_blank"}
-              = image_tag 'sponsors/brave.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-rm-and-associates
-            %a{:href => "#", :target => "_blank"}
-              = image_tag 'sponsors/rm-and-associates.jpg'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-amlclass
-            %a{:href => "http://www.amlclass.com/", :target => "_blank"}
-              = image_tag 'sponsors/aml_compliance_solutions.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "#", :target => "_blank"}
-              = image_tag 'sponsors/acle_law.png'
-        %h3{:style => "margin: 100px 0px 1px 0px;"} Event Partners
-        .row
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-btcmiami
-            %a{:href => "http://btcmiami.com/", :target => "_blank"}
-              = image_tag 'sponsors/btcmiami.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-refreshmiami
-            %a{:href => "http://www.refreshmiami.com/", :target => "_blank"}
-              = image_tag 'sponsors/refresh_miami.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-mdc
-            %a{:href => "http://www.mdc.edu/main/", :target => "_blank"}
-              = image_tag 'sponsors/miami_dade_college.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-ccn
-            %a{:href => "http://collegecrypto.org/", :target => "_blank"}
-              = image_tag 'sponsors/ccn.jpg'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-u
-            %a{:href => "http://www.miami.edu/", :target => "_blank"}
-              = image_tag 'sponsors/u.jpg'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-wyncode
-            %a{:href => "http://wyncode.co/", :target => "_blank"}
-              = image_tag 'sponsors/wyncode.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "#", :target => "_blank"}
-              = image_tag 'sponsors/blockchain_beach.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.loglo-pollotropical
-            %a{:href => "http://pollotropical.com/", :target => "_blank"}
-              = image_tag 'sponsors/pollo_tropical.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
-            %a{:href => "http://www.powerpizzeria.com/", :target => "_blank"}
-              = image_tag 'sponsors/power_pizzeria.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
-            %a{:href => "https://www.sipjojo.com/", :target => "_blank"}
-              = image_tag 'sponsors/jojo.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
-            %a{:href => "http://www.eternitycoffeeroasters.com/", :target => "_blank"}
-              = image_tag 'sponsors/eternity.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
-            %a{:href => "http://www.kindsnacks.com/", :target => "_blank"}
-              = image_tag 'sponsors/king.jpg'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
-            %a{:href => "http://satoshicloset.com/", :target => "_blank"}
-              = image_tag 'sponsors/satoshi_closet.png'
-        %h3{:style => "margin: 100px 0px 1px 0px;"} Media Partners
-        .row
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
-            %a{:href => "http://ybitcoin.net/", :target => "_blank"}
-              = image_tag 'sponsors/ybitcoin.png'
-          .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
-            %a{:href => "http://pfunkmedia.com/", :target => "_blank"}
-              = image_tag 'sponsors/pfunk_media.png'
-/ ********** GREY SECTION - PRIZES **********
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-l9TvM7cuJg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+-#     %h2.centered SPONSORS & PARTNERS
+-#     %hr.aligncenter.mb
+-#       .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
+-#         %h3 Sponsors
+-#         .row
+-#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered
+-#             %a{:href => "http://www.knightfoundation.org/", :target => "_blank"}
+-#               = image_tag 'sponsors/knight.png'
+-#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.logo-lab
+-#             %a{:href => "http://www.thelabmiami.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/lab_miami.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitstop
+-#             %a{:href => "http://bitstop.co/", :target => "_blank"}
+-#               = image_tag 'sponsors/bitstop.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitpay
+-#             %a{:href => "https://bitpay.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/bitpay.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-coinkite
+-#             %a{:href => "https://coinkite.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/coinkite.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.tally-capital
+-#             %a{:href => "http://tallycapital.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/tally_capital.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "https://lamassu.is/", :target => "_blank"}
+-#               = image_tag 'sponsors/lamassu.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "http://satoshilabs.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/satoshi_labs.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "https://www.bitcointrezor.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/trezor.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-trucoin
+-#             %a{:href => "https://www.trucoin.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/trucoin.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "https://www.alarmgrid.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/alarm_grid.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "http://www.enviropro.net/", :target => "_blank"}
+-#               = image_tag 'sponsors/enviro_pro_usa.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "http://www.digitalcurrencycouncil.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/digital_currency_council.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "http://mtalawyers.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/mearkle_trueblood_adam.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "#", :target => "_blank"}
+-#               = image_tag 'sponsors/brave.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-rm-and-associates
+-#             %a{:href => "#", :target => "_blank"}
+-#               = image_tag 'sponsors/rm-and-associates.jpg'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-amlclass
+-#             %a{:href => "http://www.amlclass.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/aml_compliance_solutions.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "#", :target => "_blank"}
+-#               = image_tag 'sponsors/acle_law.png'
+-#         %h3{:style => "margin: 100px 0px 1px 0px;"} Event Partners
+-#         .row
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-btcmiami
+-#             %a{:href => "http://btcmiami.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/btcmiami.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-refreshmiami
+-#             %a{:href => "http://www.refreshmiami.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/refresh_miami.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-mdc
+-#             %a{:href => "http://www.mdc.edu/main/", :target => "_blank"}
+-#               = image_tag 'sponsors/miami_dade_college.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-ccn
+-#             %a{:href => "http://collegecrypto.org/", :target => "_blank"}
+-#               = image_tag 'sponsors/ccn.jpg'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-u
+-#             %a{:href => "http://www.miami.edu/", :target => "_blank"}
+-#               = image_tag 'sponsors/u.jpg'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-wyncode
+-#             %a{:href => "http://wyncode.co/", :target => "_blank"}
+-#               = image_tag 'sponsors/wyncode.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "#", :target => "_blank"}
+-#               = image_tag 'sponsors/blockchain_beach.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.loglo-pollotropical
+-#             %a{:href => "http://pollotropical.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/pollo_tropical.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+-#             %a{:href => "http://www.powerpizzeria.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/power_pizzeria.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+-#             %a{:href => "https://www.sipjojo.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/jojo.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+-#             %a{:href => "http://www.eternitycoffeeroasters.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/eternity.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+-#             %a{:href => "http://www.kindsnacks.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/king.jpg'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+-#             %a{:href => "http://satoshicloset.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/satoshi_closet.png'
+-#         %h3{:style => "margin: 100px 0px 1px 0px;"} Media Partners
+-#         .row
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
+-#             %a{:href => "http://ybitcoin.net/", :target => "_blank"}
+-#               = image_tag 'sponsors/ybitcoin.png'
+-#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
+-#             %a{:href => "http://pfunkmedia.com/", :target => "_blank"}
+-#               = image_tag 'sponsors/pfunk_media.png'
+
+-# ********** GREY SECTION - PRIZES **********
 %section#prizes
 #g
   .container
     .row
-      %h2.centered PRIZES
+      %h2.centered 2016 PRIZES
       %hr.aligncenter.mb
         .col-md-12
           .col-md-4
+            %div{:style => "overflow: hidden; margin-bottom: 17px;"}
+              = image_tag 'lottery.svg', :class => "pull-left prize-icons"
+              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 1st Place
+            %div
+              %ul{:style => "padding: 0px 0px 0px 17px;list-style:none;"}
+                %li $10,000 in bitcoins
+          .col-md-4
             %div{:style => "overflow: hidden; margin-bottom: 7px;"}
               %i.icon.ion-trophy.pull-left
-              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 1st Place - Satoshi
+              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 2nd Place
             %div
-              %ul{:style => "padding: 0px 0px 0px 17px;"}
-                %li $10,000 in bitcoins
-                %li Acknowledgement of victory on stage at TNABC
-                %li Free passes to TNABC
-                %li One Trezor Hardware Wallet Device
-                %li One Satoshi Closet tshirt for each team member
-                %li First place winner of hackathon gets one year of Coinkite professional membership ($300 value)
-                %li Mad respect / street cred
+              %ul{:style => "padding: 0px 0px 0px 17px;list-style:none;"}
+                %li $3000 in bitcoins
+          .col-md-4
+            %div{:style => "overflow: hidden; margin-bottom: 26px;"}
+              = image_tag 'ribbon-c.svg', :class => "pull-left third-place"
+              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 3rd Place
+            %div
+              %ul{:style => "padding: 0px 0px 0px 17px;list-style:none;"}
+                %li $1500 in bitcoins
+        .col-md-12
           .col-md-4
             %div{:style => "overflow: hidden; margin-bottom: 7px;"}
               %i.icon.ion-ribbon-a.pull-left
-              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 2nd Place - Finney
+              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 4th Place
             %div
-              %ul{:style => "padding: 0px 0px 0px 17px;"}
-                %li $3500 in bitcoins
-                %li One Trezor Hardware Wallet Device
-                %li One Satoshi Closet tshirt for each team member
+              %ul{:style => "padding: 0px 0px 0px 17px;list-style:none;"}
+                %li $750 in bitcoins
+          .col-md-4
             %div{:style => "overflow: hidden; margin-bottom: 7px;"}
               %i.icon.ion-ribbon-b.pull-left
-              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 3rd Place - Dorian
+              %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} 5th Place
             %div
-              %ul{:style => "padding: 0px 0px 0px 17px;"}
-                %li $1000 in bitcoins
-                %li One Trezor Hardware Wallet Device
-                %li One Satoshi Closet tshirt for each team member
+              %ul{:style => "padding: 0px 0px 0px 17px;list-style:none;"}
+                %li $500 in bitcoins
           .col-md-4
             %div{:style => "overflow: hidden; margin-bottom: 7px;"}
               %i.icon.ion-android-star.pull-left
               %h3.pull-left{:style => "margin: 34px 0px 0px 24px;"} Bonus Multiplier
-            %p If a team wins any place, 1st to 3rd using the Coinkite API, they get 1 year of Coinkite business membership ($3000 value)
+            %p TBA at a later date.
 / ********** GREY SECTION - TOPICS **********
 %section#initiative
 .container.ptb
@@ -230,54 +241,43 @@
     .row.mt
       / Speakers Second Row
       .col-md-2.centered
-        = image_tag 'judges/peter_martinez.jpg', :class => 'img-circle', :height => '120'
+        = image_tag 'judges/chris_derose.jpg', :class => 'img-circle', :height => '120'
       .col-md-4
-        %h4 Peter Martinez
+        %h4 Chris DeRose
         %h6
           %tg
-            Co-founder of
-            %a{:href => "http://www.accredify.com", :target => "_blank"} Accredify.com
-            \&amp; tech community organizer
-        %p A serial entrepreneur, Peter has successfully launched several tech startups which have engaged millions of users and have been featured on news outlets including BBC News, the Washington Post, USA Today, the Miami Herald, TechCrunch, Mashable, among others.
+            Community Director of
+            %a{:href => "http://counterparty.io/", :target => "_blank"} Counterparty Foundation
+        %p Chris DeRose is an active Bitcoin evangelist, rubyist, and sometimes pythonista. Chris writes for Bitcoin Magazine, contributes to Let's talk Bitcoin, and loves to talk Smart Contracts and user assets. Chris is the “Community Director” of the Counterparty Foundation, and has two amazing cats that have both been trained to balance on one paw.
       .col-md-2.centered
-        = image_tag 'judges/doug_carrillo.jpg', :class => 'img-circle', :height => '120'
+        = image_tag 'judges/andrew_barnard.jpg', :class => 'img-circle', :height => '120'
       .col-md-4
-        %h4 Doug Carrillo
+        %h4 Andrew Barnard
         %h6
           %tg
             Co-Founder of
             %a{:href => "http://www.bitstop.co", :target => "_blank"} Bitstop
-        %p Doug is an entrepreneur who has started several successful businesses.  He was born and raised in Miami, FL.  Currently, he is a Co-Founder at Bitstop which provides Bitcoin related services for both consumers and businesses in South Florida. He has a fourth degree blackbelt in cryptocurrency mining and working with developers to create useful applications using Bitcoin's blockchain technology.
+        %p Andrew is an entrepreneur who has started several successful businesses.  He was born and raised in Miami, FL.  Currently, he is a Co-Founder at Bitstop which provides Bitcoin related services for both consumers and businesses in South Florida. He has a fourth degree blackbelt in cryptocurrency mining and working with developers to create useful applications using Bitcoin's blockchain technology.
     .row.mt
       / Speakers Second Row
       .col-md-2.centered
-        = image_tag 'judges/tom_lackner.jpg', :class => 'img-circle', :height => '120'
+        = image_tag 'judges/aaron_lasher.jpg', :class => 'img-circle', :height => '120'
       .col-md-4
-        %h4 Thomas Lackner
+        %h4 Aaron Lasher
         %h6
           %tg
-            %a{:href => "http://www.pop.co", :target => "_blank"} Pop.co
-        %p Thomas Lackner is a 15 year veteran of the tech industry. In 1999 he became the CTO of TeRespondo.com, Latin America's first pay-per-click search engine, later sold to Yahoo. Later he cofounded Destructoid.com, the world's most popular independent gaming blog and a US top 2000 site. More recently he acted as the CTO of the .CO domain extension which was sold to Neustar in 2014. Now he leads POP.co, a next-generation domain registrar, obsesses over cryptography and privacy issues, and plays with his Pomeranian.
+            Co-Founder of
+            %a{:href => "http://breadwallet.com/", :target => "_blank"} Breadwallet
+        %p Since 2011, Aaron has been preoccupied with Bitcoin. With an initial start of speculating and trading, he now focuses on investing in and working with promising startups in the digital currency space. A mathematician by trade, he finds beauty in the root (no pun intended) of Bitcoin: number theory, in which philosophy and the natural world intersect. He currently serves as CMO of breadwallet, the most secure and well-loved bitcoin wallet available.
       .col-md-2.centered
-        = image_tag 'judges/joshua_unseth.jpg', :class => 'img-circle', :height => '120'
+        = image_tag 'judges/anthony_fernandez.jpg', :class => 'img-circle', :height => '120'
       .col-md-4
-        %h4 Joshua Unseth
+        %h4 Anthony Fernandez
         %h6
           %tg
-            %a{:href => "https://www.alarmgrid.com/", :target => "_blank"} Alarm Grid
-        %p Joshua Unseth is an entrepreneur and marketer from the Fort Lauderdale/Miami area and one of the co-organizers of the South Florida Bitcoin community. His company, Alarm Grid, is a strong supporter in the advancement of disruptive technologies such as Bitcoin, and shows that support by participating and helping to fund local Bitcoin projects. Recently, Joshua spoke about Bitcoin on Refresh Miami's panel on Mobile Payments.
-    .row.mt
-      / Speakers Second Row
-      .col-md-2.centered
-        = image_tag 'judges/jorge_ruiz_m.jpg', :class => 'img-circle', :height => '120'
-      .col-md-4
-        %h4 Jorge Ruiz M.
-        %h6
-          %tg
-            Global Digital Acceleration Head at
-            %a{:href => "http://www.citi.com", :target => "_blank"} Citibank
-        %p Jorge is a senior financial service executive with successful experience in digital strategy, restructuring and developing businesses; covering different segments, markets and industries. He has held senior level positions in corporate banking and consumer business, insurance and capital markets.
-      / /End Row of Speakers
+            Business Development Manager, Latin America and Caribbean
+            %a{:href => "https://www.paypal.com/", :target => "_blank"} PayPal
+        %p Anthony worked at Standard & Poor's in New York City before taking over PayPal's Business Development team for Latin American and Caribbean markets in 2013. H1 2015 Total Payment volume grew 200% year over year versus H1 2014 at PayPal after implementing his business development strategy for large enterprise merchants in those markets. He graduated from Emory University's Goizueta Business School, and has been involved in the local startup community.
 %section#judging
 #g
   .container
@@ -285,11 +285,17 @@
       %h2.centered JUDGING CRITERIA
       %hr.aligncenter.mb
         .col-md-12.centered
-          Judging will be based on the following criteria with equal weight assigned to each:
-          %p
-            %p Idea: Original use of bitcoin technology
-            %p Product: Implementation of product, design, usability, functionality
-            %p Execution: Presentation and explanation, completeness of idea
+          %h2
+            Judging will be based on the following criteria with equal weight assigned to each:
+            %h3.col-md-4
+              Creativity:
+              %p Another bitcoin wallet may not add much wow factor for your team unless it has very unique features. How could bitcoin enhance pain points in gaming or paywalls?  How will your app create brand new interesting original use cases?
+            %h3.col-md-4
+              Product:
+              %p Does the application make bitcoin more user friendly and approachable? Can the application make bitcoin go viral or much easier to use?
+            %h3.col-md-4
+              Execution:
+              %p The devil is in the details. Does the application work well? Does it provide a good experience to the user? How does UX feel or the GUI look?
 
 / ********** WHITE SECTION - SCHEDULE **********
 %section#schedule
@@ -522,7 +528,7 @@
               After Party
               %br/
               %br/
-              = link_to 'Register', new_user_registration_path, :class => "btn btn-conf btn-green"
+              = link_to 'Register', new_user_registration_path, :class => "btn btn-conf btn-clear-red"
       .col-md-5
         .row.price-tag-green
           .col-sm-5.centered
@@ -566,7 +572,7 @@
           %li
             %p Eligible participants may participate individually or as a team up to a limit of 5 people per team. A team can be just one person or up to five people.
           %li
-            %p Participants must register on www.MiamiBitcoinHackathon.com before January 10, 2015 9:00 a.m. Eastern Standard Time.
+            %p Participants must register on www.MiamiBitcoinHackathon.com before January 10, 2016 9:00 a.m. Eastern Standard Time.
           %li
             %p Submitted project must incorporate Bitcoin.
           %li
@@ -603,19 +609,12 @@
               Miami, FL 33127
               %br/
               United States
-              /UM Life Science and Technology Park
-              /%br/
-              /1951 Northwest 7th Avenue
-              /%br/
-              /Miami, FL 33136
-              /%br/
-              /United States
           .col-sm-5
             %h3 Welcome Reception &amp; After Party
             %h5
-              Brick House
+              Venue: TBA
               %br/
-              187 Northwest 28th Street
+              Address: TBA
               %br/
               Miami, FL 33127
               %br/
@@ -650,4 +649,4 @@
       .observer-success
         %i.fa.fa-smile-o{:style => "font-size: 189px;"}
         %h1 Success
-        %h2 See you January 9 at 6:30 pm
+        %h2 See you January 22nd at 6:30 pm
