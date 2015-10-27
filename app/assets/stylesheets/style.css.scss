@@ -315,10 +315,10 @@ input {
 
 /*Buttons Configuration */
 .btn-conf {
-	border-radius: 50px;
+	border-radius: 0px;
 	margin-right: 15px;
 	font-size: 11px;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	padding: 14px 28px 13px 28px;
 	}
@@ -859,3 +859,5 @@ input {
 
 .prize-icons {width: 100px;}
 .third-place {width: 80px;}
+
+.landing-line-height {line-height: 31px;}
