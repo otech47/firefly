@@ -90,7 +90,7 @@ a {
 	-o-transition: background-color .4s linear, color .4s linear;
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
-	color: #ee4a4b;
+	color: #72b0ed;
 }
 a:hover,
 a:focus {
@@ -139,7 +139,7 @@ a:focus {
 }
 
 .menu h1.logo a:hover {
-	color: #ee4a4b;
+	color: #72b0ed;
 }
 
 .menu img.logo {
@@ -267,7 +267,7 @@ tg {
 }
 /*Text Green*/
 tgr {
-	color: #ee4a4b;
+	color: #72b0ed;
 }
 
 hr {
@@ -315,16 +315,16 @@ input {
 
 /*Buttons Configuration */
 .btn-conf {
-	border-radius: 50px;
+	border-radius: 0px;
 	margin-right: 15px;
 	font-size: 11px;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	padding: 14px 28px 13px 28px;
 	}
 
 .btn-green {
-	background: #ee4a4b;
+	background: #72b0ed;
 	color: white
 }
 
@@ -338,19 +338,31 @@ input {
 	color: #2f2f2f;
 }
 
+.btn-clear-red {
+	background: transparent;
+	color: black;
+	border: 2px solid #5a5a5a;
+	-webkit-transition: none;
+	transition: none;
+}
+.btn-clear-red:hover {
+	background: #72b0ed;
+	color: #ffffff;
+	border: 2px solid #72b0ed;
+}
+
 /* HEADER SECTION */
 #h {
   background:url(image-path('overlay.png')) repeat;
-	padding-top: 246px;
+	padding-top: 60px;
 	text-align:center;
 	width: 100%;
 	color: white;
 
-}
-
 #h h1 {
 	font-weight: 900;
-	font-size: 70px;
+	font-size: 50px;
+  text-transform: uppercase;
 }
 
 #h h5 {
@@ -375,7 +387,7 @@ input {
 }
 
 .section-bg-color {
-	background-color: #ee4a4b;
+	background-color: #72b0ed;
 	height: 100%;
 	padding-top: 40px;
 	padding-bottom: 80px;
@@ -415,7 +427,7 @@ input {
 }
 
 .circle-icon .icon {
-	color: #ee4a4b;
+	color: #72b0ed;
 	line-height: 120px;
 	text-align: center;
 }
@@ -480,7 +492,7 @@ input {
 }
 
 .price-tag-green {
-	background: #ee4a4b;
+	background: #72b0ed;
 	padding-left: 25px;
 	padding-right: 25px;
 	padding-top: 50px;
@@ -853,7 +865,27 @@ input {
   color: #ffffff;
   margin: 0px 0px 0px 15px;
 }
+.register-now-button {
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+}
 
+.register-now-button:hover {
+	background: #72b0ed;
+	color: #ffffff;
+	border: 2px solid #72b0ed;
+}
 
 .video-js {padding-top: 56.25%!important}
 .vjs-fullscreen {padding-top: 0px!important}
+
+.prize-icons {width: 100px;}
+.third-place {width: 80px; margin-top:10px;}
+
+.landing-line-height {line-height: 31px;}
+.date-padding {padding-bottom: 15px; font-weight: 700;}
+.tag-padding {padding-top: 5px; text-transform: uppercase; font-weight: 700;}
+.mbh-logo {max-width: 300px;}
+
+.divider {padding-top:25px;border-bottom: 3px solid #ffffff; width:100px;margin-left: auto;margin-right: auto;display: block;}

@@ -17,6 +17,14 @@
 
 @import 'ionicons';
 
+
+/* iphone 6 in landscape and portrait */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+
+}
+
 /* iPhone 5 & 5S in landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
   #h {
@@ -59,7 +67,7 @@
 /* iPhone 5 & 5S in portrait */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
   #h {
-    padding-top: 62px;
+    padding-top: 5px;
     background: url(image-path('header.jpg')) no-repeat center top;
     background-position: center center;
     -webkit-background-size: 100%;
@@ -77,6 +85,9 @@
 
         h1 {
           font-size: 56px;
+        }
+        img {
+          max-width: 200px;
         }
       }
 
@@ -207,7 +218,7 @@
 .participant-list {
 
 	a {
-		
+
 		.col-md-2 {
 			border: 1px solid #3c3c3c;
 			margin: 16px 13px;
