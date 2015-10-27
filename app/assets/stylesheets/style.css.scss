@@ -338,6 +338,19 @@ input {
 	color: #2f2f2f;
 }
 
+.btn-clear-red {
+	background: transparent;
+	color: black;
+	border: 2px solid #5a5a5a;
+	-webkit-transition: none;
+	transition: none;
+}
+.btn-clear-red:hover {
+	background: #ee4a4b;
+	color: #ffffff;
+	border: 2px solid #ee4a4b;
+}
+
 /* HEADER SECTION */
 #h {
   background:url(image-path('overlay.png')) repeat;
