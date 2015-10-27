@@ -12,10 +12,12 @@
 #h
   .container
     .row
-      %h1{:class => "landing-line-height"} 2nd Annual
-      %h1 Miami Bitcoin Hackathon
-      %h5 January 22nd to 24th, 2016 - Miami, Florida
-      %h3 Do you want to create code that empowers people all over the world?
+      -# %h1{:class => "landing-line-height"} 2nd Annual
+      -# %h1 Miami Bitcoin Hackathon
+      %h5{:class => "date-padding"} January 22nd to 24th
+      = image_tag 'mbh-blue-white.svg', :class => "mbh-logo"
+      %h3{:class => "tag-padding"} Write code. Empower the world.
+      .divider
       %p.mt
         %a.smoothScroll.btn.btn-conf.btn-clear.register-now-button{:href => "#registration"} Register Now
         %a.smoothScroll.btn.btn-conf.btn-clear.learn-more-button{:href => "#initiative"} Learn More
