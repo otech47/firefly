@@ -894,12 +894,17 @@ input {
 }
 .date-padding {
 	padding-bottom: 15px;
-	font-weight: 700;
+	font-weight: 900;
+	font-size: 19px;
+  text-shadow: 1px 1px #78aede;
+	letter-spacing: 3px;
 }
 .tag-padding {
 	padding-top: 5px;
 	text-transform: uppercase;
 	font-weight: 700;
+	text-shadow: 1px 1px #78aede;
+	letter-spacing: 2px;
 }
 .mbh-logo {
 	max-width: 300px;
