@@ -374,9 +374,6 @@
             %li
               %time 5:00pm
               %span Awards Distributed
-            %li
-              %time 6:00pm
-              %span After Party @ Brick House - 187 Northwest 28th Street
 %section#resources
 #g
   .container
@@ -526,23 +523,19 @@
               %br/
               Access to all areas
               %br/
-              After Party
-              %br/
               %br/
               = link_to 'Register', new_user_registration_path, :class => "btn btn-conf btn-clear-red"
       .col-md-5
         .row.price-tag-green
           .col-sm-5.centered
             %h1 FREE
-            %h5 OBSERVER &amp; AFTER PARTY
+            %h5 OBSERVER
           .col-sm-7.centered
             %h4 DAY 1 & 3
             %p
               Kick Off Bash
               %br/
               Presentation Observer
-              %br/
-              After Party Access
               %br/
               %br/
               %button.btn.btn-conf.btn-clear{"data-target" => "#observer", "data-toggle" => "modal"} Register
@@ -619,7 +612,7 @@
         %button.close{"data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} &times;
           %span.sr-only Close
-        %h4#myModalLabel.modal-title Observer & After Party Registration
+        %h4#myModalLabel.modal-title Observer Registration
       = form_for(@observer, remote: true, :html => {:class => "form-horizontal"}) do |f|
         .modal-body
           .form-group
