@@ -14,7 +14,7 @@
     .row
       -# %h1{:class => "landing-line-height"} 2nd Annual
       -# %h1 Miami Bitcoin Hackathon
-      %h5{:class => "date-padding"} January 22nd to 24th
+      %h5{:class => "date-padding"} January 22nd - 24th
       = image_tag 'mbh-blue-white.svg', :class => "mbh-logo"
       %h3{:class => "tag-padding"} Write code. Empower the world.
       .divider
@@ -23,12 +23,13 @@
         %a.smoothScroll.btn.btn-conf.btn-clear.learn-more-button{:href => "#initiative"} Learn More
 / ********** SPONSORS **********
 %section#sponsors
-.container.ptb
+.container.ptb.div-respond
   .row
     %h2.centered 2015 HACKATHON RECAP
     %hr.aligncenter.mb
       .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-l9TvM7cuJg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        .videoWrapper
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-l9TvM7cuJg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 -#     %h2.centered SPONSORS & PARTNERS
 -#     %hr.aligncenter.mb
 -#       .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
