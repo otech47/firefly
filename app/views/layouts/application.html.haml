@@ -23,7 +23,7 @@
           = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
           = javascript_include_tag 'application'
           / MAP SCRIPT - ALL CONFIGURATION IS PLACED HERE - VIEW OUR DOCUMENTATION FOR FURTHER INFORMATION
-          %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false", :type => "text/javascript"}
+          %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDXj1VZLWpo_0Cpyfn9Fwp4dbFZAFmiHWc&sensor=false", :type => "text/javascript"}
           :javascript
             // When the window has finished loading create our google map below
             google.maps.event.addDomListener(window, 'load', init);
@@ -42,7 +42,7 @@
 
                 // How you would like to style the map.
                 // This is where you would paste any style found on Snazzy Maps.
-                styles: [ {   featureType:'water',    stylers:[{color:'#03C9A9'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
+                styles: [ {   featureType:'water',    stylers:[{color:'#72b0ed'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
               };
 
               // Get the HTML DOM element that will contain your map
@@ -78,31 +78,6 @@
 
               google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
-              });
-
-              var contentString2 = '<div id="content">'+
-                  '<div id="siteNotice">'+
-                  '</div>'+
-                  '<h1 id="firstHeading" class="firstHeading">Brick House</h1>'+
-                  '<div id="bodyContent">'+
-                  '<p>187 Northwest 28th Street<br>'+
-                  'Miami, FL 33127<br>'+
-                  'United States</p>'+
-                  '</div>'+
-                  '</div>';
-
-              var infowindow2 = new google.maps.InfoWindow({
-                  content: contentString2
-              });
-
-              var marker2 = new google.maps.Marker({
-                position: bhLatlng,
-                map: map,
-                title: 'Brick House'
-              });
-
-              google.maps.event.addListener(marker2, 'click', function() {
-                infowindow2.open(map,marker2);
               });
 
             }
