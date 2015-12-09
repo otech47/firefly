@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def send_email
-    ParticipantEmailWorker.perform_in(15.seconds, self.id)
+    UserMailer.participant_ticket(self.id).deliver
+    UserMailer.participant_follow_up(self.id).deliver
   end
 
   belongs_to :team

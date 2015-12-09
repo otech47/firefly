@@ -30,10 +30,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'sidekiq'
-gem 'sinatra', '>= 1.3.0', :require => nil
-gem 'redis'
-
 gem 'devise'
 gem 'friendly_id'
 
