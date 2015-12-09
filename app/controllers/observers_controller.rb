@@ -14,7 +14,7 @@ class ObserversController < ApplicationController
 
   def new
     @observer = Observer.new
-    
+
     respond_to do |format|
       if @observer.save
         format.html { redirect_to @observer, notice: 'Observer was successfully created.' }
@@ -34,7 +34,7 @@ class ObserversController < ApplicationController
   def create
     @observer = Observer.new(observer_params)
     flash[:notice] = 'Observer was successfully created.' if @observer.save
-    ObserverEmailWorker.perform_in(15.seconds, @observer.id)
+    UserMailer.observer_ticket(@observer.id).deliver
     respond_with(@observer)
   end
 
