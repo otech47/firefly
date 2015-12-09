@@ -33,7 +33,7 @@ module Firefly
 
     ActionMailer::Base.smtp_settings = {
       :port           => 587,
-      :address        => ENV['SMTP_ADDRESS'],
+      :address        => 'smtp.mailgun.org',
       :user_name      => ENV['SMTP_USERNAME'],
       :password       => ENV['SMTP_PASSWORD'],
       :domain         => ENV['SMTP_DOMAIN'],
