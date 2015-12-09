@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <%= render partial: "layouts/shared/flash_messages", flash: flash %> 
+    <%= render partial: "layouts/shared/flash_messages", flash: flash %>
 
-    <div class="col-md-4" style="background: #194374; padding-bottom: 42px; margin-top: 27px; min-height: 695px;">
+    <div class="col-md-4" style="background: #222222; padding-bottom: 42px; margin-top: 27px; min-height: 695px;">
       <%= gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), :alt => current_user.name, :class => "img-thumbnail hacker-avatar") %>
       <%= link_to "Edit Profile", edit_user_registration_path, :style => "display: block; text-align: center;" %>
 
@@ -44,7 +44,7 @@
       </div>
 
       <div>
-        <%= image_tag "miami-bitcoin-hackathon.jpg", :class => "img-rounded dashboard-logo" %>
+        <%= image_tag "mbh-blue.svg", :class => "dashboard-logo" %>
       </div>
 
     </div>
