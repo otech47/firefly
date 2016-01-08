@@ -22,122 +22,129 @@
         %a.smoothScroll.btn.btn-conf.btn-clear.register-now-button{:href => "#registration"} Register Now
         %a.smoothScroll.btn.btn-conf.btn-clear.learn-more-button{:href => "#initiative"} Learn More
 / ********** SPONSORS **********
+%section
+#g2
+  .container.ptb.div-respond
+    .row
+      %h2.centered 2015 HACKATHON RECAP
+      %hr.aligncenter.mb
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered
+          .videoWrapper
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-l9TvM7cuJg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 %section#sponsors
-.container.ptb.div-respond
-  .row
-    %h2.centered 2015 HACKATHON RECAP
-    %hr.aligncenter.mb
-      .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered
-        .videoWrapper
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-l9TvM7cuJg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
--#     %h2.centered SPONSORS & PARTNERS
--#     %hr.aligncenter.mb
--#       .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
--#         %h3 Sponsors
--#         .row
--#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered
--#             %a{:href => "http://www.knightfoundation.org/", :target => "_blank"}
--#               = image_tag 'sponsors/knight.png'
--#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.logo-lab
--#             %a{:href => "http://www.thelabmiami.com/", :target => "_blank"}
--#               = image_tag 'sponsors/lab_miami.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitstop
--#             %a{:href => "http://bitstop.co/", :target => "_blank"}
--#               = image_tag 'sponsors/bitstop.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitpay
--#             %a{:href => "https://bitpay.com/", :target => "_blank"}
--#               = image_tag 'sponsors/bitpay.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-coinkite
--#             %a{:href => "https://coinkite.com/", :target => "_blank"}
--#               = image_tag 'sponsors/coinkite.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.tally-capital
--#             %a{:href => "http://tallycapital.com/", :target => "_blank"}
--#               = image_tag 'sponsors/tally_capital.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "https://lamassu.is/", :target => "_blank"}
--#               = image_tag 'sponsors/lamassu.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "http://satoshilabs.com/", :target => "_blank"}
--#               = image_tag 'sponsors/satoshi_labs.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "https://www.bitcointrezor.com/", :target => "_blank"}
--#               = image_tag 'sponsors/trezor.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-trucoin
--#             %a{:href => "https://www.trucoin.com/", :target => "_blank"}
--#               = image_tag 'sponsors/trucoin.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "https://www.alarmgrid.com/", :target => "_blank"}
--#               = image_tag 'sponsors/alarm_grid.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "http://www.enviropro.net/", :target => "_blank"}
--#               = image_tag 'sponsors/enviro_pro_usa.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "http://www.digitalcurrencycouncil.com/", :target => "_blank"}
--#               = image_tag 'sponsors/digital_currency_council.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "http://mtalawyers.com/", :target => "_blank"}
--#               = image_tag 'sponsors/mearkle_trueblood_adam.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "#", :target => "_blank"}
--#               = image_tag 'sponsors/brave.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-rm-and-associates
--#             %a{:href => "#", :target => "_blank"}
--#               = image_tag 'sponsors/rm-and-associates.jpg'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-amlclass
--#             %a{:href => "http://www.amlclass.com/", :target => "_blank"}
--#               = image_tag 'sponsors/aml_compliance_solutions.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "#", :target => "_blank"}
--#               = image_tag 'sponsors/acle_law.png'
--#         %h3{:style => "margin: 100px 0px 1px 0px;"} Event Partners
--#         .row
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-btcmiami
--#             %a{:href => "http://btcmiami.com/", :target => "_blank"}
--#               = image_tag 'sponsors/btcmiami.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-refreshmiami
--#             %a{:href => "http://www.refreshmiami.com/", :target => "_blank"}
--#               = image_tag 'sponsors/refresh_miami.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-mdc
--#             %a{:href => "http://www.mdc.edu/main/", :target => "_blank"}
--#               = image_tag 'sponsors/miami_dade_college.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-ccn
--#             %a{:href => "http://collegecrypto.org/", :target => "_blank"}
--#               = image_tag 'sponsors/ccn.jpg'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-u
--#             %a{:href => "http://www.miami.edu/", :target => "_blank"}
--#               = image_tag 'sponsors/u.jpg'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-wyncode
--#             %a{:href => "http://wyncode.co/", :target => "_blank"}
--#               = image_tag 'sponsors/wyncode.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "#", :target => "_blank"}
--#               = image_tag 'sponsors/blockchain_beach.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.loglo-pollotropical
--#             %a{:href => "http://pollotropical.com/", :target => "_blank"}
--#               = image_tag 'sponsors/pollo_tropical.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
--#             %a{:href => "http://www.powerpizzeria.com/", :target => "_blank"}
--#               = image_tag 'sponsors/power_pizzeria.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
--#             %a{:href => "https://www.sipjojo.com/", :target => "_blank"}
--#               = image_tag 'sponsors/jojo.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
--#             %a{:href => "http://www.eternitycoffeeroasters.com/", :target => "_blank"}
--#               = image_tag 'sponsors/eternity.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
--#             %a{:href => "http://www.kindsnacks.com/", :target => "_blank"}
--#               = image_tag 'sponsors/king.jpg'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
--#             %a{:href => "http://satoshicloset.com/", :target => "_blank"}
--#               = image_tag 'sponsors/satoshi_closet.png'
--#         %h3{:style => "margin: 100px 0px 1px 0px;"} Media Partners
--#         .row
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
--#             %a{:href => "http://ybitcoin.net/", :target => "_blank"}
--#               = image_tag 'sponsors/ybitcoin.png'
--#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
--#             %a{:href => "http://pfunkmedia.com/", :target => "_blank"}
--#               = image_tag 'sponsors/pfunk_media.png'
+  .container
+    .row
+      %h2.centered.mt SPONSORS & PARTNERS
+      %hr.aligncenter.mb
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered.mb.img-responsive
+              %a{:href => "http://bitstop.co/", :target => "_blank"}
+                = image_tag 'sponsors/bitstop.png'
+          .row
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.logo-lab.mb.img-responsive
+              %a{:href => "http://www.thelabmiami.com/", :target => "_blank"}
+                = image_tag 'sponsors/lab_miami.png'
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.mb.img-responsive
+              %a{:href => "https://www.ledgerwallet.com/", :target => "_blank"}
+                = image_tag 'ledger-wallet.png', :style => "margin-top:15px"
+  -#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered
+  -#             %a{:href => "http://www.knightfoundation.org/", :target => "_blank"}
+  -#               = image_tag 'sponsors/knight.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-bitpay
+  -#             %a{:href => "https://bitpay.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/bitpay.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-coinkite
+  -#             %a{:href => "https://coinkite.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/coinkite.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.tally-capital
+  -#             %a{:href => "http://tallycapital.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/tally_capital.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "https://lamassu.is/", :target => "_blank"}
+  -#               = image_tag 'sponsors/lamassu.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "http://satoshilabs.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/satoshi_labs.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "https://www.bitcointrezor.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/trezor.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-trucoin
+  -#             %a{:href => "https://www.trucoin.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/trucoin.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "https://www.alarmgrid.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/alarm_grid.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "http://www.enviropro.net/", :target => "_blank"}
+  -#               = image_tag 'sponsors/enviro_pro_usa.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "http://www.digitalcurrencycouncil.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/digital_currency_council.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "http://mtalawyers.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/mearkle_trueblood_adam.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "#", :target => "_blank"}
+  -#               = image_tag 'sponsors/brave.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-rm-and-associates
+  -#             %a{:href => "#", :target => "_blank"}
+  -#               = image_tag 'sponsors/rm-and-associates.jpg'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-amlclass
+  -#             %a{:href => "http://www.amlclass.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/aml_compliance_solutions.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "#", :target => "_blank"}
+  -#               = image_tag 'sponsors/acle_law.png'
+  -#         %h3{:style => "margin: 100px 0px 1px 0px;"} Event Partners
+  -#         .row
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-btcmiami
+  -#             %a{:href => "http://btcmiami.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/btcmiami.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-refreshmiami
+  -#             %a{:href => "http://www.refreshmiami.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/refresh_miami.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-mdc
+  -#             %a{:href => "http://www.mdc.edu/main/", :target => "_blank"}
+  -#               = image_tag 'sponsors/miami_dade_college.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-ccn
+  -#             %a{:href => "http://collegecrypto.org/", :target => "_blank"}
+  -#               = image_tag 'sponsors/ccn.jpg'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-u
+  -#             %a{:href => "http://www.miami.edu/", :target => "_blank"}
+  -#               = image_tag 'sponsors/u.jpg'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-wyncode
+  -#             %a{:href => "http://wyncode.co/", :target => "_blank"}
+  -#               = image_tag 'sponsors/wyncode.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "#", :target => "_blank"}
+  -#               = image_tag 'sponsors/blockchain_beach.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.loglo-pollotropical
+  -#             %a{:href => "http://pollotropical.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/pollo_tropical.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+  -#             %a{:href => "http://www.powerpizzeria.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/power_pizzeria.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+  -#             %a{:href => "https://www.sipjojo.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/jojo.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+  -#             %a{:href => "http://www.eternitycoffeeroasters.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/eternity.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-king
+  -#             %a{:href => "http://www.kindsnacks.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/king.jpg'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered
+  -#             %a{:href => "http://satoshicloset.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/satoshi_closet.png'
+  -#         %h3{:style => "margin: 100px 0px 1px 0px;"} Media Partners
+  -#         .row
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
+  -#             %a{:href => "http://ybitcoin.net/", :target => "_blank"}
+  -#               = image_tag 'sponsors/ybitcoin.png'
+  -#           .col-lg-3.col-md-3.col-sm-6.col-xs-6.centered.logo-pfunk
+  -#             %a{:href => "http://pfunkmedia.com/", :target => "_blank"}
+  -#               = image_tag 'sponsors/pfunk_media.png'
 
 -# ********** GREY SECTION - PRIZES **********
 %section#prizes
