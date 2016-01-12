@@ -38,16 +38,22 @@
       %hr.aligncenter.mb
         .col-lg-12.col-md-12.col-sm-12.col-xs-12.bigboys.centered
           .row
-            .col-lg-12.col-md-12.col-sm-12.col-xs-12.centered.mb.img-responsive
+            .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.mb.img-responsive
               %a{:href => "http://bitstop.co/", :target => "_blank"}
-                = image_tag 'sponsors/bitstop.png'
-          .row
+                = image_tag 'sponsors/bitstop.png', :class => "rss opacity", :style => "max-width:300px;margin-top:30px;"
             .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.logo-lab.mb.img-responsive
               %a{:href => "http://www.thelabmiami.com/", :target => "_blank"}
-                = image_tag 'sponsors/lab_miami.png'
-            .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered.mb.img-responsive
+                = image_tag 'sponsors/lab_miami.png', :class => "rss opacity"
+          .row
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12.centered.mb.img-responsive
+              %a{:href => "https://www.bitcointrezor.com/", :target => "_blank"}
+                = image_tag 'trezor-logo.png', :class => "rss opacity"
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12.centered.mb.img-responsive
               %a{:href => "https://www.ledgerwallet.com/", :target => "_blank"}
-                = image_tag 'ledger-wallet.png', :style => "margin-top:15px"
+                = image_tag 'ledger-vert-logo.png', :class => "rss opacity",  :style => "max-width:200px;"
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12.centered.mb.img-responsive
+              %a{:href => "https://www.breadwallet.com/", :target => "_blank"}
+                = image_tag 'breadwallet.png', :class => "rss opacity", :style => "max-width:200px;"
   -#           .col-lg-6.col-md-6.col-sm-12.col-xs-12.centered
   -#             %a{:href => "http://www.knightfoundation.org/", :target => "_blank"}
   -#               = image_tag 'sponsors/knight.png'
