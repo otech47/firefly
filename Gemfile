@@ -14,6 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
+# CORS config for 2017 website
+gem 'rack-cors', '~> 0.3.1'
 
 group :developer do
   gem 'foreman', require: false

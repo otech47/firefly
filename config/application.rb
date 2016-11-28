@@ -31,6 +31,13 @@ module Firefly
       Devise::PasswordsController.layout "clean"
     end
 
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
     ActionMailer::Base.smtp_settings = {
       :port           => 587,
       :address        => 'smtp.mailgun.org',
